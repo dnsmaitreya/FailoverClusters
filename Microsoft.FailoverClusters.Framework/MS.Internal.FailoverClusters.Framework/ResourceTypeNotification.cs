@@ -1,0 +1,16 @@
+using Microsoft.FailoverClusters.Framework;
+
+namespace MS.Internal.FailoverClusters.Framework;
+
+internal class ResourceTypeNotification : Notification
+{
+	public ResourceTypeNotification(ClusterEventArgs payload)
+		: base(payload)
+	{
+	}
+
+	public override string ToString()
+	{
+		return base.Payload.ToString();
+	}
+}

@@ -1,0 +1,14 @@
+using System;
+
+namespace Microsoft.FailoverClusters.Framework;
+
+[Flags]
+public enum NetworkLoadSelection
+{
+	None = 0,
+	Basic = 1,
+	CommonProperties = 2,
+	PrivateProperties = 4,
+	All = 7,
+	Reload = 0x20000000
+}

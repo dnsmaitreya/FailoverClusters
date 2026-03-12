@@ -1,0 +1,1 @@
+# FailoverClusters.ObjectModel

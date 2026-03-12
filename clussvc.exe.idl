@@ -1,0 +1,499 @@
+import "E:\code\rust\TinyInst_0430\rpcbind\ms-dtyp.idl";
+
+/* ---------------------------------------------------------- */
+/* Source PE: E:\server2025\server_2025_11_rpc\system32\Windows\Cluster\clussvc.exe */
+/* Interface: 299bc84a-de09-49e9-a240-8a1042d5d60a   Version: 1.0 */
+/* Offset: 7898416 */
+
+// DllOffset: 0x788530
+// DllPath E:\server2025\server_2025_11_rpc\system32\Windows\Cluster\clussvc.exe
+
+struct intf_299bc84a_de09_49e9_a240_8a1042d5d60a_Struct_0 {
+    [unique, string] /* unique */ wchar_t* Member0;
+    short Member8;
+    int MemberC;
+    int Member10;
+    int Member14;
+    [switch_is(Member8)] union intf_299bc84a_de09_49e9_a240_8a1042d5d60a_Union_1 Member18;
+    int Member28;
+    int Member2C;
+    [unique, size_is(Member28)] byte* Member30;
+};
+
+[switch_type(short)] union intf_299bc84a_de09_49e9_a240_8a1042d5d60a_Union_1 {
+    [case(4)]
+    struct intf_299bc84a_de09_49e9_a240_8a1042d5d60a_Struct_2 intf_299bc84a_de09_49e9_a240_8a1042d5d60a_Arm_4;
+    [case(3)]
+    struct intf_299bc84a_de09_49e9_a240_8a1042d5d60a_Struct_3 intf_299bc84a_de09_49e9_a240_8a1042d5d60a_Arm_3;
+    [case(17)]
+    struct intf_299bc84a_de09_49e9_a240_8a1042d5d60a_Struct_4 intf_299bc84a_de09_49e9_a240_8a1042d5d60a_Arm_17;
+    [case(20)]
+    struct intf_299bc84a_de09_49e9_a240_8a1042d5d60a_Struct_2 intf_299bc84a_de09_49e9_a240_8a1042d5d60a_Arm_20;
+    [default]
+    ;//FC_FORCED_BOGUS_STRUCT Default;
+};
+
+struct intf_299bc84a_de09_49e9_a240_8a1042d5d60a_Struct_2 {
+    int Member0;
+    int Member4;
+};
+
+struct intf_299bc84a_de09_49e9_a240_8a1042d5d60a_Struct_3 {
+    int Member0;
+};
+
+struct intf_299bc84a_de09_49e9_a240_8a1042d5d60a_Struct_4 {
+    int Member0;
+    int Member4;
+    int Member8;
+};
+
+struct intf_299bc84a_de09_49e9_a240_8a1042d5d60a_Struct_5 {
+    int Member0;
+    __int64 Member8;
+};
+
+[
+  uuid(299BC84A-DE09-49E9-A240-8A1042D5D60A),
+  version(1.0)
+]
+interface intf_299bc84a_de09_49e9_a240_8a1042d5d60a {
+    unsigned int s_RcmReceiveRhsReply([in] handle_t _hProcHandle, [in] struct intf_299bc84a_de09_49e9_a240_8a1042d5d60a_Struct_0* p0);
+    unsigned int s_RcmCaptureClusterLiveDump([in] handle_t _hProcHandle, [in] __int64 p0, [in] GUID* p1, [in, string] wchar_t* p2, [in] __int64 p3, [in] int p4, [in] __int64 p5, [in] __int64 p6, [in] __int64 p7, [in] __int64 p8, [in] int p9, [in, unique, size_is(p9)] byte* p10, [in] GUID* p11);
+    unsigned int s_RcmCaptureClusterWerDump([in] handle_t _hProcHandle, [in] __int64 p0, [in] GUID* p1, [in] __int64 p2, [in] int p3, [in, string] wchar_t* p4, [in, string] wchar_t* p5, [in, string] wchar_t* p6, [in] int p7, [in, unique, size_is(p7)] byte* p8, [in] int p9, [in, unique, size_is(p9)] byte* p10, [in, string] wchar_t* p11, [in, string] wchar_t* p12, [in, string] wchar_t* p13, [in, string] wchar_t* p14, [in, string] wchar_t* p15, [in, string] wchar_t* p16, [in, string] wchar_t* p17, [in, string] wchar_t* p18, [in, string] wchar_t* p19, [in, string] wchar_t* p20, [in, string] wchar_t* p21, [in, string] wchar_t* p22, [in, string] wchar_t* p23, [in, string] wchar_t* p24, [in, string] wchar_t* p25, [in, string] wchar_t* p26, [in, string] wchar_t* p27, [in, string] wchar_t* p28, [in, string] wchar_t* p29, [in, string] wchar_t* p30, [in, string] wchar_t* p31, [in, string] wchar_t* p32, [in, string] wchar_t* p33, [in, string] wchar_t* p34, [in, string] wchar_t* p35, [in, string] wchar_t* p36, [in, string] wchar_t* p37, [in, string] wchar_t* p38, [in, string] wchar_t* p39, [in, string] wchar_t* p40, [in, string] wchar_t* p41, [in, string] wchar_t* p42, [in, string] wchar_t* p43, [in, string] wchar_t* p44, [in, string] wchar_t* p45, [in, string] wchar_t* p46, [in, string] wchar_t* p47, [in, string] wchar_t* p48, [in, string] wchar_t* p49, [in, string] wchar_t* p50);
+    unsigned int s_RcmIssueResTypeNotification([in] handle_t _hProcHandle, [in, string] wchar_t* p0, [in] int p1, [in, size_is(p1)] byte** p2);
+    unsigned int s_RcmWprStart([in] handle_t _hProcHandle, [in] __int64 p0, [in, ptr, string] wchar_t* p1, [in] __int64 p2, [in] int p3, [in, ptr, string] wchar_t* p4, [in] __int64 p5, [in] GUID* p6, [in] int p7, [in, unique, size_is(p7)] byte* p8);
+    unsigned int s_RcmWprAddMarker([in] handle_t _hProcHandle, [in] __int64 p0, [in, string] wchar_t* p1, [in] GUID* p2, [in, ptr, string] wchar_t* p3);
+    unsigned int s_RcmWprCaptureState([in] handle_t _hProcHandle, [in] __int64 p0, [in, string] wchar_t* p1, [in] GUID* p2, [in, ptr, string] wchar_t* p3);
+    unsigned int s_RcmWprFlush([in] handle_t _hProcHandle, [in] __int64 p0, [in, string] wchar_t* p1, [in, string] wchar_t* p2, [in] GUID* p3, [in, ptr, string] wchar_t* p4);
+    unsigned int s_RcmWprCancel([in] handle_t _hProcHandle, [in] __int64 p0, [in, string] wchar_t* p1, [in] GUID* p2);
+    unsigned int s_RcmWprStop([in] handle_t _hProcHandle, [in] __int64 p0, [in, string] wchar_t* p1, [in, string] wchar_t* p2, [in] GUID* p3, [in, ptr, string] wchar_t* p4);
+}
+
+
+
+
+/* ---------------------------------------------------------- */
+/* Source PE: E:\server2025\server_2025_11_rpc\system32\Windows\Cluster\clussvc.exe */
+/* Interface: b97db8b2-4c63-11cf-bff6-08002be23f2f   Version: 3.0 */
+/* Offset: 7906992 */
+
+// DllOffset: 0x78A6B0
+// DllPath E:\server2025\server_2025_11_rpc\system32\Windows\Cluster\clussvc.exe
+
+struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_0 {
+    int Member0;
+    [size_is(Member0)] struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_1* Member8;
+};
+
+struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_1 {
+    int Member0;
+    [unique, string] /* unique */ wchar_t* Member8;
+};
+
+struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_2 {
+    int Member0;
+    struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_3 Member8;
+    int Member18;
+};
+
+struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_3 {
+    [unique, size_is(Member8), length_is(MemberC)] byte* Member0;
+    int Member8;
+    int MemberC;
+};
+
+struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_4 {
+    int Member0;
+    int Member4;
+};
+
+struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_5 {
+    int Member0;
+    int Member4;
+    int Member8;
+    int MemberC;
+    int Member10;
+};
+
+struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_6 {
+    int Member0;
+    byte Member4;
+    int Member8;
+};
+
+struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_7 {
+    int Member0;
+    __int64 Member8;
+};
+
+struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_8 {
+    unsigned __int3264 Member0;
+    struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_9 Member8;
+};
+
+struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_9 {
+    struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_7 Member0;
+    [unique, size_is(Member18)] byte* Member10;
+    int Member18;
+    [unique, string] /* unique */ wchar_t* Member20;
+    [unique, string] /* unique */ wchar_t* Member28;
+    [unique, string] /* unique */ wchar_t* Member30;
+    [unique, string] /* unique */ wchar_t* Member38;
+};
+
+struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_10 {
+    int Member0;
+    byte Member4[16];
+};
+
+struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_11 {
+    int Member0;
+    [unique, size_is(Member0)] struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_12* Member8;
+};
+
+struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_12 {
+    [unique, string] /* unique */ wchar_t* Member0;
+    int Member8;
+    int MemberC;
+    int Member10;
+    [unique, size_is(Member10)] byte* Member18;
+};
+
+struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_13 {
+    int Member0;
+    [size_is(Member0)] struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_14* Member8;
+};
+
+struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_14 {
+    [unique, string] /* unique */ wchar_t* Member0;
+    [unique, string] /* unique */ wchar_t* Member8;
+    int Member10;
+    [unique, string] /* unique */ wchar_t* Member18;
+    int Member20;
+    int Member24;
+    [unique, size_is(Member24)] byte* Member28;
+    int Member30;
+    [unique, size_is(Member30)] byte* Member38;
+};
+
+struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_15 {
+    int Member0;
+    [size_is(Member0)] struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_16* Member8;
+};
+
+struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_16 {
+    [unique, string] /* unique */ wchar_t* Member0;
+    [unique, string] /* unique */ wchar_t* Member8;
+    [unique, string] /* unique */ wchar_t* Member10;
+    [unique, string] /* unique */ wchar_t* Member18;
+    int Member20;
+    [unique, size_is(Member20)] byte* Member28;
+    int Member30;
+    [unique, size_is(Member30)] byte* Member38;
+};
+
+struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_17 {
+    int Member0;
+    int Member4;
+    [unique, string] /* unique */ wchar_t* Member8;
+};
+
+struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_18 {
+    int Member0;
+    [size_is(Member0)] struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_19* Member8;
+};
+
+struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_19 {
+    [unique, string] /* unique */ wchar_t* Member0;
+    int Member8;
+};
+
+struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_20 {
+    [unique, string] /* unique */ wchar_t* Member0;
+    [unique, string] /* unique */ wchar_t* Member8;
+    [unique, string] /* unique */ wchar_t* Member10;
+    [unique, string] /* unique */ wchar_t* Member18;
+    [unique, string] /* unique */ wchar_t* Member20;
+};
+
+[
+  uuid(B97DB8B2-4C63-11CF-BFF6-08002BE23F2F),
+  version(3.0)
+]
+interface intf_b97db8b2_4c63_11cf_bff6_08002be23f2f {
+    /* FC_BIND_CONTEXT */ handle_t s_ApiOpenCluster([in] handle_t _hProcHandle, [out] unsigned int* p0);
+    unsigned int s_ApiCloseCluster([in, out, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0);
+    unsigned int s_ApiSetClusterName([in] handle_t _hProcHandle, [in, string] wchar_t* p0, [out] unsigned int* p1);
+    unsigned int s_ApiGetClusterName([in] handle_t _hProcHandle, [out, string] /* unique */ wchar_t** p0, [out, string] /* unique */ wchar_t** p1);
+    unsigned int s_ApiEvPropEvents([in] handle_t _hProcHandle, [out] short* p0, [out] short* p1, [out] short* p2, [out, string] /* unique */ wchar_t** p3, [out, string] /* unique */ wchar_t** p4);
+    unsigned int s_ApiGetQuorumResource([in] handle_t _hProcHandle, [out, string] /* unique */ wchar_t** p0, [out, string] /* unique */ wchar_t** p1, [out] int* p2, [out] unsigned int* p3);
+    unsigned int s_ApiSetQuorumResource([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, string] wchar_t* p1, [in] int p2, [out] unsigned int* p3);
+    unsigned int s_ApiCreateEnum([in] handle_t _hProcHandle, [in] int p0, [out] /* unique */ struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_0** p1, [out] unsigned int* p2);
+    /* FC_BIND_CONTEXT */ handle_t s_ApiOpenResource([in] handle_t _hProcHandle, [in, string] wchar_t* p0, [out] unsigned int* p1, [out] unsigned int* p2);
+    /* FC_BIND_CONTEXT */ handle_t s_ApiCreateResource([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, string] wchar_t* p1, [in, string] wchar_t* p2, [in] int p3, [out] unsigned int* p4, [out] unsigned int* p5);
+    unsigned int s_ApiDeleteResource([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [out] unsigned int* p1);
+    unsigned int s_ApiCloseResource([in, out, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0);
+    unsigned int s_ApiGetResourceState([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [out] int* p1, [out, string] /* unique */ wchar_t** p2, [out, string] /* unique */ wchar_t** p3, [out] unsigned int* p4);
+    unsigned int s_ApiSetResourceName([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, string] wchar_t* p1, [out] unsigned int* p2);
+    unsigned int s_ApiGetResourceId([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [out, string] /* unique */ wchar_t** p1, [out] unsigned int* p2);
+    unsigned int s_ApiGetResourceType([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [out, string] /* unique */ wchar_t** p1, [out] unsigned int* p2);
+    unsigned int s_ApiFailResource([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [out] unsigned int* p1);
+    unsigned int s_ApiOnlineResource([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [out] unsigned int* p1);
+    unsigned int s_ApiOfflineResource([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [out] unsigned int* p1);
+    unsigned int s_ApiAddResourceDependency([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [out] unsigned int* p2);
+    unsigned int s_ApiRemoveResourceDependency([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [out] unsigned int* p2);
+    unsigned int s_ApiCanResourceBeDependent([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [out] unsigned int* p2);
+    unsigned int s_ApiCreateResEnum([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [out] /* unique */ struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_0** p2, [out] unsigned int* p3);
+    unsigned int s_ApiAddResourceNode([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [out] unsigned int* p2);
+    unsigned int s_ApiRemoveResourceNode([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [out] unsigned int* p2);
+    unsigned int s_ApiChangeResourceGroup([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [out] unsigned int* p2);
+    unsigned int s_ApiCreateResourceType([in] handle_t _hProcHandle, [in, string] wchar_t* p0, [in, string] wchar_t* p1, [in, string] wchar_t* p2, [in] int p3, [in] int p4, [out] unsigned int* p5);
+    unsigned int s_ApiDeleteResourceType([in] handle_t _hProcHandle, [in, string] wchar_t* p0, [out] unsigned int* p1);
+    /* FC_BIND_CONTEXT */ handle_t s_ApiGetRootKey([in] handle_t _hProcHandle, [in] int p0, [out] unsigned int* p1, [out] unsigned int* p2);
+    /* FC_BIND_CONTEXT */ handle_t s_ApiCreateKey([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, string] wchar_t* p1, [in] int p2, [in] int p3, [in, unique] /* unique */ struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_2* p4, [out] int* p5, [out] unsigned int* p6, [out] unsigned int* p7);
+    /* FC_BIND_CONTEXT */ handle_t s_ApiOpenKey([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, string] wchar_t* p1, [in] int p2, [out] unsigned int* p3, [out] unsigned int* p4);
+    unsigned int s_ApiEnumKey([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [out, string] /* unique */ wchar_t** p2, [out] struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_4* p3, [out] unsigned int* p4);
+    unsigned int s_ApiSetValue([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, string] wchar_t* p1, [in] int p2, [in, size_is(p4)] byte** p3, [in] int p4, [out] unsigned int* p5);
+    unsigned int s_ApiDeleteValue([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, string] wchar_t* p1, [out] unsigned int* p2);
+    unsigned int s_ApiQueryValue([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, string] wchar_t* p1, [out] int* p2, [out, size_is(p4)] byte** p3, [in] int p4, [out] int* p5, [out] unsigned int* p6);
+    unsigned int s_ApiDeleteKey([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, string] wchar_t* p1, [out] unsigned int* p2);
+    unsigned int s_ApiEnumValue([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [out, string] /* unique */ wchar_t** p2, [out] int* p3, [out] byte** p4, [in, out] int* p5, [out] int* p6, [out] unsigned int* p7);
+    unsigned int s_ApiCloseKey([in, out, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0);
+    unsigned int s_ApiQueryInfoKey([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [out] int* p1, [out] int* p2, [out] int* p3, [out] int* p4, [out] int* p5, [out] int* p6, [out] struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_4* p7, [out] unsigned int* p8);
+    unsigned int s_ApiSetKeySecurity([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in] struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_3* p2, [out] unsigned int* p3);
+    unsigned int s_ApiGetKeySecurity([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in, out] struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_3* p2, [out] unsigned int* p3);
+    /* FC_BIND_CONTEXT */ handle_t s_ApiOpenGroup([in] handle_t _hProcHandle, [in, string] wchar_t* p0, [out] unsigned int* p1, [out] unsigned int* p2);
+    /* FC_BIND_CONTEXT */ handle_t s_ApiCreateGroup([in] handle_t _hProcHandle, [in, string] wchar_t* p0, [out] unsigned int* p1, [out] unsigned int* p2);
+    unsigned int s_ApiDeleteGroup([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [out] unsigned int* p2);
+    unsigned int s_ApiCloseGroup([in, out, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0);
+    unsigned int s_ApiGetGroupState([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [out] int* p1, [out, string] /* unique */ wchar_t** p2, [out] unsigned int* p3);
+    unsigned int s_ApiSetGroupName([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, string] wchar_t* p1, [out] unsigned int* p2);
+    unsigned int s_ApiGetGroupId([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [out, string] /* unique */ wchar_t** p1, [out] unsigned int* p2);
+    unsigned int s_ApiGetNodeId([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [out, string] /* unique */ wchar_t** p1, [out] unsigned int* p2);
+    unsigned int s_ApiOnlineGroup([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [out] unsigned int* p1);
+    unsigned int s_ApiOfflineGroup([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [out] unsigned int* p1);
+    unsigned int s_ApiMoveGroup([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [out] unsigned int* p1);
+    unsigned int s_ApiMoveGroupToNode([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [out] unsigned int* p2);
+    unsigned int s_ApiCreateGroupResourceEnum([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [out] /* unique */ struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_0** p2, [out] unsigned int* p3);
+    unsigned int s_ApiSetGroupNodeList([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, unique, size_is(p2)] wchar_t* p1, [in] int p2, [out] unsigned int* p3);
+    /* FC_BIND_CONTEXT */ handle_t s_ApiCreateNotify([in] handle_t _hProcHandle, [out] unsigned int* p0, [out] unsigned int* p1);
+    unsigned int s_ApiCloseNotify([in, out, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0);
+    unsigned int s_ApiAddNotifyCluster([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in] int p2, [in] int p3, [out] unsigned int* p4);
+    unsigned int s_ApiAddNotifyNode([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in] int p2, [in] int p3, [out] int* p4, [out] unsigned int* p5);
+    unsigned int s_ApiAddNotifyGroup([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in] int p2, [in] int p3, [out] int* p4, [out] unsigned int* p5);
+    unsigned int s_ApiAddNotifyResource([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in] int p2, [in] int p3, [out] int* p4, [out] unsigned int* p5);
+    unsigned int s_ApiAddNotifyKey([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in] int p2, [in] int p3, [in] int p4, [out] unsigned int* p5);
+    unsigned int s_ApiReAddNotifyNode([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in] int p2, [in] int p3, [in] int p4, [out] unsigned int* p5);
+    unsigned int s_ApiReAddNotifyGroup([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in] int p2, [in] int p3, [in] int p4, [out] unsigned int* p5);
+    unsigned int s_ApiReAddNotifyResource([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in] int p2, [in] int p3, [in] int p4, [out] unsigned int* p5);
+    unsigned int s_ApiGetNotify([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [out] int* p1, [out] int* p2, [out] int* p3, [out, string] /* unique */ wchar_t** p4, [out] unsigned int* p5);
+    /* FC_BIND_CONTEXT */ handle_t s_ApiOpenNode([in] handle_t _hProcHandle, [in, string] wchar_t* p0, [out] unsigned int* p1, [out] unsigned int* p2);
+    unsigned int s_ApiCloseNode([in, out, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0);
+    unsigned int s_ApiGetNodeState([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [out] int* p1, [out] unsigned int* p2);
+    unsigned int s_ApiPauseNode([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [out] unsigned int* p1);
+    unsigned int s_ApiResumeNode([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [out] unsigned int* p1);
+    unsigned int s_ApiEvictNode([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [out] unsigned int* p1);
+    unsigned int s_ApiNodeResourceControl([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in] int p2, [in, unique, size_is(p4)] byte* p3, [in] int p4, [out, size_is(p6), length_is(*p7)] byte** p5, [in] int p6, [out] int* p7, [out] int* p8, [out] unsigned int* p9);
+    unsigned int s_ApiResourceControl([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in, unique, size_is(p3)] byte* p2, [in] int p3, [out, size_is(p5), length_is(*p6)] byte** p4, [in] int p5, [out] int* p6, [out] int* p7, [out] unsigned int* p8);
+    unsigned int s_ApiNodeResourceTypeControl([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, string] wchar_t* p1, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p2, [in] int p3, [in, unique, size_is(p5)] byte* p4, [in] int p5, [out, size_is(p7), length_is(*p8)] byte** p6, [in] int p7, [out] int* p8, [out] int* p9, [out] unsigned int* p10);
+    unsigned int s_ApiResourceTypeControl([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, string] wchar_t* p1, [in] int p2, [in, unique, size_is(p4)] byte* p3, [in] int p4, [out, size_is(p6), length_is(*p7)] byte** p5, [in] int p6, [out] int* p7, [out] int* p8, [out] unsigned int* p9);
+    unsigned int s_ApiNodeGroupControl([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in] int p2, [in, unique, size_is(p4)] byte* p3, [in] int p4, [out, size_is(p6), length_is(*p7)] byte** p5, [in] int p6, [out] int* p7, [out] int* p8, [out] unsigned int* p9);
+    unsigned int s_ApiGroupControl([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in, unique, size_is(p3)] byte* p2, [in] int p3, [out, size_is(p5), length_is(*p6)] byte** p4, [in] int p5, [out] int* p6, [out] int* p7, [out] unsigned int* p8);
+    unsigned int s_ApiNodeNodeControl([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in] int p2, [in, unique, size_is(p4)] byte* p3, [in] int p4, [out, size_is(p6), length_is(*p7)] byte** p5, [in] int p6, [out] int* p7, [out] int* p8, [out] unsigned int* p9);
+    unsigned int s_ApiNodeControl([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in, unique, size_is(p3)] byte* p2, [in] int p3, [out, size_is(p5), length_is(*p6)] byte** p4, [in] int p5, [out] int* p6, [out] int* p7, [out] unsigned int* p8);
+    unsigned int s_ApiEvPropEvents_1([in] handle_t _hProcHandle, [in, range(0, 524288)] /* range: 0,524288 */ int p0, [in, size_is(p0)] byte** p1);
+    /* FC_BIND_CONTEXT */ handle_t s_ApiOpenNetwork([in] handle_t _hProcHandle, [in, string] wchar_t* p0, [out] unsigned int* p1, [out] unsigned int* p2);
+    unsigned int s_ApiCloseNetwork([in, out, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0);
+    unsigned int s_ApiGetNetworkState([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [out] int* p1, [out] unsigned int* p2);
+    unsigned int s_ApiSetNetworkName([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, string] wchar_t* p1, [out] unsigned int* p2);
+    unsigned int s_ApiCreateNetworkEnum([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [out] /* unique */ struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_0** p2, [out] unsigned int* p3);
+    unsigned int s_ApiGetNetworkId([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [out, string] /* unique */ wchar_t** p1, [out] unsigned int* p2);
+    unsigned int s_ApiSetNetworkPriorityOrder([in] handle_t _hProcHandle, [in, range(0, 1000)] /* range: 0,1000 */ int p0, [in, size_is(p0)] /* unique */ wchar_t** p1, [out] unsigned int* p2);
+    unsigned int s_ApiNodeNetworkControl([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in] int p2, [in, unique, size_is(p4)] byte* p3, [in] int p4, [out, size_is(p6), length_is(*p7)] byte** p5, [in] int p6, [out] int* p7, [out] int* p8, [out] unsigned int* p9);
+    unsigned int s_ApiNetworkControl([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in, unique, size_is(p3)] byte* p2, [in] int p3, [out, size_is(p5), length_is(*p6)] byte** p4, [in] int p5, [out] int* p6, [out] int* p7, [out] unsigned int* p8);
+    unsigned int s_ApiAddNotifyNetwork([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in] int p2, [in] int p3, [out] int* p4, [out] unsigned int* p5);
+    unsigned int s_ApiReAddNotifyNetwork([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in] int p2, [in] int p3, [in] int p4, [out] unsigned int* p5);
+    /* FC_BIND_CONTEXT */ handle_t s_ApiOpenNetInterface([in] handle_t _hProcHandle, [in, string] wchar_t* p0, [out] unsigned int* p1, [out] unsigned int* p2);
+    unsigned int s_ApiCloseNetInterface([in, out, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0);
+    unsigned int s_ApiGetNetInterfaceState([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [out] int* p1, [out] unsigned int* p2);
+    unsigned int s_ApiGetNetInterface([in] handle_t _hProcHandle, [in, string] wchar_t* p0, [in, string] wchar_t* p1, [out, string] /* unique */ wchar_t** p2, [out] unsigned int* p3);
+    unsigned int s_ApiGetNetInterfaceId([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [out, string] /* unique */ wchar_t** p1, [out] unsigned int* p2);
+    unsigned int s_ApiNodeNetInterfaceControl([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in] int p2, [in, unique, size_is(p4)] byte* p3, [in] int p4, [out, size_is(p6), length_is(*p7)] byte** p5, [in] int p6, [out] int* p7, [out] int* p8, [out] unsigned int* p9);
+    unsigned int s_ApiNetInterfaceControl([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in, unique, size_is(p3)] byte* p2, [in] int p3, [out, size_is(p5), length_is(*p6)] byte** p4, [in] int p5, [out] int* p6, [out] int* p7, [out] unsigned int* p8);
+    unsigned int s_ApiAddNotifyNetInterface([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in] int p2, [in] int p3, [out] int* p4, [out] unsigned int* p5);
+    unsigned int s_ApiReAddNotifyNetInterface([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in] int p2, [in] int p3, [in] int p4, [out] unsigned int* p5);
+    unsigned int s_ApiCreateNodeEnum([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [out] /* unique */ struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_0** p2, [out] unsigned int* p3);
+    unsigned int s_ApiGetClusterVersion2([in] handle_t _hProcHandle, [out] short* p0, [out] short* p1, [out] short* p2, [out, string] /* unique */ wchar_t** p3, [out, string] /* unique */ wchar_t** p4, [out] /* unique */ struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_5** p5, [out] unsigned int* p6);
+    unsigned int s_ApiCreateResTypeEnum([in] handle_t _hProcHandle, [in, string] wchar_t* p0, [in] int p1, [out] /* unique */ struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_0** p2, [out] unsigned int* p3);
+    unsigned int s_ApiBackupClusterDatabase([in] handle_t _hProcHandle, [in, string] wchar_t* p0, [out] unsigned int* p1);
+    unsigned int s_ApiNodeClusterControl([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in] int p2, [in, unique, size_is(p4)] byte* p3, [in] int p4, [out, size_is(p6), length_is(*p7)] byte** p5, [in] int p6, [out] int* p7, [out] int* p8, [out] unsigned int* p9);
+    unsigned int s_ApiClusterControl([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in, unique, size_is(p3)] byte* p2, [in] int p3, [out, size_is(p5), length_is(*p6)] byte** p4, [in] int p5, [out] int* p6, [out] int* p7, [out] unsigned int* p8);
+    unsigned int s_ApiUnblockGetNotifyCall([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0);
+    unsigned int s_ApiEvPropEvents_2([in] handle_t _hProcHandle, [in, string] wchar_t* p0, [in] short p1, [out, size_is(p3), length_is(*p4)] struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_6* p2, [range(0, 65536), in] /* range: 0,65536 */ int p3, [out] int* p4, [out] int* p5);
+    unsigned int s_ApiSetResourceDependencyExpression([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, unique, string] /* unique */ wchar_t* p1, [out] unsigned int* p2);
+    unsigned int s_ApiGetResourceDependencyExpression([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [out, string] /* unique */ wchar_t** p1, [out] unsigned int* p2);
+    unsigned int s_ApiAddNode([in] handle_t _hProcHandle, [in, string] wchar_t* p0, [out] int* p1, [in, out] int* p2, [out] byte** p3, [out] unsigned int* p4);
+    unsigned int s_ApiGetResourceNetworkName([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [out, string] /* unique */ wchar_t** p1, [out] unsigned int* p2);
+    unsigned int s_ApiExecuteBatch([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in, size_is(p1)] byte** p2, [out] int* p3, [out] unsigned int* p4);
+    unsigned int s_ApiCreateBatchPort([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [out, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [out] unsigned int* p2);
+    unsigned int s_ApiGetBatchNotification([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [out] int* p1, [out] byte** p2);
+    unsigned int s_ApiCloseBatchPort([in, out, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0);
+    /* FC_BIND_CONTEXT */ handle_t s_ApiOpenClusterEx([in] handle_t _hProcHandle, [in] int p0, [out] int* p1, [out] unsigned int* p2);
+    /* FC_BIND_CONTEXT */ handle_t s_ApiOpenNodeEx([in] handle_t _hProcHandle, [in, string] wchar_t* p0, [in] int p1, [out] int* p2, [out] unsigned int* p3, [out] unsigned int* p4);
+    /* FC_BIND_CONTEXT */ handle_t s_ApiOpenGroupEx([in] handle_t _hProcHandle, [in, string] wchar_t* p0, [in] int p1, [out] int* p2, [out] unsigned int* p3, [out] unsigned int* p4);
+    /* FC_BIND_CONTEXT */ handle_t s_ApiOpenResourceEx([in] handle_t _hProcHandle, [in, string] wchar_t* p0, [in] int p1, [out] int* p2, [out] unsigned int* p3, [out] unsigned int* p4);
+    /* FC_BIND_CONTEXT */ handle_t s_ApiOpenNetworkEx([in] handle_t _hProcHandle, [in, string] wchar_t* p0, [in] int p1, [out] int* p2, [out] unsigned int* p3, [out] unsigned int* p4);
+    /* FC_BIND_CONTEXT */ handle_t s_ApiOpenNetInterfaceEx([in] handle_t _hProcHandle, [in, string] wchar_t* p0, [in] int p1, [out] int* p2, [out] unsigned int* p3, [out] unsigned int* p4);
+    unsigned int s_ApiChangeCsvState([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [out] unsigned int* p2);
+    unsigned int s_ApiCreateNodeEnumEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in] int p2, [out] /* unique */ struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_0** p3, [out] /* unique */ struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_0** p4, [out] unsigned int* p5);
+    unsigned int s_ApiCreateEnumEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in] int p2, [out] /* unique */ struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_0** p3, [out] /* unique */ struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_0** p4, [out] unsigned int* p5);
+    unsigned int s_ApiPauseNodeEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in] int p2, [out] unsigned int* p3);
+    unsigned int s_ApiPauseNodeWithDrainTarget([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p2, [out] unsigned int* p3);
+    unsigned int s_ApiResumeNodeEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in] int p2, [out] unsigned int* p3);
+    /* FC_BIND_CONTEXT */ handle_t s_ApiCreateGroupEx([in] handle_t _hProcHandle, [in, string] wchar_t* p0, [in, unique] /* unique */ struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_4* p1, [out] unsigned int* p2, [out] unsigned int* p3);
+    unsigned int s_ApiOnlineGroupEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in, size_is(p3)] byte** p2, [in] int p3, [out] unsigned int* p4);
+    unsigned int s_ApiOfflineGroupEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in, size_is(p3)] byte** p2, [in] int p3, [out] unsigned int* p4);
+    unsigned int s_ApiMoveGroupEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in, size_is(p3)] byte** p2, [in] int p3, [out] unsigned int* p4);
+    unsigned int s_ApiMoveGroupToNodeEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in] int p2, [in, size_is(p4)] byte** p3, [in] int p4, [out] unsigned int* p5);
+    unsigned int s_ApiCancelClusterGroupOperation([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [out] unsigned int* p2);
+    unsigned int s_ApiOnlineResourceEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in, size_is(p3)] byte** p2, [in] int p3, [out] unsigned int* p4);
+    unsigned int s_ApiOfflineResourceEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in, size_is(p3)] byte** p2, [in] int p3, [out] unsigned int* p4);
+    /* FC_BIND_CONTEXT */ handle_t s_ApiCreateNotifyV2([in] handle_t _hProcHandle, [out] unsigned int* p0, [out] unsigned int* p1);
+    unsigned int s_ApiAddNotifyV2([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in] struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_7* p2, [in] int p3, [in] int p4, [in] int p5, [out] unsigned int* p6);
+    unsigned int s_ApiGetNotifyV2([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [out, size_is(, *p2)] struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_8** p1, [out] int* p2);
+    unsigned int s_ApiQueryAllValues([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [out] int* p1, [out] byte** p2[1], [out] unsigned int* p3);
+    unsigned int s_ApiStmFindDisk([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in, out, unique] /* unique */ struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_10* p2, [in, unique, size_is(p4)] byte* p3, [in] int p4, [out, string] /* unique */ wchar_t** p5, [out] unsigned int* p6);
+    unsigned int s_ApiClusterMrr([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in] __int64 p2, [in] int p3, [in] int p4, [in] int p5, [in] int p6, [in, unique, size_is(p6)] byte* p7, [out] struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_11* p8[1][1], [out] unsigned int* p9);
+    unsigned int s_ApiCreateGroupEnum([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, unique, size_is(p2)] byte* p1, [in] int p2, [in, unique, size_is(p4)] byte* p3, [in] int p4, [out] /* unique */ struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_13** p5, [out] unsigned int* p6);
+    unsigned int s_ApiCreateResourceEnum([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, unique, size_is(p2)] byte* p1, [in] int p2, [in, unique, size_is(p4)] byte* p3, [in] int p4, [out] /* unique */ struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_15** p5, [out] unsigned int* p6);
+    unsigned int s_ApiExecuteReadBatch([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in, size_is(p1)] byte** p2, [out] int* p3, [out] byte** p4, [out] unsigned int* p5);
+    unsigned int s_ApiRestartResource([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [out] unsigned int* p2);
+    unsigned int s_ApiGetNotifyAsync([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [out, size_is(, *p2)] struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_17** p1, [out] int* p2);
+    unsigned int s_ApiNodeResourceControlAsync([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in] int p2, [in, unique, size_is(p4)] byte* p3, [in] int p4, [out, size_is(p6), length_is(*p7)] byte** p5, [range(0, 2147483647), in] /* range: 0,2147483647 */ int p6, [out] int* p7, [out] int* p8);
+    unsigned int s_ApiResourceControlAsync([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in, unique, size_is(p3)] byte* p2, [in] int p3, [out, size_is(p5), length_is(*p6)] byte** p4, [range(0, 2147483647), in] /* range: 0,2147483647 */ int p5, [out] int* p6, [out] int* p7);
+    unsigned int s_ApiNodeResourceTypeControlAsync([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, string] wchar_t* p1, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p2, [in] int p3, [in, unique, size_is(p5)] byte* p4, [in] int p5, [out, size_is(p7), length_is(*p8)] byte** p6, [range(0, 2147483647), in] /* range: 0,2147483647 */ int p7, [out] int* p8, [out] int* p9);
+    unsigned int s_ApiResourceTypeControlAsync([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, string] wchar_t* p1, [in] int p2, [in, unique, size_is(p4)] byte* p3, [in] int p4, [out, size_is(p6), length_is(*p7)] byte** p5, [range(0, 2147483647), in] /* range: 0,2147483647 */ int p6, [out] int* p7, [out] int* p8);
+    unsigned int s_ApiSyncDatabase([in] handle_t _hProcHandle, [in] int p0, [out] unsigned int* p1);
+    unsigned int s_ApiCreateManagementPoint([in] handle_t _hProcHandle, [in] int p0, [in] int p1, [in, unique] /* unique */ struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_18* p2, [in, unique] /* unique */ struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_20* p3, [out] unsigned int* p4);
+    /* FC_BIND_CONTEXT */ handle_t s_ApiCreateResourceWithId([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, string] wchar_t* p1, [in, string] wchar_t* p2, [in, string] wchar_t* p3, [in] int p4, [out] unsigned int* p5, [out] unsigned int* p6);
+    unsigned int s_ApiAddNotifyResourceTypeV2([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] __int64 p1, [in] int p2, [in, string] wchar_t* p3, [in] int p4, [out] unsigned int* p5);
+    unsigned int s_ApiCaptureLiveDump([in] handle_t _hProcHandle, [in] __int64 p0, [in] GUID* p1, [in, string] wchar_t* p2, [in] __int64 p3, [in] int p4, [in] __int64 p5, [in] __int64 p6, [in] __int64 p7, [in] __int64 p8, [in] int p9, [in, unique, size_is(p9)] byte* p10, [in] GUID* p11, [out] unsigned int* p12);
+    unsigned int s_ApiExecuteReadBatchEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in, size_is(p1)] byte** p2, [in] int p3, [out] int* p4, [out] byte** p5, [out] unsigned int* p6);
+    unsigned int s_ApiClusterMrrAsUser([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in] __int64 p2, [in] int p3, [in] int p4, [in] int p5, [in] int p6, [in, unique, size_is(p6)] byte* p7, [out] struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_11* p8[1][1], [out] unsigned int* p9);
+    unsigned int s_ApiNodeResourceControlAsUserAsync([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in] int p2, [in, unique, size_is(p4)] byte* p3, [in] int p4, [out, size_is(p6), length_is(*p7)] byte** p5, [range(0, 2147483647), in] /* range: 0,2147483647 */ int p6, [out] int* p7, [out] int* p8);
+    unsigned int s_ApiResourceControlAsUserAsync([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in, unique, size_is(p3)] byte* p2, [in] int p3, [out, size_is(p5), length_is(*p6)] byte** p4, [range(0, 2147483647), in] /* range: 0,2147483647 */ int p5, [out] int* p6, [out] int* p7);
+    unsigned int s_ApiNodeResourceTypeControlAsUserAsync([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, string] wchar_t* p1, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p2, [in] int p3, [in, unique, size_is(p5)] byte* p4, [in] int p5, [out, size_is(p7), length_is(*p8)] byte** p6, [range(0, 2147483647), in] /* range: 0,2147483647 */ int p7, [out] int* p8, [out] int* p9);
+    unsigned int s_ApiResourceTypeControlAsUserAsync([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, string] wchar_t* p1, [in] int p2, [in, unique, size_is(p4)] byte* p3, [in] int p4, [out, size_is(p6), length_is(*p7)] byte** p5, [range(0, 2147483647), in] /* range: 0,2147483647 */ int p6, [out] int* p7, [out] int* p8);
+    /* FC_BIND_CONTEXT */ handle_t s_ApiCreateGroupSet([in] handle_t _hProcHandle, [in, string] wchar_t* p0, [out] unsigned int* p1, [out] unsigned int* p2);
+    /* FC_BIND_CONTEXT */ handle_t s_ApiOpenGroupSet([in] handle_t _hProcHandle, [in, string] wchar_t* p0, [out] unsigned int* p1, [out] unsigned int* p2);
+    unsigned int s_ApiCloseGroupSet([in, out, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0);
+    unsigned int s_ApiDeleteGroupSet([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [out] unsigned int* p1);
+    unsigned int s_ApiAddGroupToGroupSet([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [out] unsigned int* p2);
+    unsigned int s_ApiRemoveGroupFromGroupSet([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [out] unsigned int* p1);
+    unsigned int s_ApiMoveGroupToGroupSet([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [out] unsigned int* p2);
+    unsigned int s_ApiAddGroupDependency([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [out] unsigned int* p2);
+    unsigned int s_ApiAddGroupSetDependency([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [out] unsigned int* p2);
+    unsigned int s_ApiAddGroupToGroupSetDependency([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [out] unsigned int* p2);
+    unsigned int s_ApiNodeGroupSetControl([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in] int p2, [in, unique, size_is(p4)] byte* p3, [in] int p4, [out, size_is(p6), length_is(*p7)] byte** p5, [range(0, 2147483647), in] /* range: 0,2147483647 */ int p6, [out] int* p7, [out] int* p8, [out] unsigned int* p9);
+    unsigned int s_ApiGroupSetControl([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in, unique, size_is(p3)] byte* p2, [in] int p3, [out, size_is(p5), length_is(*p6)] byte** p4, [range(0, 2147483647), in] /* range: 0,2147483647 */ int p5, [out] int* p6, [out] int* p7, [out] unsigned int* p8);
+    unsigned int s_ApiSetGroupDependencyExpression([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, string] wchar_t* p1, [out] unsigned int* p2);
+    unsigned int s_ApiRemoveClusterGroupDependency([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [out] unsigned int* p2);
+    unsigned int s_ApiSetGroupSetDependencyExpression([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, string] wchar_t* p1, [out] unsigned int* p2);
+    unsigned int s_ApiRemoveGroupSetDependency([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [out] unsigned int* p2);
+    unsigned int s_ApiRemoveClusterGroupToGroupSetDependency([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [out] unsigned int* p2);
+    unsigned int s_ApiCreateGroupSetEnum([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [out] /* unique */ struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_0** p1, [out] unsigned int* p2);
+    unsigned int s_ApiCreateNetInterfaceEnum([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, string] wchar_t* p1, [in, string] wchar_t* p2, [out] /* unique */ struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_0** p3, [out] unsigned int* p4);
+    unsigned int s_ApiChangeCsvStateEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in] int p2, [in, string] wchar_t* p3, [out] unsigned int* p4);
+    unsigned int s_ApiAddGroupToGroupSetEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in] int p2, [in] int p3, [in] int p4, [in] int p5, [out] unsigned int* p6);
+    unsigned int s_ApiChangeResourceGroupEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in] __int64 p2, [out] unsigned int* p3);
+    unsigned int s_ApiWprStart([in] handle_t _hProcHandle, [in] __int64 p0, [in, ptr, string] wchar_t* p1, [in] __int64 p2, [in] int p3, [in, ptr, string] wchar_t* p4, [in] __int64 p5, [in] GUID* p6, [in] int p7, [in, unique, size_is(p7)] byte* p8, [out] unsigned int* p9);
+    unsigned int s_ApiWprAddMarker([in] handle_t _hProcHandle, [in] __int64 p0, [in, string] wchar_t* p1, [in] GUID* p2, [in, ptr, string] wchar_t* p3, [out] unsigned int* p4);
+    unsigned int s_ApiWprCaptureState([in] handle_t _hProcHandle, [in] __int64 p0, [in, string] wchar_t* p1, [in] GUID* p2, [in, ptr, string] wchar_t* p3, [out] unsigned int* p4);
+    unsigned int s_ApiWprFlush([in] handle_t _hProcHandle, [in] __int64 p0, [in, string] wchar_t* p1, [in] GUID* p2, [in, ptr, string] wchar_t* p3, [out] unsigned int* p4);
+    unsigned int s_ApiWprCancel([in] handle_t _hProcHandle, [in] __int64 p0, [in, string] wchar_t* p1, [in] GUID* p2, [out] unsigned int* p3);
+    unsigned int s_ApiWprStop([in] handle_t _hProcHandle, [in] __int64 p0, [in, string] wchar_t* p1, [in] GUID* p2, [in, ptr, string] wchar_t* p3, [out] unsigned int* p4);
+    unsigned int s_ApiSetClusterNameEx([in] handle_t _hProcHandle, [in, string] wchar_t* p0, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p1, [out] unsigned int* p2);
+    unsigned int s_ApiSetQuorumResourceEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, string] wchar_t* p1, [in] int p2, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p3, [out] unsigned int* p4);
+    /* FC_BIND_CONTEXT */ handle_t s_ApiCreateResourceEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, string] wchar_t* p1, [in, string] wchar_t* p2, [in] int p3, [out] unsigned int* p4, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p5, [out] unsigned int* p6);
+    /* FC_BIND_CONTEXT */ handle_t s_ApiCreateResourceWithIdEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, string] wchar_t* p1, [in, string] wchar_t* p2, [in, string] wchar_t* p3, [in] int p4, [out] unsigned int* p5, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p6, [out] unsigned int* p7);
+    unsigned int s_ApiDeleteResourceEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p1, [out] unsigned int* p2);
+    unsigned int s_ApiSetResourceNameEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, string] wchar_t* p1, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p2, [out] unsigned int* p3);
+    unsigned int s_ApiFailResourceEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p1, [out] unsigned int* p2);
+    unsigned int s_ApiAddResourceDependencyEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p2, [out] unsigned int* p3);
+    unsigned int s_ApiRemoveResourceDependencyEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p2, [out] unsigned int* p3);
+    unsigned int s_ApiAddResourceNodeEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p2, [out] unsigned int* p3);
+    unsigned int s_ApiRemoveResourceNodeEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p2, [out] unsigned int* p3);
+    unsigned int s_ApiCreateResourceTypeEx([in] handle_t _hProcHandle, [in, string] wchar_t* p0, [in, string] wchar_t* p1, [in, string] wchar_t* p2, [in] int p3, [in] int p4, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p5, [out] unsigned int* p6);
+    unsigned int s_ApiDeleteResourceTypeEx([in] handle_t _hProcHandle, [in, string] wchar_t* p0, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p1, [out] unsigned int* p2);
+    /* FC_BIND_CONTEXT */ handle_t s_ApiCreateKeyEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, string] wchar_t* p1, [in] int p2, [in] int p3, [in, unique] /* unique */ struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_2* p4, [out] int* p5, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p6, [out] unsigned int* p7, [out] unsigned int* p8);
+    unsigned int s_ApiSetValueEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, string] wchar_t* p1, [in] int p2, [in, size_is(p4)] byte** p3, [in] int p4, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p5, [out] unsigned int* p6);
+    unsigned int s_ApiDeleteValueEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, string] wchar_t* p1, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p2, [out] unsigned int* p3);
+    unsigned int s_ApiDeleteKeyEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, string] wchar_t* p1, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p2, [out] unsigned int* p3);
+    unsigned int s_ApiSetKeySecurityEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in] struct intf_b97db8b2_4c63_11cf_bff6_08002be23f2f_Struct_3* p2, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p3, [out] unsigned int* p4);
+    unsigned int s_ApiDeleteGroupEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p2, [out] unsigned int* p3);
+    unsigned int s_ApiSetGroupNameEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, string] wchar_t* p1, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p2, [out] unsigned int* p3);
+    unsigned int s_ApiSetGroupNodeListEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, unique, size_is(p2)] wchar_t* p1, [in] int p2, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p3, [out] unsigned int* p4);
+    unsigned int s_ApiEvictNodeEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p1, [out] unsigned int* p2);
+    unsigned int s_ApiNodeResourceControlEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in] int p2, [in, unique, size_is(p4)] byte* p3, [in] int p4, [out, size_is(p6), length_is(*p7)] byte** p5, [in] int p6, [out] int* p7, [out] int* p8, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p9, [out] unsigned int* p10);
+    unsigned int s_ApiResourceControlEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in, unique, size_is(p3)] byte* p2, [in] int p3, [out, size_is(p5), length_is(*p6)] byte** p4, [in] int p5, [out] int* p6, [out] int* p7, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p8, [out] unsigned int* p9);
+    unsigned int s_ApiNodeResourceTypeControlEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, string] wchar_t* p1, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p2, [in] int p3, [in, unique, size_is(p5)] byte* p4, [in] int p5, [out, size_is(p7), length_is(*p8)] byte** p6, [in] int p7, [out] int* p8, [out] int* p9, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p10, [out] unsigned int* p11);
+    unsigned int s_ApiResourceTypeControlEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, string] wchar_t* p1, [in] int p2, [in, unique, size_is(p4)] byte* p3, [in] int p4, [out, size_is(p6), length_is(*p7)] byte** p5, [in] int p6, [out] int* p7, [out] int* p8, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p9, [out] unsigned int* p10);
+    unsigned int s_ApiNodeGroupControlEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in] int p2, [in, unique, size_is(p4)] byte* p3, [in] int p4, [out, size_is(p6), length_is(*p7)] byte** p5, [in] int p6, [out] int* p7, [out] int* p8, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p9, [out] unsigned int* p10);
+    unsigned int s_ApiGroupControlEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in, unique, size_is(p3)] byte* p2, [in] int p3, [out, size_is(p5), length_is(*p6)] byte** p4, [in] int p5, [out] int* p6, [out] int* p7, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p8, [out] unsigned int* p9);
+    unsigned int s_ApiNodeNodeControlEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in] int p2, [in, unique, size_is(p4)] byte* p3, [in] int p4, [out, size_is(p6), length_is(*p7)] byte** p5, [in] int p6, [out] int* p7, [out] int* p8, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p9, [out] unsigned int* p10);
+    unsigned int s_ApiNodeControlEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in, unique, size_is(p3)] byte* p2, [in] int p3, [out, size_is(p5), length_is(*p6)] byte** p4, [in] int p5, [out] int* p6, [out] int* p7, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p8, [out] unsigned int* p9);
+    unsigned int s_ApiSetNetworkNameEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, string] wchar_t* p1, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p2, [out] unsigned int* p3);
+    unsigned int s_ApiNodeNetworkControlEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in] int p2, [in, unique, size_is(p4)] byte* p3, [in] int p4, [out, size_is(p6), length_is(*p7)] byte** p5, [in] int p6, [out] int* p7, [out] int* p8, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p9, [out] unsigned int* p10);
+    unsigned int s_ApiNetworkControlEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in, unique, size_is(p3)] byte* p2, [in] int p3, [out, size_is(p5), length_is(*p6)] byte** p4, [in] int p5, [out] int* p6, [out] int* p7, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p8, [out] unsigned int* p9);
+    unsigned int s_ApiNodeNetInterfaceControlEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in] int p2, [in, unique, size_is(p4)] byte* p3, [in] int p4, [out, size_is(p6), length_is(*p7)] byte** p5, [in] int p6, [out] int* p7, [out] int* p8, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p9, [out] unsigned int* p10);
+    unsigned int s_ApiNetInterfaceControlEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in, unique, size_is(p3)] byte* p2, [in] int p3, [out, size_is(p5), length_is(*p6)] byte** p4, [in] int p5, [out] int* p6, [out] int* p7, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p8, [out] unsigned int* p9);
+    unsigned int s_ApiNodeClusterControlEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in] int p2, [in, unique, size_is(p4)] byte* p3, [in] int p4, [out, size_is(p6), length_is(*p7)] byte** p5, [in] int p6, [out] int* p7, [out] int* p8, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p9, [out] unsigned int* p10);
+    unsigned int s_ApiClusterControlEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in, unique, size_is(p3)] byte* p2, [in] int p3, [out, size_is(p5), length_is(*p6)] byte** p4, [in] int p5, [out] int* p6, [out] int* p7, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p8, [out] unsigned int* p9);
+    unsigned int s_ApiExecuteBatchEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in, size_is(p1)] byte** p2, [out] int* p3, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p4, [out] unsigned int* p5);
+    unsigned int s_ApiPauseNodeEx2([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in] int p2, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p3, [out] unsigned int* p4);
+    unsigned int s_ApiPauseNodeWithDrainTargetEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p2, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p3, [out] unsigned int* p4);
+    unsigned int s_ApiResumeNodeEx2([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in] int p2, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p3, [out] unsigned int* p4);
+    unsigned int s_ApiOnlineGroupEx2([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in, size_is(p3)] byte** p2, [in] int p3, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p4, [out] unsigned int* p5);
+    unsigned int s_ApiOfflineGroupEx2([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in, size_is(p3)] byte** p2, [in] int p3, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p4, [out] unsigned int* p5);
+    unsigned int s_ApiMoveGroupEx2([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in, size_is(p3)] byte** p2, [in] int p3, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p4, [out] unsigned int* p5);
+    unsigned int s_ApiMoveGroupToNodeEx2([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in] int p2, [in, size_is(p4)] byte** p3, [in] int p4, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p5, [out] unsigned int* p6);
+    unsigned int s_ApiOnlineResourceEx2([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in, size_is(p3)] byte** p2, [in] int p3, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p4, [out] unsigned int* p5);
+    unsigned int s_ApiOfflineResourceEx2([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in, size_is(p3)] byte** p2, [in] int p3, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p4, [out] unsigned int* p5);
+    unsigned int s_ApiRestartResourceEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p2, [out] unsigned int* p3);
+    unsigned int s_ApiNodeResourceControlAsyncEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in] int p2, [in, unique, size_is(p4)] byte* p3, [in] int p4, [out, size_is(p6), length_is(*p7)] byte** p5, [range(0, 2147483647), in] /* range: 0,2147483647 */ int p6, [out] int* p7, [out] int* p8, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p9);
+    unsigned int s_ApiResourceControlAsyncEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in, unique, size_is(p3)] byte* p2, [in] int p3, [out, size_is(p5), length_is(*p6)] byte** p4, [range(0, 2147483647), in] /* range: 0,2147483647 */ int p5, [out] int* p6, [out] int* p7, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p8);
+    unsigned int s_ApiNodeResourceTypeControlAsyncEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, string] wchar_t* p1, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p2, [in] int p3, [in, unique, size_is(p5)] byte* p4, [in] int p5, [out, size_is(p7), length_is(*p8)] byte** p6, [range(0, 2147483647), in] /* range: 0,2147483647 */ int p7, [out] int* p8, [out] int* p9, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p10);
+    unsigned int s_ApiResourceTypeControlAsyncEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, string] wchar_t* p1, [in] int p2, [in, unique, size_is(p4)] byte* p3, [in] int p4, [out, size_is(p6), length_is(*p7)] byte** p5, [range(0, 2147483647), in] /* range: 0,2147483647 */ int p6, [out] int* p7, [out] int* p8, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p9);
+    unsigned int s_ApiCaptureLiveDumpEx([in] handle_t _hProcHandle, [in] __int64 p0, [in] GUID* p1, [in, string] wchar_t* p2, [in] __int64 p3, [in] int p4, [in] __int64 p5, [in] __int64 p6, [in] __int64 p7, [in] __int64 p8, [in] int p9, [in, unique, size_is(p9)] byte* p10, [in] GUID* p11, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p12, [out] unsigned int* p13);
+    unsigned int s_ApiNodeResourceControlAsUserAsyncEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in] int p2, [in, unique, size_is(p4)] byte* p3, [in] int p4, [out, size_is(p6), length_is(*p7)] byte** p5, [range(0, 2147483647), in] /* range: 0,2147483647 */ int p6, [out] int* p7, [out] int* p8, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p9);
+    unsigned int s_ApiResourceControlAsUserAsyncEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in, unique, size_is(p3)] byte* p2, [in] int p3, [out, size_is(p5), length_is(*p6)] byte** p4, [range(0, 2147483647), in] /* range: 0,2147483647 */ int p5, [out] int* p6, [out] int* p7, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p8);
+    unsigned int s_ApiNodeResourceTypeControlAsUserAsyncEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, string] wchar_t* p1, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p2, [in] int p3, [in, unique, size_is(p5)] byte* p4, [in] int p5, [out, size_is(p7), length_is(*p8)] byte** p6, [range(0, 2147483647), in] /* range: 0,2147483647 */ int p7, [out] int* p8, [out] int* p9, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p10);
+    unsigned int s_ApiResourceTypeControlAsUserAsyncEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, string] wchar_t* p1, [in] int p2, [in, unique, size_is(p4)] byte* p3, [in] int p4, [out, size_is(p6), length_is(*p7)] byte** p5, [range(0, 2147483647), in] /* range: 0,2147483647 */ int p6, [out] int* p7, [out] int* p8, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p9);
+    unsigned int s_ApiDeleteGroupSetEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p1, [out] unsigned int* p2);
+    unsigned int s_ApiRemoveGroupFromGroupSetEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p1, [out] unsigned int* p2);
+    unsigned int s_ApiMoveGroupToGroupSetEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p2, [out] unsigned int* p3);
+    unsigned int s_ApiAddGroupDependencyEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p2, [out] unsigned int* p3);
+    unsigned int s_ApiAddGroupSetDependencyEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p2, [out] unsigned int* p3);
+    unsigned int s_ApiAddGroupToGroupSetDependencyEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p2, [out] unsigned int* p3);
+    unsigned int s_ApiNodeGroupSetControlEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in] int p2, [in, unique, size_is(p4)] byte* p3, [in] int p4, [out, size_is(p6), length_is(*p7)] byte** p5, [range(0, 2147483647), in] /* range: 0,2147483647 */ int p6, [out] int* p7, [out] int* p8, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p9, [out] unsigned int* p10);
+    unsigned int s_ApiGroupSetControlEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in, unique, size_is(p3)] byte* p2, [in] int p3, [out, size_is(p5), length_is(*p6)] byte** p4, [range(0, 2147483647), in] /* range: 0,2147483647 */ int p5, [out] int* p6, [out] int* p7, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p8, [out] unsigned int* p9);
+    unsigned int s_ApiSetGroupDependencyExpressionEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, string] wchar_t* p1, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p2, [out] unsigned int* p3);
+    unsigned int s_ApiRemoveClusterGroupDependencyEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p2, [out] unsigned int* p3);
+    unsigned int s_ApiSetGroupSetDependencyExpressionEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, string] wchar_t* p1, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p2, [out] unsigned int* p3);
+    unsigned int s_ApiRemoveGroupSetDependencyEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p2, [out] unsigned int* p3);
+    unsigned int s_ApiRemoveClusterGroupToGroupSetDependencyEx([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p2, [out] unsigned int* p3);
+    unsigned int s_ApiChangeCsvStateEx2([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in] int p1, [in] int p2, [in, string] wchar_t* p3, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p4, [out] unsigned int* p5);
+    unsigned int s_ApiAddGroupToGroupSetEx2([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in] int p2, [in] int p3, [in] int p4, [in] int p5, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p6, [out] unsigned int* p7);
+    unsigned int s_ApiChangeResourceGroupEx2([in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p0, [in, context_handle] /* FC_BIND_CONTEXT */ handle_t* p1, [in] __int64 p2, [in, unique, string, range(0, 512)] /* unique */ /* FC_SUPPLEMENT FC_C_WSTRING Range(0, 512) */ wchar_t* p3, [out] unsigned int* p4);
+    unsigned int s_ApiClusterGetMaximumAccessForToken([in] handle_t _hProcHandle, [in] /* FC_SYSTEM_HANDLE Token */ __int64 p0, [out] int* p1, [out] unsigned int* p2);
+    unsigned int s_ApiWprFlush2([in] handle_t _hProcHandle, [in] __int64 p0, [in, string] wchar_t* p1, [in] GUID* p2, [in, ptr, string] wchar_t* p3, [in, ptr, string] wchar_t* p4, [out] unsigned int* p5);
+    unsigned int s_ApiWprStop2([in] handle_t _hProcHandle, [in] __int64 p0, [in, string] wchar_t* p1, [in] GUID* p2, [in, ptr, string] wchar_t* p3, [in, ptr, string] wchar_t* p4, [out] unsigned int* p5);
+    unsigned int s_ApiGetNetInterfaceEx([in] handle_t _hProcHandle, [in, string] wchar_t* p0, [in, string] wchar_t* p1, [out, string] /* unique */ wchar_t** p2, [out] int* p3, [out] unsigned int* p4);
+    unsigned int s_ApiClusterNativeUpdateControl([in] handle_t _hProcHandle, [in, unique, size_is(p1)] byte* p0, [in] int p1, [out, size_is(p3), length_is(*p4)] byte** p2, [in] int p3, [out] int* p4, [out] int* p5, [out] unsigned int* p6);
+}
+
+
+
+
+

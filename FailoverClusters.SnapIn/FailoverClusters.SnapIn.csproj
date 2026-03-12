@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <AssemblyName>FailoverClusters.Snapin</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net46</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>11.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="Microsoft.ManagementConsole" />
+    <Reference Include="Microsoft.FailoverClusters.Framework">
+      <HintPath>C:\Windows\Cluster\Microsoft.FailoverClusters.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="FailoverClusters.Common" />
+    <Reference Include="FailoverClusters.ObjectModel">
+      <HintPath>C:\Windows\Cluster\FailoverClusters.ObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="Microsoft.FailoverClusters.UIFramework" />
+    <Reference Include="Microsoft.FailoverClusters.UI.Common" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Management" />
+    <Reference Include="Microsoft.Virtualization.Client.Common" />
+    <Reference Include="FailoverClusters.Wizards" />
+    <Reference Include="Microsoft.FailoverClusters.Validation" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="Microsoft.Windows.FileServer.Management.ServerManagerProxy" />
+    <Reference Include="Microsoft.Virtualization.Client.Common.Types" />
+  </ItemGroup>
+</Project>

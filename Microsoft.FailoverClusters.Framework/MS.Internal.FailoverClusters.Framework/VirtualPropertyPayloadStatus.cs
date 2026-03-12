@@ -1,0 +1,10 @@
+namespace MS.Internal.FailoverClusters.Framework;
+
+internal enum VirtualPropertyPayloadStatus
+{
+	None,
+	Fetching,
+	Deleted,
+	Success,
+	Error
+}

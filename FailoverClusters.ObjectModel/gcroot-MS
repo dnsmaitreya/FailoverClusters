@@ -1,0 +1,9 @@
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+[StructLayout(LayoutKind.Sequential, Size = 8)]
+[NativeCppClass]
+internal struct gcroot_003CMS_003A_003AInternal_003A_003AServerClusters_003A_003AEventLogSubscriptionCallbackDelegate_0020_005E_003E
+{
+	private long _003Calignment_0020member_003E;
+}
