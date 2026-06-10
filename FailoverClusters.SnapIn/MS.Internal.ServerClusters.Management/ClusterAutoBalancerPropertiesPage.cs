@@ -1,9 +1,9 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.Framework;
+using FailoverClusters.Framework;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -94,10 +94,10 @@ internal class ClusterAutoBalancerPropertiesPage : PropertyPageControlBase
 			});
 			countDown.Wait();
 		}
-		if (autoBalancerModeProperty != null && autoBalancerModeProperty.PropertyType == Microsoft.FailoverClusters.Framework.ClusterPropertyType.UnsignedInt)
+		if (autoBalancerModeProperty != null && autoBalancerModeProperty.PropertyType == FailoverClusters.Framework.ClusterPropertyType.UnsignedInt)
 		{
 			autoBalancerModeValue = (AutoBalancerMode)(uint)autoBalancerModeProperty.Value;
-			if (autoBalancerLevelProperty != null && autoBalancerLevelProperty.PropertyType == Microsoft.FailoverClusters.Framework.ClusterPropertyType.UnsignedInt)
+			if (autoBalancerLevelProperty != null && autoBalancerLevelProperty.PropertyType == FailoverClusters.Framework.ClusterPropertyType.UnsignedInt)
 			{
 				autoBalancerLevelValue = (AutoBalancerLevel)(uint)autoBalancerLevelProperty.Value;
 				return;
@@ -288,3 +288,4 @@ internal class ClusterAutoBalancerPropertiesPage : PropertyPageControlBase
 		((Control)(object)this).PerformLayout();
 	}
 }
+

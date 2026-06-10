@@ -1,5 +1,5 @@
-using System.Globalization;
-using Microsoft.ManagementConsole;
+﻿using System.Globalization;
+using ManagementConsole;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -30,3 +30,4 @@ internal class SnapinActionEventArgs
 		return CreateWaitDialog(initialStatus);
 	}
 }
+

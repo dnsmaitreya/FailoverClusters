@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
@@ -48,7 +48,7 @@ public class QuorumManager
 		return result;
 	}
 
-	[SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+	[SuppressMessage("Performance", "CA1811:AvoidUncalledPrivateCode")]
 	private void OnOperationProgress(OperationProgressEventArgs e)
 	{
 		_003Cbacking_store_003EOperationProgress?.Invoke(this, e);
@@ -204,3 +204,4 @@ public class QuorumManager
 		return StorageQuorumSettings.CreateLegacyDiskQuorumSettings(resource);
 	}
 }
+

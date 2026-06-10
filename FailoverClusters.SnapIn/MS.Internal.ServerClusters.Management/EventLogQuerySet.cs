@@ -1,10 +1,10 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 using System.Threading;
-using Microsoft.FailoverClusters.UI.Common;
+using FailoverClusters.UI.Common;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -398,3 +398,4 @@ internal class EventLogQuerySet : IDisposable
 		GC.SuppressFinalize(this);
 	}
 }
+

@@ -1,11 +1,11 @@
-using System.Windows.Input;
-using Microsoft.FailoverClusters.ClusterSnapIn;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.ManagementConsole;
+﻿using System.Windows.Input;
+using FailoverClusters.ClusterSnapIn;
+using FailoverClusters.Framework;
+using FailoverClusters.UI.Common;
+using ManagementConsole;
 using MS.Internal.ServerClusters.Management;
 
-namespace Microsoft.FailoverClusters.SnapIn;
+namespace FailoverClusters.SnapIn;
 
 internal class AddPoolsActionPaneItem : MmcActionPaneItem
 {
@@ -26,3 +26,4 @@ internal class AddPoolsActionPaneItem : MmcActionPaneItem
 		new AddPoolsOperation(FrameworkCluster, ClusterContext.Cluster).Execute();
 	}
 }
+

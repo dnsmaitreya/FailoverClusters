@@ -1,4 +1,4 @@
-#define DEBUG
+﻿#define DEBUG
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,8 +11,8 @@ using System.Runtime.InteropServices;
 using System.Security.AccessControl;
 using System.Threading;
 using _003CCppImplementationDetails_003E;
-using Microsoft.FailoverClusters.NativeHelp;
-using Microsoft.FailoverClusters.UI.Common;
+using FailoverClusters.NativeHelp;
+using FailoverClusters.UI.Common;
 
 namespace MS.Internal.ServerClusters;
 
@@ -5304,3 +5304,4 @@ public class ClusterResource : ClusterItem
 		}
 	}
 }
+

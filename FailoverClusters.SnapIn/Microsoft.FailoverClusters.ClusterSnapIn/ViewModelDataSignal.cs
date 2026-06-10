@@ -1,7 +1,8 @@
-namespace Microsoft.FailoverClusters.ClusterSnapIn;
+﻿namespace FailoverClusters.ClusterSnapIn;
 
 public enum ViewModelDataSignal
 {
 	Refresh,
 	TargetedRefresh
 }
+

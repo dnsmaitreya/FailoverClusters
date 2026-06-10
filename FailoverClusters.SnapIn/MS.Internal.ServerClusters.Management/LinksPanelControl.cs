@@ -1,11 +1,11 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.ManagementConsole;
+using FailoverClusters.UI.Common;
+using ManagementConsole;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -19,7 +19,7 @@ internal class LinksPanelControl : SnapinUserControl
 
 	private Collection<Control> items;
 
-	private Microsoft.ManagementConsole.View view;
+	private ManagementConsole.View view;
 
 	private IScopeNodeContext parentContext;
 
@@ -105,9 +105,9 @@ internal class LinksPanelControl : SnapinUserControl
 	public static LinksPanelControl CreateMoreInformationPanel(StartPageContainerControl baseFormControl)
 	{
 		LinksPanelControl linksPanelControl = new LinksPanelControl(baseFormControl, "informationPanel");
-		linksPanelControl.AddUrlLink(Resources.FailoverTopics_Title_Text, "https://go.microsoft.com/fwlink/?LinkID=230640");
-		linksPanelControl.AddUrlLink(Resources.FailoverCommunities_Title_Text, "https://go.microsoft.com/fwlink/?LinkID=230641");
-		linksPanelControl.AddUrlLink(Resources.MicrosoftSupport_Title_Text, "https://go.microsoft.com/fwlink/?LinkID=230642");
+		linksPanelControl.AddUrlLink(Resources.FailoverTopics_Title_Text, "https://go.com/fwlink/?LinkID=230640");
+		linksPanelControl.AddUrlLink(Resources.FailoverCommunities_Title_Text, "https://go.com/fwlink/?LinkID=230641");
+		linksPanelControl.AddUrlLink(Resources.MicrosoftSupport_Title_Text, "https://go.com/fwlink/?LinkID=230642");
 		return linksPanelControl;
 	}
 
@@ -326,3 +326,4 @@ internal class LinksPanelControl : SnapinUserControl
 		((Control)this).ResumeLayout(performLayout: false);
 	}
 }
+

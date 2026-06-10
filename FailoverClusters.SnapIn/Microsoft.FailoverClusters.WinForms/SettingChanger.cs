@@ -1,7 +1,7 @@
-using System;
+﻿using System;
 using System.Threading;
 
-namespace Microsoft.FailoverClusters.WinForms;
+namespace FailoverClusters.WinForms;
 
 internal class SettingChanger : IDisposable
 {
@@ -28,3 +28,4 @@ internal class SettingChanger : IDisposable
 		completed.Dispose();
 	}
 }
+

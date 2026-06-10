@@ -1,7 +1,7 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Windows.Forms;
-using Microsoft.ManagementConsole;
+using ManagementConsole;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -51,3 +51,4 @@ internal class ErrorPropertyPage : PropertyPageControlBase
 		((Control)(object)this).ResumeLayout(performLayout: false);
 	}
 }
+

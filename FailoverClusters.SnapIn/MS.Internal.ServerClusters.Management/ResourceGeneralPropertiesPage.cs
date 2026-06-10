@@ -1,10 +1,10 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.FailoverClusters.UI.Controls;
-using Microsoft.FailoverClusters.UIFramework;
+using FailoverClusters.UI.Common;
+using FailoverClusters.UI.Controls;
+using FailoverClusters.UIFramework;
 using MS.Internal.ServerClusters.Controls;
 
 namespace MS.Internal.ServerClusters.Management;
@@ -253,3 +253,4 @@ internal class ResourceGeneralPropertiesPage : ResourcePropertiesPage
 		((Control)(object)this).PerformLayout();
 	}
 }
+

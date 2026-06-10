@@ -1,5 +1,5 @@
-using System.ComponentModel;
-using Microsoft.ManagementConsole;
+﻿using System.ComponentModel;
+using ManagementConsole;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -13,3 +13,4 @@ public class MySnapInInstaller : SnapInInstaller
 		components = new Container();
 	}
 }
+

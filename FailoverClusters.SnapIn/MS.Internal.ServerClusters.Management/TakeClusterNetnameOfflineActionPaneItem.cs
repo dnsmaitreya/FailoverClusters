@@ -1,5 +1,5 @@
-using System.Windows.Input;
-using Microsoft.ManagementConsole;
+﻿using System.Windows.Input;
+using ManagementConsole;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -16,3 +16,4 @@ internal class TakeClusterNetnameOfflineActionPaneItem : ResourceContextActionPa
 		base.ResourceContext.OnTakeOffline(sender, e2);
 	}
 }
+

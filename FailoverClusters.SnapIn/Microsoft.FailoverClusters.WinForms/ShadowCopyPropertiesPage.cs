@@ -1,25 +1,25 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Globalization;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.FailoverClusters.UI.Controls;
+using FailoverClusters.Framework;
+using FailoverClusters.UI.Common;
+using FailoverClusters.UI.Controls;
 using MS.Internal.ServerClusters;
 using MS.Internal.ServerClusters.Management;
 
-namespace Microsoft.FailoverClusters.WinForms;
+namespace FailoverClusters.WinForms;
 
 internal class ShadowCopyPropertiesPage : ResourcePropertyPage
 {
 	private byte[] triggerArray;
 
-	private readonly Dictionary<Microsoft.FailoverClusters.Framework.ClusterDiskPartition, byte[]> triggerArrayDictionary = new Dictionary<Microsoft.FailoverClusters.Framework.ClusterDiskPartition, byte[]>();
+	private readonly Dictionary<FailoverClusters.Framework.ClusterDiskPartition, byte[]> triggerArrayDictionary = new Dictionary<FailoverClusters.Framework.ClusterDiskPartition, byte[]>();
 
-	private Microsoft.FailoverClusters.Framework.ResourceState state;
+	private FailoverClusters.Framework.ResourceState state;
 
 	private string emptyMsg;
 
@@ -27,7 +27,7 @@ internal class ShadowCopyPropertiesPage : ResourcePropertyPage
 
 	private string taskName;
 
-	private readonly Dictionary<Microsoft.FailoverClusters.Framework.ClusterDiskPartition, string> tasksNameDictionary = new Dictionary<Microsoft.FailoverClusters.Framework.ClusterDiskPartition, string>();
+	private readonly Dictionary<FailoverClusters.Framework.ClusterDiskPartition, string> tasksNameDictionary = new Dictionary<FailoverClusters.Framework.ClusterDiskPartition, string>();
 
 	private int lastSelectedIndex = -1;
 
@@ -41,13 +41,13 @@ internal class ShadowCopyPropertiesPage : ResourcePropertyPage
 
 	private string volumeGuid;
 
-	private readonly Dictionary<Microsoft.FailoverClusters.Framework.ClusterDiskPartition, string> volumeGuidDictionary = new Dictionary<Microsoft.FailoverClusters.Framework.ClusterDiskPartition, string>();
+	private readonly Dictionary<FailoverClusters.Framework.ClusterDiskPartition, string> volumeGuidDictionary = new Dictionary<FailoverClusters.Framework.ClusterDiskPartition, string>();
 
 	private readonly int TriggerSize = 48;
 
 	private Guid resourceId;
 
-	private readonly Microsoft.FailoverClusters.Framework.Cluster cluster;
+	private readonly FailoverClusters.Framework.Cluster cluster;
 
 	private Resource resource;
 
@@ -79,7 +79,7 @@ internal class ShadowCopyPropertiesPage : ResourcePropertyPage
 		InitializeComponent();
 	}
 
-	internal ShadowCopyPropertiesPage(Microsoft.FailoverClusters.Framework.Cluster cluster, Guid resourceId)
+	internal ShadowCopyPropertiesPage(FailoverClusters.Framework.Cluster cluster, Guid resourceId)
 		: this()
 	{
 		Exceptions.ThrowIfNull((object)cluster, "cluster");
@@ -97,7 +97,7 @@ internal class ShadowCopyPropertiesPage : ResourcePropertyPage
 		if (((ListView)(object)volumesListView).SelectedItems.Count > 0)
 		{
 			lastSelectedIndex = ((ListView)(object)volumesListView).SelectedIndices[0];
-			Microsoft.FailoverClusters.Framework.ClusterDiskPartition clusterDiskPartition = (Microsoft.FailoverClusters.Framework.ClusterDiskPartition)((ListView)(object)volumesListView).SelectedItems[0].Tag;
+			FailoverClusters.Framework.ClusterDiskPartition clusterDiskPartition = (FailoverClusters.Framework.ClusterDiskPartition)((ListView)(object)volumesListView).SelectedItems[0].Tag;
 			volumeGuid = clusterDiskPartition.VolumeGuid.ToString();
 			taskName = string.Format(CultureInfo.CurrentCulture, "{0}{{{1}}}", "ShadowCopyVolume", volumeGuid);
 			if (!volumeGuidDictionary.ContainsKey(clusterDiskPartition))
@@ -128,7 +128,7 @@ internal class ShadowCopyPropertiesPage : ResourcePropertyPage
 		{
 			int newSize = 0;
 			string text = ((ListView)(object)volumesListView).SelectedItems[0].Text;
-			Microsoft.FailoverClusters.Framework.ClusterDiskPartition key = (Microsoft.FailoverClusters.Framework.ClusterDiskPartition)((ListView)(object)volumesListView).SelectedItems[0].Tag;
+			FailoverClusters.Framework.ClusterDiskPartition key = (FailoverClusters.Framework.ClusterDiskPartition)((ListView)(object)volumesListView).SelectedItems[0].Tag;
 			if (triggerArrayDictionary.ContainsKey(key))
 			{
 				triggerArray = triggerArrayDictionary[key];
@@ -204,10 +204,10 @@ internal class ShadowCopyPropertiesPage : ResourcePropertyPage
 	{
 		//IL_004f: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0055: Expected O, but got Unknown
-		Microsoft.FailoverClusters.Framework.ClusterDiskPartition partition = null;
+		FailoverClusters.Framework.ClusterDiskPartition partition = null;
 		if (((ListView)(object)volumesListView).SelectedItems.Count > 0)
 		{
-			partition = (Microsoft.FailoverClusters.Framework.ClusterDiskPartition)((ListView)(object)volumesListView).SelectedItems[0].Tag;
+			partition = (FailoverClusters.Framework.ClusterDiskPartition)((ListView)(object)volumesListView).SelectedItems[0].Tag;
 		}
 		UIThreadHandlerV function = (UIThreadHandlerV)delegate
 		{
@@ -244,14 +244,14 @@ internal class ShadowCopyPropertiesPage : ResourcePropertyPage
 	private void LoadDiskInfo(StorageResource diskResource)
 	{
 		partitions.Clear();
-		if (state != Microsoft.FailoverClusters.Framework.ResourceState.Online)
+		if (state != FailoverClusters.Framework.ResourceState.Online)
 		{
 			emptyMsg = Resources.DiskNotOnlineMessage_Text;
 		}
 		try
 		{
-			Microsoft.FailoverClusters.Framework.ClusterDisk diskInfo = diskResource.DiskInfo;
-			if (state != Microsoft.FailoverClusters.Framework.ResourceState.Online)
+			FailoverClusters.Framework.ClusterDisk diskInfo = diskResource.DiskInfo;
+			if (state != FailoverClusters.Framework.ResourceState.Online)
 			{
 				return;
 			}
@@ -260,7 +260,7 @@ internal class ShadowCopyPropertiesPage : ResourcePropertyPage
 				emptyMsg = Resources.DiskNoPartition_Text;
 				return;
 			}
-			foreach (Microsoft.FailoverClusters.Framework.ClusterDiskPartition partition in diskInfo.Partitions)
+			foreach (FailoverClusters.Framework.ClusterDiskPartition partition in diskInfo.Partitions)
 			{
 				ListViewItem listViewItem = new ListViewItem((!string.IsNullOrEmpty(partition.DriveLetter)) ? string.Format(CultureInfo.InvariantCulture, "{0}:\\", partition.DriveLetter) : partition.Name);
 				listViewItem.ImageIndex = Icons.PhysicalDiskIndex;
@@ -350,9 +350,9 @@ internal class ShadowCopyPropertiesPage : ResourcePropertyPage
 
 	protected override bool SaveProperties()
 	{
-		foreach (KeyValuePair<Microsoft.FailoverClusters.Framework.ClusterDiskPartition, byte[]> item in triggerArrayDictionary)
+		foreach (KeyValuePair<FailoverClusters.Framework.ClusterDiskPartition, byte[]> item in triggerArrayDictionary)
 		{
-			Microsoft.FailoverClusters.Framework.ClusterDiskPartition key = item.Key;
+			FailoverClusters.Framework.ClusterDiskPartition key = item.Key;
 			byte[] value = item.Value;
 			string text = tasksNameDictionary[key];
 			int num = (int)NativeMethods.ClusterTaskChange_TS_V1(cluster.Name, text, value.Length / TriggerSize, value, value.Length);
@@ -584,3 +584,4 @@ internal class ShadowCopyPropertiesPage : ResourcePropertyPage
 		((Control)(object)this).PerformLayout();
 	}
 }
+

@@ -1,8 +1,8 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.WinForms;
+using FailoverClusters.WinForms;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -100,3 +100,4 @@ internal static class ClusterHelp
 		return resource.DisplayName;
 	}
 }
+

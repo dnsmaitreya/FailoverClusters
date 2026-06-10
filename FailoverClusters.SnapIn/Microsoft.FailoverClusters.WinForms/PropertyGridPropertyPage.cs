@@ -1,13 +1,13 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.UI.Common;
+using FailoverClusters.Framework;
+using FailoverClusters.UI.Common;
 using MS.Internal.ServerClusters;
 using MS.Internal.ServerClusters.Management;
 
-namespace Microsoft.FailoverClusters.WinForms;
+namespace FailoverClusters.WinForms;
 
 internal class PropertyGridPropertyPage : ResourcePropertyPage
 {
@@ -21,7 +21,7 @@ internal class PropertyGridPropertyPage : ResourcePropertyPage
 
 	private readonly Guid resourceId;
 
-	private readonly Microsoft.FailoverClusters.Framework.Cluster cluster;
+	private readonly FailoverClusters.Framework.Cluster cluster;
 
 	private Resource resource;
 
@@ -33,7 +33,7 @@ internal class PropertyGridPropertyPage : ResourcePropertyPage
 		InitializeComponent();
 	}
 
-	internal PropertyGridPropertyPage(Microsoft.FailoverClusters.Framework.Cluster cluster, Guid resourceId)
+	internal PropertyGridPropertyPage(FailoverClusters.Framework.Cluster cluster, Guid resourceId)
 		: base(Resources.PropertyGrid_Text)
 	{
 		Exceptions.ThrowIfNull((object)cluster, "cluster");
@@ -217,3 +217,4 @@ internal class PropertyGridPropertyPage : ResourcePropertyPage
 		base.IsDirty = (propertyGridDirty = true);
 	}
 }
+

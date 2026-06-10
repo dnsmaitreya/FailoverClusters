@@ -1,8 +1,8 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.Win32;
+using FailoverClusters.Framework;
+using FailoverClusters.UI.Common;
+using Win32;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -84,3 +84,4 @@ internal class ClusterDatabase
 		}
 	}
 }
+

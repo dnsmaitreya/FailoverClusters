@@ -1,11 +1,11 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Management;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using Microsoft.FailoverClusters.UI.Common;
+using FailoverClusters.UI.Common;
 
 namespace MS.Internal.ServerClusters;
 
@@ -585,3 +585,4 @@ public class ClusterDisk : IComparable<ClusterDisk>
 		m_diskId = ClusterDiskId.CreateDiskSignature(signature);
 	}
 }
+

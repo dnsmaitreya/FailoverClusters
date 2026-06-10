@@ -1,13 +1,13 @@
-using System;
+﻿using System;
 using System.Globalization;
 using System.Windows.Input;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.UIFramework;
-using Microsoft.ManagementConsole;
+using FailoverClusters.Framework;
+using FailoverClusters.UIFramework;
+using ManagementConsole;
 using MS.Internal.ServerClusters;
 using MS.Internal.ServerClusters.Management;
 
-namespace Microsoft.FailoverClusters.ClusterSnapIn;
+namespace FailoverClusters.ClusterSnapIn;
 
 public class MoveGroupActionPaneItem : MmcActionPaneItem
 {
@@ -29,12 +29,12 @@ public class MoveGroupActionPaneItem : MmcActionPaneItem
 	{
 		//IL_004f: Unknown result type (might be due to invalid IL or missing references)
 		//IL_0056: Expected O, but got Unknown
-		if (!(base.Action is Microsoft.ManagementConsole.Action action))
+		if (!(base.Action is ManagementConsole.Action action))
 		{
 			throw new InvalidOperationException("Action must be a MgmtConsoleAction");
 		}
 		INotifyUser notifyUserFromSender = ActionData.GetNotifyUserFromSender(sender);
-		Microsoft.FailoverClusters.Framework.Node node = null;
+		FailoverClusters.Framework.Node node = null;
 		if (!moveToBest)
 		{
 			UIDialogProxyCommand val = new UIDialogProxyCommand(base.Command as ClusterCommand, parentCommand, false);
@@ -43,7 +43,7 @@ public class MoveGroupActionPaneItem : MmcActionPaneItem
 			{
 				return;
 			}
-			node = val.OutputObject as Microsoft.FailoverClusters.Framework.Node;
+			node = val.OutputObject as FailoverClusters.Framework.Node;
 			if (node == null)
 			{
 				throw new InvalidOperationException("Dialog chooser did not pick object of the correct type");
@@ -69,3 +69,4 @@ public class MoveGroupActionPaneItem : MmcActionPaneItem
 		});
 	}
 }
+

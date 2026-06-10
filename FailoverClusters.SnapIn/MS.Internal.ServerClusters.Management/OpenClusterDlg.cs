@@ -1,12 +1,12 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.FailoverClusters.UI.Controls;
+using FailoverClusters.UI.Common;
+using FailoverClusters.UI.Controls;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -251,3 +251,4 @@ internal class OpenClusterDlg : SnapinForm
 		((Control)this).ResumeLayout(performLayout: false);
 	}
 }
+

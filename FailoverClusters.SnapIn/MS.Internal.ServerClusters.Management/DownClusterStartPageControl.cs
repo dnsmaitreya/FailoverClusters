@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -6,9 +6,9 @@ using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.FailoverClusters.UI.Controls;
-using Microsoft.ManagementConsole;
+using FailoverClusters.UI.Common;
+using FailoverClusters.UI.Controls;
+using ManagementConsole;
 using MS.Internal.ServerClusters.Controls;
 
 namespace MS.Internal.ServerClusters.Management;
@@ -473,3 +473,4 @@ internal class DownClusterStartPageControl : StartPageContainerControl
 		StartSummaryUpdate(UpdateReason.Update);
 	}
 }
+

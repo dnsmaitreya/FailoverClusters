@@ -1,11 +1,11 @@
-using System;
+﻿using System;
 using System.Globalization;
 using System.IO;
 using System.Windows.Forms;
 using MS.Internal.ServerClusters;
 using MS.Internal.ServerClusters.Management;
 
-namespace Microsoft.FailoverClusters.SnapIn;
+namespace FailoverClusters.SnapIn;
 
 internal class AddDisksOperation
 {
@@ -160,3 +160,4 @@ internal class AddDisksOperation
 		}
 	}
 }
+

@@ -1,7 +1,7 @@
-using System;
+﻿using System;
 using System.ComponentModel;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.ManagementConsole;
+using FailoverClusters.Framework;
+using ManagementConsole;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -55,7 +55,7 @@ internal class ActionData : IDisposable
 
 	private void SubscribeToTriggered()
 	{
-		if (mmcAction is Microsoft.ManagementConsole.Action action)
+		if (mmcAction is ManagementConsole.Action action)
 		{
 			action.Triggered += AsyncActionHandler;
 		}
@@ -69,7 +69,7 @@ internal class ActionData : IDisposable
 	{
 		if (mmcAction != null)
 		{
-			if (mmcAction is Microsoft.ManagementConsole.Action action)
+			if (mmcAction is ManagementConsole.Action action)
 			{
 				action.Triggered -= AsyncActionHandler;
 			}
@@ -163,3 +163,4 @@ internal class ActionData : IDisposable
 		return cluAdminScopeNode.NotifyUser;
 	}
 }
+

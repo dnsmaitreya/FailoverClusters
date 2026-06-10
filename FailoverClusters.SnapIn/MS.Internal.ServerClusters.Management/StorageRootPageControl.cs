@@ -1,9 +1,9 @@
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.ManagementConsole;
+using FailoverClusters.Framework;
+using FailoverClusters.UI.Common;
+using ManagementConsole;
 using MS.Internal.ServerClusters.Controls;
 
 namespace MS.Internal.ServerClusters.Management;
@@ -135,3 +135,4 @@ internal class StorageRootPageControl : StartPageContainerControl
 		((Control)(object)this).ResumeLayout(performLayout: false);
 	}
 }
+

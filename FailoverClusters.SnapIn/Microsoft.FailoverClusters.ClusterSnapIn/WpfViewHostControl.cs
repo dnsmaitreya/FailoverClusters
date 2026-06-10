@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Globalization;
@@ -6,12 +6,12 @@ using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.SnapIn;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.ManagementConsole;
+using FailoverClusters.SnapIn;
+using FailoverClusters.UI.Common;
+using ManagementConsole;
 using MS.Internal.ServerClusters;
 
-namespace Microsoft.FailoverClusters.ClusterSnapIn;
+namespace FailoverClusters.ClusterSnapIn;
 
 public class WpfViewHostControl<TWpfPageControl, TWpfViewAdapter> : System.Windows.Forms.UserControl, IFormViewControl where TWpfPageControl : System.Windows.Controls.UserControl, new() where TWpfViewAdapter : FormView, IWpfViewAdapter, new()
 {
@@ -150,3 +150,4 @@ public class WpfViewHostControl<TWpfPageControl, TWpfViewAdapter> : System.Windo
 		base.Dispose(disposing);
 	}
 }
+

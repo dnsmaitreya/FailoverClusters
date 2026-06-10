@@ -1,10 +1,10 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Runtime.Serialization;
 using System.Security.Permissions;
 using System.Threading;
-using Microsoft.FailoverClusters.UI.Common;
+using FailoverClusters.UI.Common;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -169,3 +169,4 @@ internal class SnapInSettings : ISerializable
 		}
 	}
 }
+

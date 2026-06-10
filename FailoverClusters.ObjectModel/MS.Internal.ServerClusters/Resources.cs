@@ -1,4 +1,4 @@
-using System.CodeDom.Compiler;
+﻿using System.CodeDom.Compiler;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
@@ -1137,8 +1137,9 @@ internal class Resources
 		}
 	}
 
-	[SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+	[SuppressMessage("Performance", "CA1811:AvoidUncalledPrivateCode")]
 	private protected Resources()
 	{
 	}
 }
+

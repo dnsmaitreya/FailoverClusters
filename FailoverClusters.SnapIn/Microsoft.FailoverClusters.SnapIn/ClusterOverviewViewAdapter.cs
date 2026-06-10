@@ -1,8 +1,8 @@
-using Microsoft.FailoverClusters.ClusterSnapIn;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.UIFramework;
+﻿using FailoverClusters.ClusterSnapIn;
+using FailoverClusters.Framework;
+using FailoverClusters.UIFramework;
 
-namespace Microsoft.FailoverClusters.SnapIn;
+namespace FailoverClusters.SnapIn;
 
 internal class ClusterOverviewViewAdapter : ClusterGridViewAdapterBase<ClusterOverviewViewModel>
 {
@@ -13,3 +13,4 @@ internal class ClusterOverviewViewAdapter : ClusterGridViewAdapterBase<ClusterOv
 		return new ClusterOverviewViewModel(cluster, viewModelData.ViewCommandsProvider, (IScopeNodeNavigationCommandsProvider)(object)new ScopeNodeNavigationCommandsProvider(this));
 	}
 }
+

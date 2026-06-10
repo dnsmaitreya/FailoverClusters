@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -6,9 +6,9 @@ using System.Globalization;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.UI.Controls;
-using Microsoft.FailoverClusters.WinForms;
+using FailoverClusters.Framework;
+using FailoverClusters.UI.Controls;
+using FailoverClusters.WinForms;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -222,8 +222,8 @@ internal class ClusterGeneralPropertiesPage : PropertyPageControlBase
 			}
 			List<SnapinPropertyPageControlBase> pageControls = new List<SnapinPropertyPageControlBase>
 			{
-				new GroupGeneralPropertyPage((Microsoft.FailoverClusters.Framework.Cluster)(object)groupContext.Cluster.FrameworkCluster, groupContext.Group.Id),
-				new GroupFailoverPropertyPage((Microsoft.FailoverClusters.Framework.Cluster)(object)groupContext.Cluster.FrameworkCluster, groupContext.Group.Id)
+				new GroupGeneralPropertyPage((FailoverClusters.Framework.Cluster)(object)groupContext.Cluster.FrameworkCluster, groupContext.Group.Id),
+				new GroupFailoverPropertyPage((FailoverClusters.Framework.Cluster)(object)groupContext.Cluster.FrameworkCluster, groupContext.Group.Id)
 			};
 			SnapinPropertySheet snapinPropertySheet = new SnapinPropertySheet(groupContext.DisplayName, pageControls);
 			try
@@ -467,3 +467,4 @@ internal class ClusterGeneralPropertiesPage : PropertyPageControlBase
 		((Control)(object)this).PerformLayout();
 	}
 }
+

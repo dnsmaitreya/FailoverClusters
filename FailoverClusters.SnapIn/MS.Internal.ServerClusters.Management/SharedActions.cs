@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
@@ -6,13 +6,13 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using System.Windows.Input;
-using Microsoft.FailoverClusters.Configuration;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.FailoverClusters.UI.Wizards;
-using Microsoft.FailoverClusters.UIFramework;
-using Microsoft.ManagementConsole;
-using Microsoft.Virtualization.Client.Common;
+using FailoverClusters.Configuration;
+using FailoverClusters.Framework;
+using FailoverClusters.UI.Common;
+using FailoverClusters.UI.Wizards;
+using FailoverClusters.UIFramework;
+using ManagementConsole;
+using Virtualization.Client.Common;
 using MS.Internal.ServerClusters.Configuration;
 using MS.Internal.ServerClusters.Validation;
 using MS.Internal.ServerClusters.Wizards;
@@ -198,7 +198,7 @@ internal static class SharedActions
 		return ActionFactory.CreateAction(CommandResources.MakeAppOrServiceHAAction_Text, Resources.MakeAppOrServiceHAAction_Description_Text, Icons.HARoleIndex, actionHandler);
 	}
 
-	public static ActionGroup CreateNewVirtualMachineActions(Cluster cluster, Microsoft.FailoverClusters.Framework.Cluster frameworkCluster)
+	public static ActionGroup CreateNewVirtualMachineActions(Cluster cluster, FailoverClusters.Framework.Cluster frameworkCluster)
 	{
 		ActionGroup actionGroup = new ActionGroup(CommandResources.VirtualMachineActions_Text, Resources.VirtualMachineActionsDescription_Text);
 		ActionBase item = ActionFactory.CreateAction(CommandResources.NewVirtualMachineActionGroup_Text, Resources.NewVirtualMachineActionGroupDescription_Text, Icons.HARoleIndex, delegate(object s, SnapinActionEventArgs args)
@@ -580,7 +580,7 @@ internal static class SharedActions
 			return;
 		}
 		Cluster cluster = GetClusterFromSender(sender);
-		Microsoft.FailoverClusters.Framework.Cluster cluster2 = (Microsoft.FailoverClusters.Framework.Cluster)((ActionData)e.Action.Tag).Tag;
+		FailoverClusters.Framework.Cluster cluster2 = (FailoverClusters.Framework.Cluster)((ActionData)e.Action.Tag).Tag;
 		ClusterCommand obj = (isHardDisk ? new CreateVirtualHardDiskCommand(cluster2).GetInstance() : new CreateVirtualMachineCommand(cluster2).GetInstance());
 		UIDialogProxyCommand val = new UIDialogProxyCommand(obj, (ICommand)obj, false);
 		((UIProxyCommand)val).Execute();
@@ -588,7 +588,7 @@ internal static class SharedActions
 		{
 			return;
 		}
-		Microsoft.FailoverClusters.Framework.Node frameworkNode = val.OutputObject as Microsoft.FailoverClusters.Framework.Node;
+		FailoverClusters.Framework.Node frameworkNode = val.OutputObject as FailoverClusters.Framework.Node;
 		if (frameworkNode == null)
 		{
 			throw new InvalidOperationException("Dialog must return a framework node.");
@@ -714,3 +714,4 @@ internal static class SharedActions
 		}
 	}
 }
+

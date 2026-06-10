@@ -1,18 +1,18 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.UI.Common;
+using FailoverClusters.Framework;
+using FailoverClusters.UI.Common;
 using MS.Internal.ServerClusters;
 using MS.Internal.ServerClusters.Controls;
 using MS.Internal.ServerClusters.Management;
 
-namespace Microsoft.FailoverClusters.WinForms;
+namespace FailoverClusters.WinForms;
 
 internal class GroupFailoverPropertyPage : SnapinPropertyPageControlBase
 {
-	private Microsoft.FailoverClusters.Framework.GroupFailbackType autoFailbackType;
+	private FailoverClusters.Framework.GroupFailbackType autoFailbackType;
 
 	private uint failbackWindowStart;
 
@@ -22,7 +22,7 @@ internal class GroupFailoverPropertyPage : SnapinPropertyPageControlBase
 
 	private uint failoverPeriod;
 
-	private Microsoft.FailoverClusters.Framework.GroupType groupType;
+	private FailoverClusters.Framework.GroupType groupType;
 
 	private uint defaultFailoverThreshold;
 
@@ -32,7 +32,7 @@ internal class GroupFailoverPropertyPage : SnapinPropertyPageControlBase
 
 	private readonly Guid groupId;
 
-	private readonly Microsoft.FailoverClusters.Framework.Cluster cluster;
+	private readonly FailoverClusters.Framework.Cluster cluster;
 
 	private Group group;
 
@@ -87,7 +87,7 @@ internal class GroupFailoverPropertyPage : SnapinPropertyPageControlBase
 		CommonConstruct();
 	}
 
-	internal GroupFailoverPropertyPage(Microsoft.FailoverClusters.Framework.Cluster cluster, Guid groupId)
+	internal GroupFailoverPropertyPage(FailoverClusters.Framework.Cluster cluster, Guid groupId)
 		: base(Resources.Failover_Text)
 	{
 		Exceptions.ThrowIfNull((object)cluster, "cluster");
@@ -157,7 +157,7 @@ internal class GroupFailoverPropertyPage : SnapinPropertyPageControlBase
 		{
 			groupType = group.GroupType;
 			ClusterPropertyCollection properties = group.Properties;
-			autoFailbackType = (Microsoft.FailoverClusters.Framework.GroupFailbackType)(uint)properties["AutoFailbackType"].Value;
+			autoFailbackType = (FailoverClusters.Framework.GroupFailbackType)(uint)properties["AutoFailbackType"].Value;
 			failbackWindowStart = (uint)properties["FailbackWindowStart"].Value;
 			failbackWindowEnd = (uint)properties["FailbackWindowEnd"].Value;
 			failoverThreshold = (uint)properties["FailoverThreshold"].Value;
@@ -184,8 +184,8 @@ internal class GroupFailoverPropertyPage : SnapinPropertyPageControlBase
 		failbackWindowEndUpDown.Maximum = 23m;
 		failoverThresholdUpDown.Value = ((failoverThreshold == uint.MaxValue) ? defaultFailoverThreshold : failoverThreshold);
 		failoverPeriodUpDown.Value = failoverPeriod;
-		preventFailbackButton.Checked = autoFailbackType == Microsoft.FailoverClusters.Framework.GroupFailbackType.PreventFailback;
-		allowFailbackButton.Checked = autoFailbackType == Microsoft.FailoverClusters.Framework.GroupFailbackType.AllowFailback;
+		preventFailbackButton.Checked = autoFailbackType == FailoverClusters.Framework.GroupFailbackType.PreventFailback;
+		allowFailbackButton.Checked = autoFailbackType == FailoverClusters.Framework.GroupFailbackType.AllowFailback;
 		((Control)(object)allowFailbackGroupBox).Enabled = allowFailbackButton.Checked;
 		failbackImmediatelyButton.Checked = failbackWindowStart == uint.MaxValue || failbackWindowEnd == uint.MaxValue;
 		failbackWindowButton.Checked = !failbackImmediatelyButton.Checked;
@@ -193,7 +193,7 @@ internal class GroupFailoverPropertyPage : SnapinPropertyPageControlBase
 		failbackWindowEndUpDown.Enabled = failbackWindowButton.Checked;
 		failbackWindowStartUpDown.Value = ((failbackWindowStart != uint.MaxValue) ? failbackWindowStart : 0u);
 		failbackWindowEndUpDown.Value = ((failbackWindowEnd != uint.MaxValue) ? failbackWindowEnd : 0u);
-		if (groupType == Microsoft.FailoverClusters.Framework.GroupType.CoreCluster)
+		if (groupType == FailoverClusters.Framework.GroupType.CoreCluster)
 		{
 			failoverInfoLabel.Text = Resources.CoreClusterGroupFailoverInfo_Text;
 			failbackInstructionsLabel.Text = Resources.CoreClusterGroupFailbackInstructions_Text;
@@ -223,7 +223,7 @@ internal class GroupFailoverPropertyPage : SnapinPropertyPageControlBase
 		}
 		if (failbackPolicyDirty)
 		{
-			autoFailbackType = ((!preventFailbackButton.Checked) ? Microsoft.FailoverClusters.Framework.GroupFailbackType.AllowFailback : Microsoft.FailoverClusters.Framework.GroupFailbackType.PreventFailback);
+			autoFailbackType = ((!preventFailbackButton.Checked) ? FailoverClusters.Framework.GroupFailbackType.AllowFailback : FailoverClusters.Framework.GroupFailbackType.PreventFailback);
 			if (failbackImmediatelyButton.Checked)
 			{
 				failbackWindowStart = uint.MaxValue;
@@ -499,3 +499,4 @@ internal class GroupFailoverPropertyPage : SnapinPropertyPageControlBase
 		((Control)(object)this).PerformLayout();
 	}
 }
+

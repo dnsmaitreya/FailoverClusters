@@ -1,7 +1,7 @@
-using System.Windows.Input;
-using Microsoft.FailoverClusters.ClusterSnapIn;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.ManagementConsole;
+﻿using System.Windows.Input;
+using FailoverClusters.ClusterSnapIn;
+using FailoverClusters.UI.Common;
+using ManagementConsole;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -21,3 +21,4 @@ internal class EvictNodeActionPaneItem : MmcActionPaneItem
 		NodeContext.Evict(sender, e);
 	}
 }
+

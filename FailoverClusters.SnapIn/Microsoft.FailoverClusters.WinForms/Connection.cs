@@ -1,4 +1,4 @@
-namespace Microsoft.FailoverClusters.WinForms;
+﻿namespace FailoverClusters.WinForms;
 
 internal enum Connection
 {
@@ -7,3 +7,4 @@ internal enum Connection
 	Down,
 	Across
 }
+

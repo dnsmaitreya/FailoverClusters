@@ -1,10 +1,10 @@
-using System;
+﻿using System;
 using System.Windows.Input;
-using Microsoft.FailoverClusters.UIFramework;
-using Microsoft.ManagementConsole;
+using FailoverClusters.UIFramework;
+using ManagementConsole;
 using MS.Internal.ServerClusters.Management;
 
-namespace Microsoft.FailoverClusters.ClusterSnapIn;
+namespace FailoverClusters.ClusterSnapIn;
 
 internal class ScopeNodeNavigationCommandsProvider : IScopeNodeNavigationCommandsProvider
 {
@@ -79,3 +79,4 @@ internal class ScopeNodeNavigationCommandsProvider : IScopeNodeNavigationCommand
 		return new SelectScopeNodeCommand(View, clusterName, childNodeName, canExecute);
 	}
 }
+

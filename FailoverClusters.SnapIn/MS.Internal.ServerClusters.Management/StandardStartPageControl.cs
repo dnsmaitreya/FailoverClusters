@@ -1,8 +1,8 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-using Microsoft.ManagementConsole;
+using ManagementConsole;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -177,3 +177,4 @@ internal class StandardStartPageControl : StartPageContainerControl
 		((Control)(object)this).ResumeLayout(performLayout: false);
 	}
 }
+

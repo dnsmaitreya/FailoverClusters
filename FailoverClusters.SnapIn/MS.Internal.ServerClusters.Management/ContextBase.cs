@@ -1,9 +1,9 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Threading;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.ManagementConsole;
+using FailoverClusters.UI.Common;
+using ManagementConsole;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -270,3 +270,4 @@ internal abstract class ContextBase : IContext, IDisposable
 	{
 	}
 }
+

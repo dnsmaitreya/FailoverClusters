@@ -1,16 +1,16 @@
-using System;
+﻿using System;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.ManagementConsole.Advanced;
-using Microsoft.WindowsAPICodePack.Dialogs;
+using FailoverClusters.UI.Common;
+using ManagementConsole.Advanced;
+using WindowsAPICodePack.Dialogs;
 
 namespace MS.Internal.ServerClusters.Management;
 
 internal sealed class ConsoleNotifyUser : NotifyUser
 {
-	private Microsoft.ManagementConsole.Advanced.Console console;
+	private ManagementConsole.Advanced.Console console;
 
-	public ConsoleNotifyUser(Microsoft.ManagementConsole.Advanced.Console console)
+	public ConsoleNotifyUser(ManagementConsole.Advanced.Console console)
 	{
 		this.console = console;
 	}
@@ -40,3 +40,4 @@ internal sealed class ConsoleNotifyUser : NotifyUser
 		return confirmationDialog.ShowDialog();
 	}
 }
+

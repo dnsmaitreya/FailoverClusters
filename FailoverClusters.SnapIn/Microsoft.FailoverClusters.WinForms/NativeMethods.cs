@@ -1,7 +1,7 @@
-using System;
+﻿using System;
 using System.Runtime.InteropServices;
 
-namespace Microsoft.FailoverClusters.WinForms;
+namespace FailoverClusters.WinForms;
 
 internal static class NativeMethods
 {
@@ -213,3 +213,4 @@ internal static class NativeMethods
 	[DllImport("resutils.dll", CharSet = CharSet.Unicode, ExactSpelling = true, SetLastError = true)]
 	internal static extern void ClusterFreeTaskInfo(IntPtr taskInfo);
 }
+

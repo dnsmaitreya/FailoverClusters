@@ -1,16 +1,16 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.FailoverClusters.UI.Controls;
+using FailoverClusters.Framework;
+using FailoverClusters.UI.Common;
+using FailoverClusters.UI.Controls;
 using MS.Internal.ServerClusters;
 using MS.Internal.ServerClusters.Controls;
 using MS.Internal.ServerClusters.Management;
 
-namespace Microsoft.FailoverClusters.WinForms;
+namespace FailoverClusters.WinForms;
 
 [DesignTimeVisible(true)]
 internal class NetworkGeneralPropertyPage : SnapinPropertyPageControlBase
@@ -22,15 +22,15 @@ internal class NetworkGeneralPropertyPage : SnapinPropertyPageControlBase
 		Other
 	}
 
-	private Microsoft.FailoverClusters.Framework.NetworkRole networkRole;
+	private FailoverClusters.Framework.NetworkRole networkRole;
 
 	private string name;
 
-	private Microsoft.FailoverClusters.Framework.NetworkState state;
+	private FailoverClusters.Framework.NetworkState state;
 
 	private readonly List<string> subNetworks = new List<string>();
 
-	private Microsoft.FailoverClusters.Framework.NetworkRole previousRole;
+	private FailoverClusters.Framework.NetworkRole previousRole;
 
 	private bool networkNameDirty;
 
@@ -38,7 +38,7 @@ internal class NetworkGeneralPropertyPage : SnapinPropertyPageControlBase
 
 	private readonly Guid networkId;
 
-	private readonly Microsoft.FailoverClusters.Framework.Cluster cluster;
+	private readonly FailoverClusters.Framework.Cluster cluster;
 
 	private Network network;
 
@@ -70,7 +70,7 @@ internal class NetworkGeneralPropertyPage : SnapinPropertyPageControlBase
 
 	private HorizontalLine horizontalLine;
 
-	internal NetworkGeneralPropertyPage(Microsoft.FailoverClusters.Framework.Cluster cluster, Guid networkId)
+	internal NetworkGeneralPropertyPage(FailoverClusters.Framework.Cluster cluster, Guid networkId)
 		: base(Resources.General_Text)
 	{
 		Exceptions.ThrowIfNull((object)cluster, "cluster");
@@ -303,34 +303,34 @@ internal class NetworkGeneralPropertyPage : SnapinPropertyPageControlBase
 		clientAccessCheckBox.Enabled = !dontUseRadioButton.Checked;
 	}
 
-	private Microsoft.FailoverClusters.Framework.NetworkRole DetermineNetworkRole()
+	private FailoverClusters.Framework.NetworkRole DetermineNetworkRole()
 	{
 		if (dontUseRadioButton.Checked)
 		{
-			return Microsoft.FailoverClusters.Framework.NetworkRole.None;
+			return FailoverClusters.Framework.NetworkRole.None;
 		}
 		if (clientAccessCheckBox.Checked)
 		{
-			return Microsoft.FailoverClusters.Framework.NetworkRole.InternalAndClient;
+			return FailoverClusters.Framework.NetworkRole.InternalAndClient;
 		}
-		return Microsoft.FailoverClusters.Framework.NetworkRole.InternalUse;
+		return FailoverClusters.Framework.NetworkRole.InternalUse;
 	}
 
 	private void SetNetworkRoleControls()
 	{
 		switch (networkRole)
 		{
-		case Microsoft.FailoverClusters.Framework.NetworkRole.None:
+		case FailoverClusters.Framework.NetworkRole.None:
 			dontUseRadioButton.Checked = true;
 			clusterUseRadioButton.Checked = false;
 			clientAccessCheckBox.Checked = true;
 			break;
-		case Microsoft.FailoverClusters.Framework.NetworkRole.InternalUse:
+		case FailoverClusters.Framework.NetworkRole.InternalUse:
 			dontUseRadioButton.Checked = false;
 			clusterUseRadioButton.Checked = true;
 			clientAccessCheckBox.Checked = false;
 			break;
-		case Microsoft.FailoverClusters.Framework.NetworkRole.InternalAndClient:
+		case FailoverClusters.Framework.NetworkRole.InternalAndClient:
 			dontUseRadioButton.Checked = false;
 			clusterUseRadioButton.Checked = true;
 			clientAccessCheckBox.Checked = true;
@@ -357,9 +357,9 @@ internal class NetworkGeneralPropertyPage : SnapinPropertyPageControlBase
 		return NetworkRoleTransitionResult.Other;
 	}
 
-	private bool GetClientAccessForRole(Microsoft.FailoverClusters.Framework.NetworkRole role)
+	private bool GetClientAccessForRole(FailoverClusters.Framework.NetworkRole role)
 	{
-		if (role == Microsoft.FailoverClusters.Framework.NetworkRole.InternalAndClient || role == Microsoft.FailoverClusters.Framework.NetworkRole.ClientAccess)
+		if (role == FailoverClusters.Framework.NetworkRole.InternalAndClient || role == FailoverClusters.Framework.NetworkRole.ClientAccess)
 		{
 			return true;
 		}
@@ -504,3 +504,4 @@ internal class NetworkGeneralPropertyPage : SnapinPropertyPageControlBase
 		((Control)(object)this).PerformLayout();
 	}
 }
+

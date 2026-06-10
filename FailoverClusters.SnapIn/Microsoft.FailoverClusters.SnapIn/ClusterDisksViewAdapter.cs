@@ -1,8 +1,8 @@
-using Microsoft.FailoverClusters.ClusterSnapIn;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.UIFramework;
+﻿using FailoverClusters.ClusterSnapIn;
+using FailoverClusters.Framework;
+using FailoverClusters.UIFramework;
 
-namespace Microsoft.FailoverClusters.SnapIn;
+namespace FailoverClusters.SnapIn;
 
 internal class ClusterDisksViewAdapter : ClusterGridViewAdapterBase<ClusterDisksViewModel>
 {
@@ -13,3 +13,4 @@ internal class ClusterDisksViewAdapter : ClusterGridViewAdapterBase<ClusterDisks
 		return new ClusterDisksViewModel(cluster);
 	}
 }
+

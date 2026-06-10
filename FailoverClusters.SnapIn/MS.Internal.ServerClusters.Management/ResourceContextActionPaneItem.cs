@@ -1,5 +1,5 @@
-using System.Windows.Input;
-using Microsoft.FailoverClusters.ClusterSnapIn;
+﻿using System.Windows.Input;
+using FailoverClusters.ClusterSnapIn;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -13,3 +13,4 @@ internal abstract class ResourceContextActionPaneItem : MmcActionPaneItem
 		ResourceContext = resourceContext;
 	}
 }
+

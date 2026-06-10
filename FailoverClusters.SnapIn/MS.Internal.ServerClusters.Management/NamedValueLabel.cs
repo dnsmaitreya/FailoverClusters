@@ -1,9 +1,9 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Globalization;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.UI.Controls;
+using FailoverClusters.UI.Controls;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -310,3 +310,4 @@ internal class NamedValueLabel : SnapinUserControl
 		((Control)this).ResumeLayout(performLayout: false);
 	}
 }
+

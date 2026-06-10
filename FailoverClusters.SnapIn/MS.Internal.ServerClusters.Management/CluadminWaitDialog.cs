@@ -1,8 +1,8 @@
-using System;
+﻿using System;
 using System.Globalization;
 using System.Threading;
 using System.Windows.Forms;
-using Microsoft.ManagementConsole.Advanced;
+using ManagementConsole.Advanced;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -455,3 +455,4 @@ internal class CluadminWaitDialog : CommonDialog
 		cancelTimer.Stop();
 	}
 }
+

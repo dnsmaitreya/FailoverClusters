@@ -1,8 +1,8 @@
-using System.Windows.Forms;
-using Microsoft.FailoverClusters.Framework;
+﻿using System.Windows.Forms;
+using FailoverClusters.Framework;
 using MS.Internal.ServerClusters.Management;
 
-namespace Microsoft.FailoverClusters.SnapIn;
+namespace FailoverClusters.SnapIn;
 
 internal class PoolListView : BaseListView
 {
@@ -20,3 +20,4 @@ internal class PoolListView : BaseListView
 		}
 	}
 }
+

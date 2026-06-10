@@ -1,12 +1,12 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
-using Microsoft.FailoverClusters.ClusterSnapIn;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.FailoverClusters.UIFramework;
-using Microsoft.ManagementConsole;
+using FailoverClusters.ClusterSnapIn;
+using FailoverClusters.Framework;
+using FailoverClusters.UI.Common;
+using FailoverClusters.UIFramework;
+using ManagementConsole;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -129,3 +129,4 @@ internal class WpfAllNetworksContext : ScopeNodeContextBase, IClusterSpecific, I
 		((CluAdminScopeNode)sender).ShowPropertySheet(CommandResources.LiveMigrationSettings_Text);
 	}
 }
+

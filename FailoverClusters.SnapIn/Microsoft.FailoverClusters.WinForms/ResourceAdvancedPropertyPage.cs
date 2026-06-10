@@ -1,17 +1,17 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.FailoverClusters.UI.Controls;
+using FailoverClusters.Framework;
+using FailoverClusters.UI.Common;
+using FailoverClusters.UI.Controls;
 using MS.Internal.ServerClusters;
 using MS.Internal.ServerClusters.Management;
 
-namespace Microsoft.FailoverClusters.WinForms;
+namespace FailoverClusters.WinForms;
 
 internal class ResourceAdvancedPropertyPage : ResourcePropertyPage
 {
@@ -37,7 +37,7 @@ internal class ResourceAdvancedPropertyPage : ResourcePropertyPage
 
 	private readonly Guid resourceId;
 
-	private readonly Microsoft.FailoverClusters.Framework.Cluster cluster;
+	private readonly FailoverClusters.Framework.Cluster cluster;
 
 	private Resource resource;
 
@@ -70,7 +70,7 @@ internal class ResourceAdvancedPropertyPage : ResourcePropertyPage
 		InitializeComponent();
 	}
 
-	public ResourceAdvancedPropertyPage(Microsoft.FailoverClusters.Framework.Cluster cluster, Guid resourceId)
+	public ResourceAdvancedPropertyPage(FailoverClusters.Framework.Cluster cluster, Guid resourceId)
 		: base(Resources.AdvancedPolicies_Text)
 	{
 		Exceptions.ThrowIfNull((object)cluster, "cluster");
@@ -555,3 +555,4 @@ internal class ResourceAdvancedPropertyPage : ResourcePropertyPage
 		((Control)(object)this).PerformLayout();
 	}
 }
+

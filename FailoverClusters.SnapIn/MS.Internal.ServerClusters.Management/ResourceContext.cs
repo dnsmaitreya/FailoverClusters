@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -7,11 +7,11 @@ using System.Security.Principal;
 using System.Text;
 using System.Windows.Forms;
 using System.Windows.Input;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.FailoverClusters.UI.Controls;
-using Microsoft.FailoverClusters.UIFramework;
-using Microsoft.ManagementConsole;
+using FailoverClusters.Framework;
+using FailoverClusters.UI.Common;
+using FailoverClusters.UI.Controls;
+using FailoverClusters.UIFramework;
+using ManagementConsole;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -896,3 +896,4 @@ internal class ResourceContext : ContextBase, IDeleteable, IHasPropertyPages, ID
 		_ = cluadminWaitDialog.IsCanceled;
 	}
 }
+

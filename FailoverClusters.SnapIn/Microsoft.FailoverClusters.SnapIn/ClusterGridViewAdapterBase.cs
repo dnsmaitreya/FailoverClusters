@@ -1,12 +1,12 @@
-using System;
-using Microsoft.FailoverClusters.ClusterSnapIn;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.FailoverClusters.UIFramework;
-using Microsoft.FailoverClusters.WinForms;
+﻿using System;
+using FailoverClusters.ClusterSnapIn;
+using FailoverClusters.Framework;
+using FailoverClusters.UI.Common;
+using FailoverClusters.UIFramework;
+using FailoverClusters.WinForms;
 using MS.Internal.ServerClusters.Management;
 
-namespace Microsoft.FailoverClusters.SnapIn;
+namespace FailoverClusters.SnapIn;
 
 internal abstract class ClusterGridViewAdapterBase<TViewModel> : WpfViewAdapterBase<TViewModel> where TViewModel : ClusterViewModelBase
 {
@@ -158,3 +158,4 @@ internal abstract class ClusterGridViewAdapterBase<TViewModel> : WpfViewAdapterB
 		}
 	}
 }
+

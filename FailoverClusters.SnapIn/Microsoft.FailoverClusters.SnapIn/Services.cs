@@ -1,9 +1,9 @@
-using Microsoft.FailoverClusters.UI.Common.Services;
-using Microsoft.FailoverClusters.UIFramework;
-using Microsoft.ManagementConsole;
+﻿using FailoverClusters.UI.Common.Services;
+using FailoverClusters.UIFramework;
+using ManagementConsole;
 using MS.Internal.ServerClusters.Management;
 
-namespace Microsoft.FailoverClusters.SnapIn;
+namespace FailoverClusters.SnapIn;
 
 internal static class Services
 {
@@ -27,3 +27,4 @@ internal static class Services
 		ServiceContainer.Container.RegisterServiceInstance(typeof(IClusterEventsMonitorRegistry), (object)new ClusterEventsMonitorRegistry());
 	}
 }
+

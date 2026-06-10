@@ -1,9 +1,9 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
-using Microsoft.ManagementConsole;
+using ManagementConsole;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -158,3 +158,4 @@ internal class BaseFormControl : SnapinUserControl
 		((Control)this).ResumeLayout(performLayout: false);
 	}
 }
+

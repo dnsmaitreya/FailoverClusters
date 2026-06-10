@@ -1,11 +1,11 @@
-using System;
+﻿using System;
 using System.Windows.Input;
-using Microsoft.FailoverClusters.ClusterSnapIn;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.SnapIn;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.FailoverClusters.UIFramework;
-using Microsoft.ManagementConsole;
+using FailoverClusters.ClusterSnapIn;
+using FailoverClusters.Framework;
+using FailoverClusters.SnapIn;
+using FailoverClusters.UI.Common;
+using FailoverClusters.UIFramework;
+using ManagementConsole;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -17,7 +17,7 @@ internal class WpfClusterPoolsContext : ScopeNodeContextBase, IClusterSpecific
 
 	private bool needToRecreateActions = true;
 
-	private Microsoft.FailoverClusters.Framework.Cluster frameworkCluster;
+	private FailoverClusters.Framework.Cluster frameworkCluster;
 
 	private static readonly Guid contextId = new Guid("{9f5b51cb-e176-4736-8218-c4a3e3427a7f}");
 
@@ -68,7 +68,7 @@ internal class WpfClusterPoolsContext : ScopeNodeContextBase, IClusterSpecific
 		}
 	}
 
-	private Microsoft.FailoverClusters.Framework.Cluster FrameworkCluster
+	private FailoverClusters.Framework.Cluster FrameworkCluster
 	{
 		get
 		{
@@ -151,3 +151,4 @@ internal class WpfClusterPoolsContext : ScopeNodeContextBase, IClusterSpecific
 		}
 	}
 }
+

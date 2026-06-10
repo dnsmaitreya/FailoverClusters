@@ -1,13 +1,13 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Windows.Input;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.FailoverClusters.UIFramework;
-using Microsoft.ManagementConsole;
+using FailoverClusters.Framework;
+using FailoverClusters.UI.Common;
+using FailoverClusters.UIFramework;
+using ManagementConsole;
 using MS.Internal.ServerClusters.Management;
 
-namespace Microsoft.FailoverClusters.ClusterSnapIn;
+namespace FailoverClusters.ClusterSnapIn;
 
 internal abstract class ViewCommandsProviderBase : IViewCommandsProvider
 {
@@ -80,3 +80,4 @@ internal abstract class ViewCommandsProviderBase : IViewCommandsProvider
 		return null;
 	}
 }
+

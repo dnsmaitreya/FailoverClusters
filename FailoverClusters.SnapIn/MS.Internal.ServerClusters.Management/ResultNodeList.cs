@@ -1,11 +1,11 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Globalization;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.ManagementConsole;
+using FailoverClusters.UI.Common;
+using ManagementConsole;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -322,3 +322,4 @@ internal class ResultNodeList : ClusterList
 		}
 	}
 }
+

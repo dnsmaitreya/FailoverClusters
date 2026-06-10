@@ -1,6 +1,6 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
-using Microsoft.ManagementConsole;
+using ManagementConsole;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -40,3 +40,4 @@ internal interface IContext : IDisposable
 
 	void ClearActions();
 }
+

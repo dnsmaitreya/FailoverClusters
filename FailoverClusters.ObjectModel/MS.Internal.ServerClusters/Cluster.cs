@@ -1,4 +1,4 @@
-#define DEBUG
+﻿#define DEBUG
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -12,7 +12,7 @@ using System.Security;
 using System.Security.AccessControl;
 using System.Threading;
 using _003CCppImplementationDetails_003E;
-using Microsoft.FailoverClusters.UI.Common;
+using FailoverClusters.UI.Common;
 
 namespace MS.Internal.ServerClusters;
 
@@ -5922,3 +5922,4 @@ public class Cluster : ClusterItem
 		base.Dispose(A_0: false);
 	}
 }
+

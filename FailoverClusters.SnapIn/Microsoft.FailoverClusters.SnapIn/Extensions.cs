@@ -1,8 +1,8 @@
-using System.Globalization;
-using Microsoft.ManagementConsole;
+﻿using System.Globalization;
+using ManagementConsole;
 using MS.Internal.ServerClusters.Management;
 
-namespace Microsoft.FailoverClusters.SnapIn;
+namespace FailoverClusters.SnapIn;
 
 internal static class Extensions
 {
@@ -17,3 +17,4 @@ internal static class Extensions
 		return eventArgs.CreateWaitDialog(initialStatus);
 	}
 }
+

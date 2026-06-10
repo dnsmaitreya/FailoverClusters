@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Security.Permissions;
@@ -6,9 +6,9 @@ using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Forms.Integration;
 using System.Windows.Input;
-using Microsoft.FailoverClusters.UI.Common;
+using FailoverClusters.UI.Common;
 
-namespace Microsoft.FailoverClusters.ClusterSnapIn;
+namespace FailoverClusters.ClusterSnapIn;
 
 public class TabFriendlyElementHost : ElementHost
 {
@@ -102,3 +102,4 @@ public class TabFriendlyElementHost : ElementHost
 		return base.ProcessCmdKey(ref msg, keyData);
 	}
 }
+

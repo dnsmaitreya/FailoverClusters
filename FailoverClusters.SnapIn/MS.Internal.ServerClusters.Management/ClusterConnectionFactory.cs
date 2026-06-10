@@ -1,10 +1,10 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.UI.Common;
+using FailoverClusters.Framework;
+using FailoverClusters.UI.Common;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -278,3 +278,4 @@ internal static class ClusterConnectionFactory
 		return null;
 	}
 }
+

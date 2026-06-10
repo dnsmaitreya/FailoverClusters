@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Globalization;
@@ -6,12 +6,12 @@ using System.IO;
 using System.Threading;
 using System.Windows.Forms;
 using System.Windows.Input;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.SnapIn;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.FailoverClusters.UI.Controls;
-using Microsoft.FailoverClusters.UIFramework;
-using Microsoft.ManagementConsole;
+using FailoverClusters.Framework;
+using FailoverClusters.SnapIn;
+using FailoverClusters.UI.Common;
+using FailoverClusters.UI.Controls;
+using FailoverClusters.UIFramework;
+using ManagementConsole;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -513,3 +513,4 @@ internal class NodeContext : ScopeNodeContextBase, IClusterSpecific, IViewContex
 		return result;
 	}
 }
+

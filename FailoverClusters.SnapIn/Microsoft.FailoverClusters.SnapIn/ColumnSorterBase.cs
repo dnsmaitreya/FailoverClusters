@@ -1,7 +1,7 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Windows.Forms;
 
-namespace Microsoft.FailoverClusters.SnapIn;
+namespace FailoverClusters.SnapIn;
 
 internal abstract class ColumnSorterBase<TObject> : IComparer where TObject : class
 {
@@ -27,3 +27,4 @@ internal abstract class ColumnSorterBase<TObject> : IComparer where TObject : cl
 
 	protected abstract int Compare(TObject x, TObject y);
 }
+

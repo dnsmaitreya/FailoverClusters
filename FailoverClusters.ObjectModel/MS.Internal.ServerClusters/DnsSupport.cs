@@ -1,4 +1,4 @@
-#define DEBUG
+﻿#define DEBUG
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -6,7 +6,7 @@ using System.Diagnostics;
 using System.Net;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using Microsoft.FailoverClusters.UI.Common;
+using FailoverClusters.UI.Common;
 
 namespace MS.Internal.ServerClusters;
 
@@ -595,3 +595,4 @@ public sealed class DnsSupport
 		}
 	}
 }
+

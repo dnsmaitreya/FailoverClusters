@@ -1,15 +1,15 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.ClusterSnapIn;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.SnapIn;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.FailoverClusters.UI.Common.Services;
-using Microsoft.FailoverClusters.UIFramework;
-using Microsoft.ManagementConsole;
+using FailoverClusters.ClusterSnapIn;
+using FailoverClusters.Framework;
+using FailoverClusters.SnapIn;
+using FailoverClusters.UI.Common;
+using FailoverClusters.UI.Common.Services;
+using FailoverClusters.UIFramework;
+using ManagementConsole;
 using MS.Internal.ServerClusters.Wizards;
 
 namespace MS.Internal.ServerClusters.Management;
@@ -138,7 +138,7 @@ internal class RootContext : ScopeNodeContextBase, IHasPropertyPages
 			{
 				foreach (ClusterContext item in GetChildContexts().OfType<ClusterContext>())
 				{
-					Microsoft.FailoverClusters.Framework.Cluster frameworkCluster = item.FrameworkCluster;
+					FailoverClusters.Framework.Cluster frameworkCluster = item.FrameworkCluster;
 					if (frameworkCluster != null && frameworkCluster.CacheId == v.ClusterCacheId)
 					{
 						item.Close();
@@ -529,3 +529,4 @@ internal class RootContext : ScopeNodeContextBase, IHasPropertyPages
 		GC.SuppressFinalize(this);
 	}
 }
+

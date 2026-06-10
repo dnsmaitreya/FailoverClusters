@@ -1,8 +1,8 @@
-using System;
+﻿using System;
 using System.Globalization;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.ManagementConsole;
+using FailoverClusters.UI.Common;
+using ManagementConsole;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -104,3 +104,4 @@ internal abstract class StorageResourceContextBase : ResourceContext, IDeleteabl
 		base.Refresh();
 	}
 }
+

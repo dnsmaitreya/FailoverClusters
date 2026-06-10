@@ -1,14 +1,14 @@
-using System;
+﻿using System;
 using System.Globalization;
 using System.IO;
 using System.Threading;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.UI.Common;
+using FailoverClusters.Framework;
+using FailoverClusters.UI.Common;
 using MS.Internal.ServerClusters;
 using MS.Internal.ServerClusters.Management;
 
-namespace Microsoft.FailoverClusters.SnapIn;
+namespace FailoverClusters.SnapIn;
 
 internal class AddPoolsOperation
 {
@@ -34,11 +34,11 @@ internal class AddPoolsOperation
 
 	private ReportChannel report;
 
-	private Microsoft.FailoverClusters.Framework.Cluster FrameworkCluster { get; set; }
+	private FailoverClusters.Framework.Cluster FrameworkCluster { get; set; }
 
 	private MS.Internal.ServerClusters.Cluster LegacyCluster { get; set; }
 
-	internal AddPoolsOperation(Microsoft.FailoverClusters.Framework.Cluster frameworkCluster, MS.Internal.ServerClusters.Cluster legacyCluster)
+	internal AddPoolsOperation(FailoverClusters.Framework.Cluster frameworkCluster, MS.Internal.ServerClusters.Cluster legacyCluster)
 	{
 		FrameworkCluster = frameworkCluster;
 		LegacyCluster = legacyCluster;
@@ -186,3 +186,4 @@ internal class AddPoolsOperation
 		}
 	}
 }
+

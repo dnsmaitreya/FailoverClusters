@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.ComponentModel;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.UI.Controls;
+using FailoverClusters.UI.Controls;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -616,3 +616,4 @@ internal class ResourceTypeGeneralPropertiesPage : PropertyPageControlBase
 		((Control)(object)this).PerformLayout();
 	}
 }
+

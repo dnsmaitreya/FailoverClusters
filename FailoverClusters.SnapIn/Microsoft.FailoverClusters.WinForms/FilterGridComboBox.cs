@@ -1,7 +1,7 @@
-using System;
+﻿using System;
 using System.Windows.Forms;
 
-namespace Microsoft.FailoverClusters.WinForms;
+namespace FailoverClusters.WinForms;
 
 internal class FilterGridComboBox : ComboBox, IDataGridViewEditingControl
 {
@@ -168,3 +168,4 @@ internal class FilterGridComboBox : ComboBox, IDataGridViewEditingControl
 		NotifyDataGridViewOfValueChange();
 	}
 }
+

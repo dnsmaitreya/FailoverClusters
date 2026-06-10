@@ -1,9 +1,9 @@
-using System;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.ManagementConsole;
+﻿using System;
+using FailoverClusters.Framework;
+using ManagementConsole;
 using MS.Internal.ServerClusters.Management;
 
-namespace Microsoft.FailoverClusters.WinForms;
+namespace FailoverClusters.WinForms;
 
 public static class ClusterContext
 {
@@ -22,3 +22,4 @@ public static class ClusterContext
 		return 0;
 	}
 }
+

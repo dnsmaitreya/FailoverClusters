@@ -1,7 +1,7 @@
-using System;
+﻿using System;
 using System.Windows.Forms;
 
-namespace Microsoft.FailoverClusters.WinForms;
+namespace FailoverClusters.WinForms;
 
 internal class FilterGridComboBoxCell : DataGridViewTextBoxCell
 {
@@ -27,3 +27,4 @@ internal class FilterGridComboBoxCell : DataGridViewTextBoxCell
 		}
 	}
 }
+

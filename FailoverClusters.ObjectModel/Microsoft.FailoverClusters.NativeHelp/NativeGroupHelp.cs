@@ -1,7 +1,7 @@
-using System;
+﻿using System;
 using System.Runtime.CompilerServices;
 
-namespace Microsoft.FailoverClusters.NativeHelp;
+namespace FailoverClusters.NativeHelp;
 
 public class NativeGroupHelp
 {
@@ -72,3 +72,4 @@ public class NativeGroupHelp
 		return propertyListWrapper;
 	}
 }
+

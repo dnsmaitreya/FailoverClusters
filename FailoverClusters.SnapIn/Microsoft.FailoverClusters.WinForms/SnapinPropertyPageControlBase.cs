@@ -1,13 +1,13 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.UI.Common;
+using FailoverClusters.Framework;
+using FailoverClusters.UI.Common;
 using MS.Internal.ServerClusters;
 using MS.Internal.ServerClusters.Management;
 
-namespace Microsoft.FailoverClusters.WinForms;
+namespace FailoverClusters.WinForms;
 
 internal class SnapinPropertyPageControlBase : SnapinUserControl, ISnapInPropertyPage
 {
@@ -294,3 +294,4 @@ internal class SnapinPropertyPageControlBase : SnapinUserControl, ISnapInPropert
 		}
 	}
 }
+

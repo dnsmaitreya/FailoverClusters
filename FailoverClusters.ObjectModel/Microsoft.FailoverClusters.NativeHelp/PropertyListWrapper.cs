@@ -1,7 +1,7 @@
-using System;
+﻿using System;
 using System.Runtime.InteropServices;
 
-namespace Microsoft.FailoverClusters.NativeHelp;
+namespace FailoverClusters.NativeHelp;
 
 public class PropertyListWrapper : IDisposable
 {
@@ -81,3 +81,4 @@ public class PropertyListWrapper : IDisposable
 		GC.SuppressFinalize(this);
 	}
 }
+

@@ -1,20 +1,20 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.UI.Common;
+using FailoverClusters.Framework;
+using FailoverClusters.UI.Common;
 using MS.Internal.ServerClusters;
 using MS.Internal.ServerClusters.Controls;
 using MS.Internal.ServerClusters.Management;
 
-namespace Microsoft.FailoverClusters.WinForms;
+namespace FailoverClusters.WinForms;
 
 internal class ReplicationLogPropertyPage : ResourcePropertyPage
 {
 	private readonly Guid resourceId;
 
-	private readonly Microsoft.FailoverClusters.Framework.Cluster cluster;
+	private readonly FailoverClusters.Framework.Cluster cluster;
 
 	private Resource resource;
 
@@ -46,7 +46,7 @@ internal class ReplicationLogPropertyPage : ResourcePropertyPage
 		InitializeComponent();
 	}
 
-	internal ReplicationLogPropertyPage(Microsoft.FailoverClusters.Framework.Cluster cluster, Guid resourceId)
+	internal ReplicationLogPropertyPage(FailoverClusters.Framework.Cluster cluster, Guid resourceId)
 		: this()
 	{
 		Exceptions.ThrowIfNull((object)cluster, "cluster");
@@ -95,7 +95,7 @@ internal class ReplicationLogPropertyPage : ResourcePropertyPage
 						CalculateSpaceOnDisk();
 						LogSizeNumbericUpDown.Enabled = true;
 						base.IsDirty = false;
-						if (storageResource.ResourceState == Microsoft.FailoverClusters.Framework.ResourceState.Online)
+						if (storageResource.ResourceState == FailoverClusters.Framework.ResourceState.Online)
 						{
 							((Control)(object)this).Enabled = true;
 						}
@@ -239,3 +239,4 @@ internal class ReplicationLogPropertyPage : ResourcePropertyPage
 		((Control)(object)this).PerformLayout();
 	}
 }
+

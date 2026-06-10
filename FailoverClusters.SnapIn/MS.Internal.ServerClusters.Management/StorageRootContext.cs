@@ -1,6 +1,6 @@
-using System;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.ManagementConsole;
+﻿using System;
+using FailoverClusters.UI.Common;
+using ManagementConsole;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -57,3 +57,4 @@ internal class StorageRootContext : ScopeNodeContextBase, IViewContext
 		base.EnabledStandardVerbs &= ~StandardVerbs.Refresh;
 	}
 }
+

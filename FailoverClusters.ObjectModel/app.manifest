@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!-- Copyright (c) Microsoft Corporation -->
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Copyright (c) Corporation -->
 <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
 <assemblyIdentity
     name="FailoverClusters.ObjectModel"
@@ -11,7 +11,7 @@
     <dependentAssembly>
         <assemblyIdentity
             type="win32"
-            name="Microsoft.Windows.Common-Controls"
+            name="Windows.Common-Controls"
             version="6.0.0.0"
             processorArchitecture="*"
             publicKeyToken="6595b64144ccf1df"
@@ -20,3 +20,4 @@
     </dependentAssembly>
 </dependency>
 </assembly>
+

@@ -1,11 +1,11 @@
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Globalization;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.Win32;
+using FailoverClusters.UI.Common;
+using Win32;
 
 namespace MS.Internal.ServerClusters;
 
@@ -241,3 +241,4 @@ public sealed class DebugLog
 		ClusterLog.LogCritical(debugMessage);
 	}
 }
+

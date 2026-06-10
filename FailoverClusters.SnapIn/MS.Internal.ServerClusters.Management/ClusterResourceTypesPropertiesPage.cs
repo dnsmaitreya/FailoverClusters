@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -7,9 +7,9 @@ using System.IO;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.FailoverClusters.UI.Controls;
-using Microsoft.ManagementConsole;
+using FailoverClusters.UI.Common;
+using FailoverClusters.UI.Controls;
+using ManagementConsole;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -544,3 +544,4 @@ internal class ClusterResourceTypesPropertiesPage : PropertyPageControlBase
 		((Control)(object)this).PerformLayout();
 	}
 }
+

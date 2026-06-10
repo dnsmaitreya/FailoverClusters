@@ -1,6 +1,6 @@
-using System;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.UIFramework;
+﻿using System;
+using FailoverClusters.Framework;
+using FailoverClusters.UIFramework;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -23,3 +23,4 @@ internal class ShowPropertyPageService : IShowPropertyPageService, ISetPropertyP
 		}
 	}
 }
+

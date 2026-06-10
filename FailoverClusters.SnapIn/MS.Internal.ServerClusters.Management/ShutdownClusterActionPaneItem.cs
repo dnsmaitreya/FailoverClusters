@@ -1,6 +1,6 @@
-using System.Windows.Input;
-using Microsoft.FailoverClusters.ClusterSnapIn;
-using Microsoft.ManagementConsole;
+﻿using System.Windows.Input;
+using FailoverClusters.ClusterSnapIn;
+using ManagementConsole;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -19,3 +19,4 @@ internal class ShutdownClusterActionPaneItem : MmcActionPaneItem
 		ClusterContext.ShutdownCluster(sender, e);
 	}
 }
+

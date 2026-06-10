@@ -1,9 +1,9 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.UI.Controls;
-using Microsoft.ManagementConsole;
+using FailoverClusters.UI.Controls;
+using ManagementConsole;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -17,14 +17,14 @@ internal class LinksPanelActionControl : SnapinUserControl
 
 	private ActionBase action;
 
-	private Microsoft.ManagementConsole.View view;
+	private ManagementConsole.View view;
 
 	private LinksPanelActionControl()
 	{
 		InitializeComponent();
 	}
 
-	private LinksPanelActionControl(Microsoft.ManagementConsole.View view, ActionBase action)
+	private LinksPanelActionControl(ManagementConsole.View view, ActionBase action)
 		: this()
 	{
 		this.action = action;
@@ -48,7 +48,7 @@ internal class LinksPanelActionControl : SnapinUserControl
 		pictureBox.Cursor = Cursors.Hand;
 	}
 
-	public static UserControl CreateActionLink(Microsoft.ManagementConsole.View view, ActionBase action)
+	public static UserControl CreateActionLink(ManagementConsole.View view, ActionBase action)
 	{
 		ActionData.GetActionData(action);
 		return (UserControl)(object)new LinksPanelActionControl(view, action);
@@ -120,3 +120,4 @@ internal class LinksPanelActionControl : SnapinUserControl
 		label.Height = TextRenderer.MeasureText(label.Text, label.Font, new Size(label.Width, int.MaxValue), TextFormatFlags.WordBreak).Height;
 	}
 }
+

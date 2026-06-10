@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Runtime.InteropServices;
 
 namespace MS.Internal.ServerClusters;
@@ -51,7 +51,7 @@ public sealed class WellKnownResourceType
 
 	public static string VirtualMachine => "Virtual Machine";
 
-	public static string IScsiNameService => "Microsoft iSNS";
+	public static string IScsiNameService => "iSNS";
 
 	public static string VolumeShadowCopyServiceTask => "Volume Shadow Copy Service Task";
 
@@ -129,7 +129,7 @@ public sealed class WellKnownResourceType
 		array[15] = text16;
 		string text17 = "Volume Shadow Copy Service Task";
 		array[16] = text17;
-		string text18 = "Microsoft iSNS";
+		string text18 = "iSNS";
 		array[17] = text18;
 		string text19 = "NFS Share";
 		array[18] = text19;
@@ -199,3 +199,4 @@ public sealed class WellKnownResourceType
 		return false;
 	}
 }
+

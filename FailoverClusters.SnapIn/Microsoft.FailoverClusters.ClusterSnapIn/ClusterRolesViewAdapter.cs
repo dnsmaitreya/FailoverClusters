@@ -1,11 +1,11 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.SnapIn;
-using Microsoft.FailoverClusters.UIFramework;
+using FailoverClusters.Framework;
+using FailoverClusters.SnapIn;
+using FailoverClusters.UIFramework;
 
-namespace Microsoft.FailoverClusters.ClusterSnapIn;
+namespace FailoverClusters.ClusterSnapIn;
 
 internal class ClusterRolesViewAdapter : ClusterGridViewAdapterBase<ClusterRolesViewModel>
 {
@@ -31,3 +31,4 @@ internal class ClusterRolesViewAdapter : ClusterGridViewAdapterBase<ClusterRoles
 		return result;
 	}
 }
+

@@ -1,20 +1,20 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Windows.Input;
-using Microsoft.FailoverClusters.ClusterSnapIn;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.FailoverClusters.UI.Common.Services;
-using Microsoft.FailoverClusters.UIFramework;
-using Microsoft.FailoverClusters.WinForms;
-using Microsoft.ManagementConsole;
+using FailoverClusters.ClusterSnapIn;
+using FailoverClusters.Framework;
+using FailoverClusters.UI.Common;
+using FailoverClusters.UI.Common.Services;
+using FailoverClusters.UIFramework;
+using FailoverClusters.WinForms;
+using ManagementConsole;
 using MS.Internal.ServerClusters.Management;
 
-namespace Microsoft.FailoverClusters.SnapIn;
+namespace FailoverClusters.SnapIn;
 
 internal abstract class WpfViewAdapterBase<TViewModel> : FormView, IWpfViewAdapter where TViewModel : ViewModelBase, IViewModelRefreshable
 {
@@ -228,13 +228,13 @@ internal abstract class WpfViewAdapterBase<TViewModel> : FormView, IWpfViewAdapt
 		Group group = currentSelectedItem as Group;
 		if (group != null)
 		{
-			Microsoft.FailoverClusters.WinForms.GroupContext.GetPropertyPages(propertyPageCollection, group.GroupType, group.Cluster, group.Id);
+			FailoverClusters.WinForms.GroupContext.GetPropertyPages(propertyPageCollection, group.GroupType, group.Cluster, group.Id);
 			return;
 		}
 		Network network = currentSelectedItem as Network;
 		if (network != null)
 		{
-			Microsoft.FailoverClusters.WinForms.NetworkContext.GetNetworkPropertyPages(propertyPageCollection, network.Cluster, network.Id);
+			FailoverClusters.WinForms.NetworkContext.GetNetworkPropertyPages(propertyPageCollection, network.Cluster, network.Id);
 			return;
 		}
 		Resource resource = currentSelectedItem as Resource;
@@ -245,7 +245,7 @@ internal abstract class WpfViewAdapterBase<TViewModel> : FormView, IWpfViewAdapt
 			{
 				propertyPageCollection.Add(propertyPage);
 			}
-			Microsoft.FailoverClusters.WinForms.ResourceContext.GetPropertyPages(propertyPageCollection, resource.ResourceType, resource.Cluster, resource.Id);
+			FailoverClusters.WinForms.ResourceContext.GetPropertyPages(propertyPageCollection, resource.ResourceType, resource.Cluster, resource.Id);
 			PropertyPage propertyPage2 = LegacyFactory.CreateResourceRegistryPropertyPage(resource.Cluster.Id, resource.Name);
 			if (propertyPage2 != null)
 			{
@@ -276,7 +276,7 @@ internal abstract class WpfViewAdapterBase<TViewModel> : FormView, IWpfViewAdapt
 			Cluster cluster = currentSelectedItem as Cluster;
 			if (cluster != null)
 			{
-				Microsoft.FailoverClusters.WinForms.ClusterContext.GetPropertyPages(propertyPageCollection, cluster);
+				FailoverClusters.WinForms.ClusterContext.GetPropertyPages(propertyPageCollection, cluster);
 			}
 		}
 	}
@@ -437,19 +437,19 @@ internal abstract class WpfViewAdapterBase<TViewModel> : FormView, IWpfViewAdapt
 				base.SelectionData.Update(null, multiSelection: true, null, null);
 				if (group != null)
 				{
-					base.SelectionData.Update(group, multiSelection: false, Microsoft.FailoverClusters.WinForms.GroupContext.GetNodeTypes(), Microsoft.FailoverClusters.WinForms.GroupContext.GetSharedData(group));
+					base.SelectionData.Update(group, multiSelection: false, FailoverClusters.WinForms.GroupContext.GetNodeTypes(), FailoverClusters.WinForms.GroupContext.GetSharedData(group));
 				}
 				else if (network != null)
 				{
-					base.SelectionData.Update(network, multiSelection: false, Microsoft.FailoverClusters.WinForms.NetworkContext.GetNodeTypes(), Microsoft.FailoverClusters.WinForms.NetworkContext.GetSharedData(network));
+					base.SelectionData.Update(network, multiSelection: false, FailoverClusters.WinForms.NetworkContext.GetNodeTypes(), FailoverClusters.WinForms.NetworkContext.GetSharedData(network));
 				}
 				else if (resource2 != null)
 				{
-					base.SelectionData.Update(resource2, multiSelection: false, Microsoft.FailoverClusters.WinForms.ResourceContext.GetNodeTypes(), Microsoft.FailoverClusters.WinForms.ResourceContext.GetSharedData(resource2));
+					base.SelectionData.Update(resource2, multiSelection: false, FailoverClusters.WinForms.ResourceContext.GetNodeTypes(), FailoverClusters.WinForms.ResourceContext.GetSharedData(resource2));
 				}
 				else if (cluster != null)
 				{
-					base.SelectionData.Update(cluster, multiSelection: false, Microsoft.FailoverClusters.WinForms.ClusterContext.GetNodeTypes(), Microsoft.FailoverClusters.WinForms.ClusterContext.GetSharedData(cluster));
+					base.SelectionData.Update(cluster, multiSelection: false, FailoverClusters.WinForms.ClusterContext.GetNodeTypes(), FailoverClusters.WinForms.ClusterContext.GetSharedData(cluster));
 				}
 				else
 				{
@@ -549,7 +549,7 @@ internal abstract class WpfViewAdapterBase<TViewModel> : FormView, IWpfViewAdapt
 			{
 				LegacyFactory.ShowNetworkInterfaceCriticalEventsDialog(clusterObject.Cluster.Id, clusterObject.Name);
 			}
-			else if (clusterObject is Microsoft.FailoverClusters.Framework.Node)
+			else if (clusterObject is FailoverClusters.Framework.Node)
 			{
 				LegacyFactory.ShowNodeCriticalEventsDialog(clusterObject.Cluster.Id, clusterObject.Name);
 			}
@@ -618,3 +618,4 @@ internal abstract class WpfViewAdapterBase<TViewModel> : FormView, IWpfViewAdapt
 		LegacyFactory.ClusterAwareUpdating(((Cluster)value).Id);
 	}
 }
+

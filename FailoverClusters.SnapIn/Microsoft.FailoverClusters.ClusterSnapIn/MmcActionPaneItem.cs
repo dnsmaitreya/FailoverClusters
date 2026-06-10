@@ -1,12 +1,12 @@
-using System;
+﻿using System;
 using System.Windows.Input;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.FailoverClusters.UIFramework;
-using Microsoft.ManagementConsole;
+using FailoverClusters.Framework;
+using FailoverClusters.UI.Common;
+using FailoverClusters.UIFramework;
+using ManagementConsole;
 using MS.Internal.ServerClusters;
 
-namespace Microsoft.FailoverClusters.ClusterSnapIn;
+namespace FailoverClusters.ClusterSnapIn;
 
 public class MmcActionPaneItem : IDisposable
 {
@@ -51,7 +51,7 @@ public class MmcActionPaneItem : IDisposable
 		UICommand val = (UICommand)((command is UICommand) ? command : null);
 		if (val != null)
 		{
-			Microsoft.ManagementConsole.Action action = new Microsoft.ManagementConsole.Action(StringExtensions.ReplaceAccelerator(((ClusterCommand)(object)val).Text), string.Empty, ConvertCommandIdToImageIndex(val))
+			ManagementConsole.Action action = new ManagementConsole.Action(StringExtensions.ReplaceAccelerator(((ClusterCommand)(object)val).Text), string.Empty, ConvertCommandIdToImageIndex(val))
 			{
 				Enabled = ((ClusterCommand)(object)val).CanExecute(((ClusterCommand)(object)val).CommandParameter)
 			};
@@ -83,7 +83,7 @@ public class MmcActionPaneItem : IDisposable
 		}
 		if (command is ClusterCommand clusterCommand2)
 		{
-			Microsoft.ManagementConsole.Action action2 = new Microsoft.ManagementConsole.Action(StringExtensions.ReplaceAccelerator(clusterCommand2.Text), string.Empty, ConvertCommandIdToImageIndex(clusterCommand2))
+			ManagementConsole.Action action2 = new ManagementConsole.Action(StringExtensions.ReplaceAccelerator(clusterCommand2.Text), string.Empty, ConvertCommandIdToImageIndex(clusterCommand2))
 			{
 				Enabled = clusterCommand2.CanExecute(null)
 			};
@@ -94,7 +94,7 @@ public class MmcActionPaneItem : IDisposable
 		UIProxyCommandWithParameter val2 = (UIProxyCommandWithParameter)((command is UIProxyCommandWithParameter) ? command : null);
 		if (val2 != null)
 		{
-			Microsoft.ManagementConsole.Action action3 = new Microsoft.ManagementConsole.Action(StringExtensions.ReplaceAccelerator(((UIProxyCommand)val2).Text), string.Empty, ConvertCommandIdToImageIndex((UIProxyCommand)(object)val2))
+			ManagementConsole.Action action3 = new ManagementConsole.Action(StringExtensions.ReplaceAccelerator(((UIProxyCommand)val2).Text), string.Empty, ConvertCommandIdToImageIndex((UIProxyCommand)(object)val2))
 			{
 				Enabled = ((UIProxyCommand)val2).CanExecute(((UIProxyCommand)val2).CommandParameter)
 			};
@@ -137,7 +137,7 @@ public class MmcActionPaneItem : IDisposable
 		}
 		else
 		{
-			Microsoft.ManagementConsole.Action action4 = new Microsoft.ManagementConsole.Action(StringExtensions.ReplaceAccelerator(val3.Text), string.Empty, ConvertCommandIdToImageIndex(val3))
+			ManagementConsole.Action action4 = new ManagementConsole.Action(StringExtensions.ReplaceAccelerator(val3.Text), string.Empty, ConvertCommandIdToImageIndex(val3))
 			{
 				Enabled = val3.CanExecute(val3.CommandParameter)
 			};
@@ -493,7 +493,7 @@ public class MmcActionPaneItem : IDisposable
 	private void ClusterCommandCanExecuteChanged(object sender, EventArgs e)
 	{
 		ICommand command = (ICommand)clusterCommandRef.Target;
-		if (command != null && actionsPaneItem is Microsoft.ManagementConsole.Action action)
+		if (command != null && actionsPaneItem is ManagementConsole.Action action)
 		{
 			try
 			{
@@ -530,7 +530,7 @@ public class MmcActionPaneItem : IDisposable
 		{
 			command.CanExecuteChanged -= ClusterCommandCanExecuteChanged;
 		}
-		if (actionsPaneItem is Microsoft.ManagementConsole.Action action)
+		if (actionsPaneItem is ManagementConsole.Action action)
 		{
 			try
 			{
@@ -547,3 +547,4 @@ public class MmcActionPaneItem : IDisposable
 		disposed = true;
 	}
 }
+

@@ -1,8 +1,8 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.ManagementConsole;
+using FailoverClusters.UI.Common;
+using ManagementConsole;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -125,3 +125,4 @@ internal class ClusterPropertyPage : PropertyPage
 		notifyUser.ShowError(e, Resources.UnexpectedError_Text);
 	}
 }
+

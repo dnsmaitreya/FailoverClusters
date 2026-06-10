@@ -1,6 +1,6 @@
-using System;
+﻿using System;
 using System.Management;
-using Microsoft.FailoverClusters.UI.Common;
+using FailoverClusters.UI.Common;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -108,3 +108,4 @@ internal class ServerInfo
 		processorSpeed = WmiHelp.GetUInt32((ManagementBaseObject)firstElement, "MaxClockSpeed");
 	}
 }
+

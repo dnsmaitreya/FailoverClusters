@@ -1,7 +1,7 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.FailoverClusters.UIFramework;
+using FailoverClusters.UI.Common;
+using FailoverClusters.UIFramework;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -82,3 +82,4 @@ internal class ClusterEventsMonitorRegistry : IClusterEventsMonitorRegistry
 		}
 	}
 }
+

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+﻿<Project Sdk="NET.Sdk.WindowsDesktop">
   <PropertyGroup>
     <AssemblyName>FailoverClusters.ObjectModel</AssemblyName>
     <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
@@ -16,16 +16,16 @@
   </PropertyGroup>
   <ItemGroup />
   <ItemGroup>
-    <Reference Include="Microsoft.VisualC" />
+    <Reference Include="VisualC" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
     <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Xml" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Web" />
-    <Reference Include="Microsoft.Management.Infrastructure" />
-    <Reference Include="Microsoft.FailoverClusters.UI.Common">
-      <HintPath>C:\Windows\Cluster\Microsoft.FailoverClusters.UI.Common.dll</HintPath>
+    <Reference Include="Management.Infrastructure" />
+    <Reference Include="FailoverClusters.UI.Common">
+      <HintPath>C:\Windows\Cluster\FailoverClusters.UI.Common.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>

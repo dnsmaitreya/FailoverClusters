@@ -1,14 +1,14 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Threading;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.UI.Controls;
+using FailoverClusters.Framework;
+using FailoverClusters.UI.Controls;
 using MS.Internal.ServerClusters;
 using MS.Internal.ServerClusters.Management;
 
-namespace Microsoft.FailoverClusters.SnapIn;
+namespace FailoverClusters.SnapIn;
 
 internal class AddPoolDialog : SnapinForm
 {
@@ -40,12 +40,12 @@ internal class AddPoolDialog : SnapinForm
 
 	internal int TotalCapacityColumnIndex => totalCapacityColumnHeader.Index;
 
-	internal static ClusterableStoragePoolsCollection AddPoolsDialog(Microsoft.FailoverClusters.Framework.Cluster cluster, INotifyUser notifyUser)
+	internal static ClusterableStoragePoolsCollection AddPoolsDialog(FailoverClusters.Framework.Cluster cluster, INotifyUser notifyUser)
 	{
 		return ExecuteDialog(cluster, notifyUser, SelectionBehavior.Multi, Resources.AddPoolDialogTitle_Text, Resources.AddPoolDialogInstructions_Text);
 	}
 
-	private static ClusterableStoragePoolsCollection ExecuteDialog(Microsoft.FailoverClusters.Framework.Cluster cluster, INotifyUser notifyUser, SelectionBehavior selectionBehavior, string title, string instructions)
+	private static ClusterableStoragePoolsCollection ExecuteDialog(FailoverClusters.Framework.Cluster cluster, INotifyUser notifyUser, SelectionBehavior selectionBehavior, string title, string instructions)
 	{
 		//IL_002b: Unknown result type (might be due to invalid IL or missing references)
 		ClusterableStoragePoolsCollection clusterableStoragePoolsCollection = FindClusterablePools(notifyUser, cluster);
@@ -94,7 +94,7 @@ internal class AddPoolDialog : SnapinForm
 		InitializeComponent();
 	}
 
-	private AddPoolDialog(Microsoft.FailoverClusters.Framework.Cluster cluster, INotifyUser notifyUser, ClusterableStoragePoolsCollection clusterableStoragePools, SelectionBehavior selectionBehavior, string title, string instructions)
+	private AddPoolDialog(FailoverClusters.Framework.Cluster cluster, INotifyUser notifyUser, ClusterableStoragePoolsCollection clusterableStoragePools, SelectionBehavior selectionBehavior, string title, string instructions)
 		: this()
 	{
 		this.clusterableStoragePools = clusterableStoragePools;
@@ -128,7 +128,7 @@ internal class AddPoolDialog : SnapinForm
 		}
 	}
 
-	private void LoadClusterablePoolsListView(Microsoft.FailoverClusters.Framework.Cluster cluster, INotifyUser notifyUser)
+	private void LoadClusterablePoolsListView(FailoverClusters.Framework.Cluster cluster, INotifyUser notifyUser)
 	{
 		((ListView)(object)poolsListView).SmallImageList = IconsHelp.SmallImageList;
 		List<ListViewItem> list = new List<ListViewItem>();
@@ -155,7 +155,7 @@ internal class AddPoolDialog : SnapinForm
 		clusterableStoragePools.Clear();
 	}
 
-	private static ClusterableStoragePoolsCollection FindClusterablePools(INotifyUser notifyUser, Microsoft.FailoverClusters.Framework.Cluster cluster)
+	private static ClusterableStoragePoolsCollection FindClusterablePools(INotifyUser notifyUser, FailoverClusters.Framework.Cluster cluster)
 	{
 		CluadminWaitDialog cluadminWaitDialog = CluadminWaitDialog.Create(Resources.SearchingForClusterableStoragePools_Text, Resources.FindingClusterableStoragePools_Text);
 		ClusterableStoragePoolsCollection clusterableStoragePoolsCollection = null;
@@ -165,7 +165,7 @@ internal class AddPoolDialog : SnapinForm
 		}
 	}
 
-	private static ClusterableStoragePoolsCollection DetermineClusterablePools(CluadminWaitDialog waitDialog, Microsoft.FailoverClusters.Framework.Cluster frameworkCluster)
+	private static ClusterableStoragePoolsCollection DetermineClusterablePools(CluadminWaitDialog waitDialog, FailoverClusters.Framework.Cluster frameworkCluster)
 	{
 		ClusterableStoragePoolsCollection clusterableStoragePoolsCollection = null;
 		AutoResetEvent autoResetEvent = new AutoResetEvent(initialState: false);
@@ -262,3 +262,4 @@ internal class AddPoolDialog : SnapinForm
 		((Control)this).ResumeLayout(performLayout: false);
 	}
 }
+

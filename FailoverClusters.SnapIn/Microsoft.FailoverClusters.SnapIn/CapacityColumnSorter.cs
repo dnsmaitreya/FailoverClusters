@@ -1,8 +1,8 @@
-using System;
+﻿using System;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.UI.Common;
+using FailoverClusters.UI.Common;
 
-namespace Microsoft.FailoverClusters.SnapIn;
+namespace FailoverClusters.SnapIn;
 
 internal class CapacityColumnSorter<TObject> : ColumnSorterBase<TObject> where TObject : class
 {
@@ -39,3 +39,4 @@ internal class CapacityColumnSorter<TObject> : ColumnSorterBase<TObject> where T
 		return result;
 	}
 }
+

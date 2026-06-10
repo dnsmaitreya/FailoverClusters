@@ -1,8 +1,8 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.UI.Common;
+using FailoverClusters.UI.Common;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -197,3 +197,4 @@ internal class CriticalEventsAlert : SnapinUserControl
 		((Control)this).ResumeLayout(performLayout: false);
 	}
 }
+

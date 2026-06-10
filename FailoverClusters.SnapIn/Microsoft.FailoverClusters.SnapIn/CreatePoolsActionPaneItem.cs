@@ -1,11 +1,11 @@
-using System.Windows.Input;
-using Microsoft.FailoverClusters.ClusterSnapIn;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.FileServer.Management.ServerManagerProxy;
-using Microsoft.ManagementConsole;
+﻿using System.Windows.Input;
+using FailoverClusters.ClusterSnapIn;
+using FailoverClusters.Framework;
+using FailoverClusters.UI.Common;
+using FileServer.Management.ServerManagerProxy;
+using ManagementConsole;
 
-namespace Microsoft.FailoverClusters.SnapIn;
+namespace FailoverClusters.SnapIn;
 
 public class CreatePoolsActionPaneItem : MmcActionPaneItem
 {
@@ -29,3 +29,4 @@ public class CreatePoolsActionPaneItem : MmcActionPaneItem
 		});
 	}
 }
+

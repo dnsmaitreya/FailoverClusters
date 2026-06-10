@@ -1,7 +1,7 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 
-namespace Microsoft.FailoverClusters.WinForms;
+namespace FailoverClusters.WinForms;
 
 internal static class ClusterHelp
 {
@@ -23,3 +23,4 @@ internal static class ClusterHelp
 		return list;
 	}
 }
+

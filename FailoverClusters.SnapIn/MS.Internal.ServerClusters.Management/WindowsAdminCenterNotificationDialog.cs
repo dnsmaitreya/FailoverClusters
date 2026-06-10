@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
@@ -81,7 +81,7 @@ public class WindowsAdminCenterNotificationDialog : Form
 		componentResourceManager.ApplyResources(this.linkLabel, "linkLabel");
 		this.linkLabel.Name = "linkLabel";
 		this.linkLabel.TabStop = true;
-		this.linkLabel.Tag = "https://go.microsoft.com/fwlink/?linkid=872972";
+		this.linkLabel.Tag = "https://go.com/fwlink/?linkid=872972";
 		this.linkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(OnLinkClicked);
 		componentResourceManager.ApplyResources(this.announcementLabel, "announcementLabel");
 		this.announcementLabel.Name = "announcementLabel";
@@ -99,3 +99,4 @@ public class WindowsAdminCenterNotificationDialog : Form
 		base.ResumeLayout(false);
 	}
 }
+

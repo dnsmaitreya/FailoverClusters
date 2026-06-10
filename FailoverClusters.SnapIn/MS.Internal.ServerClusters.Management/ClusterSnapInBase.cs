@@ -1,5 +1,5 @@
-using System.Diagnostics;
-using Microsoft.ManagementConsole;
+﻿using System.Diagnostics;
+using ManagementConsole;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -42,3 +42,4 @@ public class ClusterSnapInBase : SnapIn
 		cluAdmin.OnShutdown(status);
 	}
 }
+

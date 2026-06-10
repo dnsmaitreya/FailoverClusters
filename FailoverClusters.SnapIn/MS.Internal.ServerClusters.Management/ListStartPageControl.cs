@@ -1,10 +1,10 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.ManagementConsole;
+using FailoverClusters.UI.Common;
+using ManagementConsole;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -357,3 +357,4 @@ internal class ListStartPageControl : StartPageContainerControl
 		base.View.ModeActionsPaneItems.AddRange(new ActionsPaneItem[2] { actionBase, actionBase2 });
 	}
 }
+

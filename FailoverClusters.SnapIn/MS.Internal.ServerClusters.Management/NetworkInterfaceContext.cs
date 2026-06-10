@@ -1,7 +1,7 @@
-using System;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.FailoverClusters.UI.Controls;
-using Microsoft.ManagementConsole;
+﻿using System;
+using FailoverClusters.UI.Common;
+using FailoverClusters.UI.Controls;
+using ManagementConsole;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -84,3 +84,4 @@ internal class NetworkInterfaceContext : ContextBase, IDisposable, IClusterSpeci
 	{
 	}
 }
+

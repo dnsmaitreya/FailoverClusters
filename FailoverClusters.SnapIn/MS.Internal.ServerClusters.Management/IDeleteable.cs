@@ -1,4 +1,4 @@
-using Microsoft.ManagementConsole;
+﻿using ManagementConsole;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -8,3 +8,4 @@ internal interface IDeleteable
 
 	void Delete(object sender, Status status);
 }
+

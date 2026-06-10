@@ -1,9 +1,9 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Globalization;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using Microsoft.Win32;
+using Win32;
 
 namespace MS.Internal.ServerClusters;
 
@@ -522,3 +522,4 @@ public static class Crypto
 		}
 	}
 }
+

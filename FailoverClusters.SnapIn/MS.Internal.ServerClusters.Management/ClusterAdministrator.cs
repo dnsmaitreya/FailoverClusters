@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Drawing;
@@ -13,15 +13,15 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Threading;
-using Microsoft.FailoverClusters.Configuration;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.SnapIn;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.FailoverClusters.UI.Common.Services;
-using Microsoft.FailoverClusters.UI.Controls;
-using Microsoft.FailoverClusters.UIFramework;
-using Microsoft.ManagementConsole;
-using Microsoft.ManagementConsole.Advanced;
+using FailoverClusters.Configuration;
+using FailoverClusters.Framework;
+using FailoverClusters.SnapIn;
+using FailoverClusters.UI.Common;
+using FailoverClusters.UI.Common.Services;
+using FailoverClusters.UI.Controls;
+using FailoverClusters.UIFramework;
+using ManagementConsole;
+using ManagementConsole.Advanced;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -46,7 +46,7 @@ internal class ClusterAdministrator
 
 	public const string StorageApplianceManagerName = "Storage Appliance Manager";
 
-	public const string SnapInVendor = "Microsoft Corporation";
+	public const string SnapInVendor = "Corporation";
 
 	public static readonly Guid GroupContextGuid = new Guid("{141BD9CF-1A26-4CDF-AB68-2A8A53D8D50B}");
 
@@ -124,7 +124,7 @@ internal class ClusterAdministrator
 
 	public static ClusterAdministrator Instance => snapin;
 
-	public static Microsoft.ManagementConsole.Advanced.Console Console => Instance.snapInBase.Console;
+	public static ManagementConsole.Advanced.Console Console => Instance.snapInBase.Console;
 
 	internal static FormView ActiveFormView
 	{
@@ -206,9 +206,9 @@ internal class ClusterAdministrator
 
 	private Assembly CurrentDomainAssemblyResolve(object sender, ResolveEventArgs args)
 	{
-		if (args.Name.Contains("Microsoft.Virtualization.Client.Common.Types"))
+		if (args.Name.Contains("Virtualization.Client.Common.Types"))
 		{
-			return Assembly.Load("Microsoft.Virtualization.Client.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");
+			return Assembly.Load("Virtualization.Client.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");
 		}
 		return null;
 	}
@@ -613,7 +613,7 @@ internal class ClusterAdministrator
 		shutdownCallbacks.TryTake(out callback);
 	}
 
-	public static DateTime GetClusterEventsStartTime(Microsoft.FailoverClusters.Framework.Cluster frameworkCluster)
+	public static DateTime GetClusterEventsStartTime(FailoverClusters.Framework.Cluster frameworkCluster)
 	{
 		DateTime now = DateTime.Now;
 		DateTime dateTime = now - TimeSpan.FromDays(1.0);
@@ -702,3 +702,4 @@ internal class ClusterAdministrator
 		ClusterAdministrator.SelectScopeNode?.Invoke(null, new SelectScopeNodeEventArgs(scopeNode));
 	}
 }
+

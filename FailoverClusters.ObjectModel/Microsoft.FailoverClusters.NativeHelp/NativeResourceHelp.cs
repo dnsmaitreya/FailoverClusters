@@ -1,6 +1,6 @@
-using System;
+﻿using System;
 
-namespace Microsoft.FailoverClusters.NativeHelp;
+namespace FailoverClusters.NativeHelp;
 
 public class NativeResourceHelp
 {
@@ -17,3 +17,4 @@ public class NativeResourceHelp
 		Unmonitored = 0x40
 	}
 }
+

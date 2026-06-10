@@ -1,7 +1,7 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.ManagementConsole;
+using FailoverClusters.UI.Common;
+using ManagementConsole;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -101,3 +101,4 @@ internal class ClusterEventsContext : ScopeNodeContextBase
 		this.ContextRefreshed?.Invoke(this, EventArgs.Empty);
 	}
 }
+

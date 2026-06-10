@@ -1,11 +1,11 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Globalization;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Security.AccessControl;
-using Microsoft.Win32;
+using Win32;
 
 namespace MS.Internal.ServerClusters;
 
@@ -547,3 +547,4 @@ public class ClusterRegistryKey : IDisposable
 		GC.SuppressFinalize(this);
 	}
 }
+

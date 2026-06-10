@@ -1,10 +1,10 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.UI.Controls;
-using Microsoft.ManagementConsole;
+using FailoverClusters.UI.Controls;
+using ManagementConsole;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -166,3 +166,4 @@ internal class ErrorStartPageControl : StartPageContainerControl
 		((Control)(object)this).ResumeLayout(performLayout: false);
 	}
 }
+

@@ -1,6 +1,6 @@
-using System;
-using Microsoft.FailoverClusters.UI.Controls;
-using Microsoft.ManagementConsole;
+﻿using System;
+using FailoverClusters.UI.Controls;
+using ManagementConsole;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -145,3 +145,4 @@ internal class GroupContext : ScopeNodeContextBase, IHasPropertyPages, IClusterS
 		throw new NotSupportedException();
 	}
 }
+

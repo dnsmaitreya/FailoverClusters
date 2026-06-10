@@ -1,9 +1,9 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Windows.Input;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.ManagementConsole;
+using FailoverClusters.Framework;
+using ManagementConsole;
 
-namespace Microsoft.FailoverClusters.SnapIn;
+namespace FailoverClusters.SnapIn;
 
 internal class CommandsToActionsContainer
 {
@@ -26,3 +26,4 @@ internal class CommandsToActionsContainer
 		HelpTopic = helpTopic;
 	}
 }
+

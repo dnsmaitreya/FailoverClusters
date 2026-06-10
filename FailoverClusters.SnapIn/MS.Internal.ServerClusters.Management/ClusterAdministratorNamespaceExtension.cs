@@ -1,9 +1,9 @@
-using Microsoft.ManagementConsole;
-using Microsoft.ManagementConsole.Advanced;
+﻿using ManagementConsole;
+using ManagementConsole.Advanced;
 
 namespace MS.Internal.ServerClusters.Management;
 
-[SnapInSettings("{A83E0714-53DF-4f3e-824B-67FF54048B53}", Description = "Failover Cluster Manager", DisplayName = "Failover Cluster Manager", Vendor = "Microsoft Corporation", UseCustomHelp = true)]
+[SnapInSettings("{A83E0714-53DF-4f3e-824B-67FF54048B53}", Description = "Failover Cluster Manager", DisplayName = "Failover Cluster Manager", Vendor = "Corporation", UseCustomHelp = true)]
 [ExtendsNodeType("{1E5F3C57-CA68-4194-AE4B-45B4EA171E37}")]
 public class ClusterAdministratorNamespaceExtension : NamespaceExtension
 {
@@ -40,3 +40,4 @@ public class ClusterAdministratorNamespaceExtension : NamespaceExtension
 		cluAdmin.OnShutdown(status);
 	}
 }
+

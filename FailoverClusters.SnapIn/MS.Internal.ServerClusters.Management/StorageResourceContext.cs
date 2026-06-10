@@ -1,11 +1,11 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.FailoverClusters.WinForms;
-using Microsoft.ManagementConsole;
+using FailoverClusters.Framework;
+using FailoverClusters.UI.Common;
+using FailoverClusters.WinForms;
+using ManagementConsole;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -151,7 +151,7 @@ internal class StorageResourceContext : StorageResourceContextBase
 		try
 		{
 			ClusterSnapinPropertyPage clusterSnapinPropertyPage = new ClusterSnapinPropertyPage();
-			clusterSnapinPropertyPage.SetControl(new ShadowCopyPropertiesPage((Microsoft.FailoverClusters.Framework.Cluster)(object)base.Cluster.FrameworkCluster, Id));
+			clusterSnapinPropertyPage.SetControl(new ShadowCopyPropertiesPage((FailoverClusters.Framework.Cluster)(object)base.Cluster.FrameworkCluster, Id));
 			pages.Add(clusterSnapinPropertyPage);
 		}
 		catch (Exception caughtException)
@@ -336,3 +336,4 @@ internal class StorageResourceContext : StorageResourceContextBase
 		return MaintenanceModeResult.Success;
 	}
 }
+

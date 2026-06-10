@@ -1,11 +1,11 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.WinForms;
-using Microsoft.ManagementConsole;
+using FailoverClusters.WinForms;
+using ManagementConsole;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -215,3 +215,4 @@ internal class SnapinPropertySheet : SnapinForm
 		((Control)this).ResumeLayout(performLayout: false);
 	}
 }
+

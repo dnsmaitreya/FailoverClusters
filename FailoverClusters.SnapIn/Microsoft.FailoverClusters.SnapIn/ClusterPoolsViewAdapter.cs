@@ -1,10 +1,10 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using Microsoft.FailoverClusters.ClusterSnapIn;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.UIFramework;
+using FailoverClusters.ClusterSnapIn;
+using FailoverClusters.Framework;
+using FailoverClusters.UIFramework;
 
-namespace Microsoft.FailoverClusters.SnapIn;
+namespace FailoverClusters.SnapIn;
 
 internal class ClusterPoolsViewAdapter : ClusterGridViewAdapterBase<ClusterPoolsViewModel>
 {
@@ -26,3 +26,4 @@ internal class ClusterPoolsViewAdapter : ClusterGridViewAdapterBase<ClusterPools
 		return result;
 	}
 }
+

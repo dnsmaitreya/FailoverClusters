@@ -1,6 +1,6 @@
-using System.Globalization;
+﻿using System.Globalization;
 using System.Linq;
-using Microsoft.ManagementConsole;
+using ManagementConsole;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -124,3 +124,4 @@ internal static class ActionFactory
 		};
 	}
 }
+

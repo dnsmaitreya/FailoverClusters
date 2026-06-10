@@ -1,17 +1,17 @@
-using System;
+﻿using System;
 using System.Collections.Specialized;
 using System.Globalization;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.ManagementConsole;
+using FailoverClusters.Framework;
+using FailoverClusters.UI.Common;
+using ManagementConsole;
 using MS.Internal.ServerClusters;
 using MS.Internal.ServerClusters.Management;
 
-namespace Microsoft.FailoverClusters.WinForms;
+namespace FailoverClusters.WinForms;
 
 public static class ResourceContext
 {
@@ -21,7 +21,7 @@ public static class ResourceContext
 	[DllImport("failoverclusters.snapinsupport.dll", CharSet = CharSet.Auto)]
 	private static extern int RegisterAdminExtensionsServer([In][MarshalAs(UnmanagedType.LPWStr)] string extensionDll);
 
-	public static int GetPropertyPages(PropertyPageCollection pages, ResourceType resourceType, Microsoft.FailoverClusters.Framework.Cluster cluster, Guid resourceId)
+	public static int GetPropertyPages(PropertyPageCollection pages, ResourceType resourceType, FailoverClusters.Framework.Cluster cluster, Guid resourceId)
 	{
 		if (pages == null)
 		{
@@ -117,7 +117,7 @@ public static class ResourceContext
 		return pages.Count;
 	}
 
-	private static ClusterSnapinPropertyPage AddPropertyGridPage(ResourceType resourceType, Microsoft.FailoverClusters.Framework.Cluster cluster, Guid resourceId)
+	private static ClusterSnapinPropertyPage AddPropertyGridPage(ResourceType resourceType, FailoverClusters.Framework.Cluster cluster, Guid resourceId)
 	{
 		ClusterSnapinPropertyPage clusterSnapinPropertyPage = null;
 		bool addPropertyGrid = false;
@@ -226,7 +226,7 @@ public static class ResourceContext
 		return writableSharedData;
 	}
 
-	private static void SetupAdminExtensions(Microsoft.FailoverClusters.Framework.Cluster cluster, StringCollection adminExtensions)
+	private static void SetupAdminExtensions(FailoverClusters.Framework.Cluster cluster, StringCollection adminExtensions)
 	{
 		try
 		{
@@ -260,7 +260,7 @@ public static class ResourceContext
 		}
 	}
 
-	private static void InstallExtensionDlls(Microsoft.FailoverClusters.Framework.Cluster cluster)
+	private static void InstallExtensionDlls(FailoverClusters.Framework.Cluster cluster)
 	{
 		if (cluster == null)
 		{
@@ -270,7 +270,7 @@ public static class ResourceContext
 		cluster.Nodes.ExecuteQuery(ResultExecution.Sync, NodesQuery, parameter);
 	}
 
-	private static void NodesQuery(OperationResult<IClusterList<Microsoft.FailoverClusters.Framework.Node>> nodeResult)
+	private static void NodesQuery(OperationResult<IClusterList<FailoverClusters.Framework.Node>> nodeResult)
 	{
 		DirectoryInfo directoryInfo = (DirectoryInfo)nodeResult.Parameter;
 		if (nodeResult.Error != null)
@@ -278,7 +278,7 @@ public static class ResourceContext
 			throw nodeResult.Error;
 		}
 		FileInfo[] files;
-		foreach (Microsoft.FailoverClusters.Framework.Node item in nodeResult.Result)
+		foreach (FailoverClusters.Framework.Node item in nodeResult.Result)
 		{
 			try
 			{
@@ -322,7 +322,7 @@ public static class ResourceContext
 		}
 	}
 
-	private static void CheckClusterBinaryPath(Microsoft.FailoverClusters.Framework.Node node)
+	private static void CheckClusterBinaryPath(FailoverClusters.Framework.Node node)
 	{
 		try
 		{
@@ -334,7 +334,7 @@ public static class ResourceContext
 		}
 	}
 
-	private static string CreateClusterBinaryPath(Microsoft.FailoverClusters.Framework.Node node, string binary)
+	private static string CreateClusterBinaryPath(FailoverClusters.Framework.Node node, string binary)
 	{
 		if (node == null)
 		{
@@ -367,3 +367,4 @@ public static class ResourceContext
 		}
 	}
 }
+

@@ -1,10 +1,10 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.UI.Controls;
-using Microsoft.ManagementConsole;
+using FailoverClusters.UI.Controls;
+using ManagementConsole;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -20,7 +20,7 @@ internal class LinksPanelLinkControl : SnapinUserControl
 
 	private IContext context;
 
-	private Microsoft.ManagementConsole.View view;
+	private ManagementConsole.View view;
 
 	private string linkText;
 
@@ -46,7 +46,7 @@ internal class LinksPanelLinkControl : SnapinUserControl
 		view = null;
 	}
 
-	private LinksPanelLinkControl(Icon icon, string linkText, Microsoft.ManagementConsole.View view, IContext context)
+	private LinksPanelLinkControl(Icon icon, string linkText, ManagementConsole.View view, IContext context)
 		: this(icon, linkText)
 	{
 		this.view = view;
@@ -69,7 +69,7 @@ internal class LinksPanelLinkControl : SnapinUserControl
 		return (UserControl)(object)new LinksPanelLinkControl(Icons.OnlineHelp, linkText, url);
 	}
 
-	internal static UserControl CreateShortcutLink(Microsoft.ManagementConsole.View view, IContext context, string shortcutText)
+	internal static UserControl CreateShortcutLink(ManagementConsole.View view, IContext context, string shortcutText)
 	{
 		if (string.IsNullOrEmpty(shortcutText))
 		{
@@ -139,3 +139,4 @@ internal class LinksPanelLinkControl : SnapinUserControl
 		view.SelectScopeNode(scopeNode);
 	}
 }
+

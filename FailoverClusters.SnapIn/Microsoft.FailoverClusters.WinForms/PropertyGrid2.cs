@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -8,11 +8,11 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.Framework;
+using FailoverClusters.Framework;
 using MS.Internal.ServerClusters;
 using MS.Internal.ServerClusters.Management;
 
-namespace Microsoft.FailoverClusters.WinForms;
+namespace FailoverClusters.WinForms;
 
 internal class PropertyGrid2 : DataGridView
 {
@@ -73,7 +73,7 @@ internal class PropertyGrid2 : DataGridView
 		{
 			return Resources.Property_ReadOnly_Text;
 		}
-		if (prop.PropertyType == Microsoft.FailoverClusters.Framework.ClusterPropertyType.Binary)
+		if (prop.PropertyType == FailoverClusters.Framework.ClusterPropertyType.Binary)
 		{
 			return Resources.Property_NotEditable_Text;
 		}
@@ -85,7 +85,7 @@ internal class PropertyGrid2 : DataGridView
 		StringBuilder stringBuilder = new StringBuilder();
 		switch (prop.PropertyType)
 		{
-		case Microsoft.FailoverClusters.Framework.ClusterPropertyType.Binary:
+		case FailoverClusters.Framework.ClusterPropertyType.Binary:
 		{
 			byte[] array = (byte[])prop.Value;
 			int num = 0;
@@ -113,7 +113,7 @@ internal class PropertyGrid2 : DataGridView
 			stringBuilder.AppendFormat(CultureInfo.CurrentCulture, " ({0} {1})", array.Length, Resources.Bytes_Text);
 			break;
 		}
-		case Microsoft.FailoverClusters.Framework.ClusterPropertyType.StringCollection:
+		case FailoverClusters.Framework.ClusterPropertyType.StringCollection:
 			foreach (string item in (IEnumerable<string>)prop.Value)
 			{
 				if (stringBuilder.Length != 0)
@@ -137,40 +137,40 @@ internal class PropertyGrid2 : DataGridView
 	{
 		switch (prop.PropertyType)
 		{
-		case Microsoft.FailoverClusters.Framework.ClusterPropertyType.ExpandString:
+		case FailoverClusters.Framework.ClusterPropertyType.ExpandString:
 			((ClusterPropertyExpandString)prop).TypedValue = value ?? string.Empty;
 			break;
-		case Microsoft.FailoverClusters.Framework.ClusterPropertyType.ExpandedString:
+		case FailoverClusters.Framework.ClusterPropertyType.ExpandedString:
 			((ClusterPropertyExpandedString)prop).TypedValue = value ?? string.Empty;
 			break;
-		case Microsoft.FailoverClusters.Framework.ClusterPropertyType.String:
+		case FailoverClusters.Framework.ClusterPropertyType.String:
 			((ClusterPropertyString)prop).TypedValue = value ?? string.Empty;
 			break;
-		case Microsoft.FailoverClusters.Framework.ClusterPropertyType.Int:
+		case FailoverClusters.Framework.ClusterPropertyType.Int:
 			((ClusterPropertyInt)prop).TypedValue = int.Parse(value, CultureInfo.InvariantCulture);
 			break;
-		case Microsoft.FailoverClusters.Framework.ClusterPropertyType.Int64:
+		case FailoverClusters.Framework.ClusterPropertyType.Int64:
 			((ClusterPropertyLong)prop).TypedValue = long.Parse(value, CultureInfo.InvariantCulture);
 			break;
-		case Microsoft.FailoverClusters.Framework.ClusterPropertyType.UnsignedInt:
+		case FailoverClusters.Framework.ClusterPropertyType.UnsignedInt:
 			((ClusterPropertyUInt)prop).TypedValue = uint.Parse(value, CultureInfo.InvariantCulture);
 			break;
-		case Microsoft.FailoverClusters.Framework.ClusterPropertyType.UnsignedInt64:
+		case FailoverClusters.Framework.ClusterPropertyType.UnsignedInt64:
 			((ClusterPropertyULong)prop).TypedValue = ulong.Parse(value, CultureInfo.InvariantCulture);
 			break;
-		case Microsoft.FailoverClusters.Framework.ClusterPropertyType.UnsignedShort:
+		case FailoverClusters.Framework.ClusterPropertyType.UnsignedShort:
 			((ClusterPropertyUShort)prop).TypedValue = ushort.Parse(value, CultureInfo.InvariantCulture);
 			break;
-		case Microsoft.FailoverClusters.Framework.ClusterPropertyType.DateTime:
+		case FailoverClusters.Framework.ClusterPropertyType.DateTime:
 			((ClusterPropertyDateTime)prop).TypedValue = DateTime.Parse(value, CultureInfo.InvariantCulture, DateTimeStyles.AllowWhiteSpaces | DateTimeStyles.AssumeLocal);
 			break;
 		default:
 			DebugLog.LogWarning("Code needed to set this property type: " + prop.PropertyType);
 			break;
-		case Microsoft.FailoverClusters.Framework.ClusterPropertyType.Unknown:
-		case Microsoft.FailoverClusters.Framework.ClusterPropertyType.Binary:
-		case Microsoft.FailoverClusters.Framework.ClusterPropertyType.StringCollection:
-		case Microsoft.FailoverClusters.Framework.ClusterPropertyType.SecurityDescriptor:
+		case FailoverClusters.Framework.ClusterPropertyType.Unknown:
+		case FailoverClusters.Framework.ClusterPropertyType.Binary:
+		case FailoverClusters.Framework.ClusterPropertyType.StringCollection:
+		case FailoverClusters.Framework.ClusterPropertyType.SecurityDescriptor:
 			break;
 		}
 	}
@@ -276,10 +276,10 @@ internal class PropertyGrid2 : DataGridView
 		}
 		switch (propertyFromRow.PropertyType)
 		{
-		case Microsoft.FailoverClusters.Framework.ClusterPropertyType.Binary:
+		case FailoverClusters.Framework.ClusterPropertyType.Binary:
 			e.Cancel = true;
 			break;
-		case Microsoft.FailoverClusters.Framework.ClusterPropertyType.StringCollection:
+		case FailoverClusters.Framework.ClusterPropertyType.StringCollection:
 		{
 			e.Cancel = true;
 			DataGridViewRow row = base.Rows[e.RowIndex];
@@ -294,3 +294,4 @@ internal class PropertyGrid2 : DataGridView
 		OnPropertiesChanged();
 	}
 }
+

@@ -426,7 +426,7 @@ Your cluster quorum settings have not been changed.</value></data>
   <data name="InvalidNodeNameFormat_Text"><value>The node name '{0}' is not valid.</value></data>
   <data name="Exception_QuickMigration_Text"><value>The group is in an invalid state to perform a quick migration.</value></data>
   <data name="Cluster_NotConstructed_Text"><value>The cluster '{0}' is not fully created.  Please wait for the create cluster process to complete and try again.</value></data>
-  <data name="Exception_ReadOnlyAccess_Footer_Text"><value>&lt;a href="https://go.microsoft.com/fwlink/p/?LinkId=233200"&gt;More about PowerShell&lt;/a&gt;</value></data>
+  <data name="Exception_ReadOnlyAccess_Footer_Text"><value>&lt;a href="https://go.com/fwlink/p/?LinkId=233200"&gt;More about PowerShell&lt;/a&gt;</value></data>
   <data name="Resource_MultipleCoreResourcesFound_Text"><value>The clustered role is not configured correctly; it contains multiple resources of type '{0}'.</value></data>
   <data name="TaskDialog_WindowTitle_HyperVNotSupported_Text"><value>Hyper-V Management Actions</value></data>
   <data name="Node_GetNetworkInterfaces_Fail_Text"><value>An error occurred while retrieving the network interfaces for the node '{0}'.</value></data>
@@ -495,9 +495,9 @@ Your cluster quorum settings have not been changed.</value></data>
   <data name="AzureWitnessDeletingResource_Text"><value>Deleting the cloud witness resource...</value></data>
   <data name="Cluster_GetResourceCount_Failed_Text"><value>Failed to retrieve the number of resources for '{0}'.</value></data>
   <data name="EventPublisherOpenFailed_Text"><value>Failed to open the publishers of the event logs.</value></data>
-  <data name="AddNodeFail_S2DNotSupported_Text"><value>Microsoft recommends deploying SDDC on WSSD [https://www.microsoft.com/en-us/cloud-platform/software-defined-datacenter] certified hardware offerings for production environments. The WSSD offerings will be pre-validated on Windows Server 2019 in the coming months. In the meantime, we are making the SDDC bits available early to Windows Server 2019 Insiders to allow for testing and evaluation in preparation for WSSD certified hardware becoming available. 
+  <data name="AddNodeFail_S2DNotSupported_Text"><value>recommends deploying SDDC on WSSD [https://www.com/en-us/cloud-platform/software-defined-datacenter] certified hardware offerings for production environments. The WSSD offerings will be pre-validated on Windows Server 2019 in the coming months. In the meantime, we are making the SDDC bits available early to Windows Server 2019 Insiders to allow for testing and evaluation in preparation for WSSD certified hardware becoming available. 
 
-Customers interested in upgrading existing WSSD environments to Windows Server 2019 should contact Microsoft for recommendations on how to proceed. Please call Microsoft support [https://support.microsoft.com/en-us/help/4051701/global-customer-service-phone-numbers].
+Customers interested in upgrading existing WSSD environments to Windows Server 2019 should contact for recommendations on how to proceed. Please call support [https://support.com/en-us/help/4051701/global-customer-service-phone-numbers].
     </value></data>
   <data name="ResourceTypeUnavailable_Text"><value>(Resource Type Unavailable)</value></data>
   <data name="Resource_IsPathValid_Fail_Text"><value>An error occurred while verifying that a path is valid for the resource '{0}'.</value></data>

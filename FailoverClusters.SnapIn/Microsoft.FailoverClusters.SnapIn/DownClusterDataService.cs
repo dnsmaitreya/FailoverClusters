@@ -1,10 +1,10 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.FailoverClusters.UIFramework;
+using FailoverClusters.UIFramework;
 using MS.Internal.ServerClusters.Management;
 
-namespace Microsoft.FailoverClusters.SnapIn;
+namespace FailoverClusters.SnapIn;
 
 internal class DownClusterDataService : IDownClusterDataService, IDownClusterDataChangedService
 {
@@ -44,3 +44,4 @@ internal class DownClusterDataService : IDownClusterDataService, IDownClusterDat
 		return downClusterDataItems;
 	}
 }
+

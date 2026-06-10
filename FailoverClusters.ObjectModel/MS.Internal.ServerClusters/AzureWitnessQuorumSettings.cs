@@ -1,7 +1,7 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
-using Microsoft.Management.Infrastructure;
+using Management.Infrastructure;
 
 namespace MS.Internal.ServerClusters;
 
@@ -164,3 +164,4 @@ public class AzureWitnessQuorumSettings : QuorumSettings, IHasQuorumResource
 		return result;
 	}
 }
+

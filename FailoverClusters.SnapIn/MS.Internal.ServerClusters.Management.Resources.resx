@@ -466,7 +466,7 @@ If the clustered role fails more than the maximum in the specified period, it wi
   <data name="ClusterShutdownByResourceOffline_Text"><value>You cannot fail the resource {0} or take it offline because this would cause the cluster to lose quorum. Before taking this action on this resource, bring an offline node online. Alternatively, to stop the cluster, right-click the cluster name, click More Actions, and then click the shut down command.</value></data>
   <data name="RetrievingItem_Text"><value>Retrieving item information...</value></data>
   <data name="CannotQueryClusterObjectEvents_Text"><value>Failed to look for events related to '{0}'.</value></data>
-  <data name="MicrosoftSupport_Title_Text"><value>Microsoft support page on the Web</value></data>
+  <data name="MicrosoftSupport_Title_Text"><value>support page on the Web</value></data>
   <data name="ForceClusterStartConfirmation_Text"><value>Forcing the cluster to start can have unexpected results. This includes the loss of cluster configuration.</value></data>
   <data name="ShareSubdirectories_Text"><value>Share subdirectories</value></data>
   <data name="LargeIconViewActionDescription_Text"><value>This action changes the view to show larger icons.</value></data>

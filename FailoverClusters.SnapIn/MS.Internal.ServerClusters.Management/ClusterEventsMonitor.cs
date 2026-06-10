@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -6,9 +6,9 @@ using System.Globalization;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.FailoverClusters.UIFramework;
+using FailoverClusters.Framework;
+using FailoverClusters.UI.Common;
+using FailoverClusters.UIFramework;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -91,7 +91,7 @@ internal class ClusterEventsMonitor : ViewModelBase, IClusterEventsMonitor
 
 	private ReaderWriterLock clusterEventsNodeInfoLock = new ReaderWriterLock();
 
-	private Microsoft.FailoverClusters.Framework.Cluster frameworkCluster;
+	private FailoverClusters.Framework.Cluster frameworkCluster;
 
 	private string clusterDomain;
 
@@ -146,7 +146,7 @@ internal class ClusterEventsMonitor : ViewModelBase, IClusterEventsMonitor
 		updateCriticalEventsTimer = new Timer(UpdateClusterEvents, null, 3600000, 3600000);
 	}
 
-	public ClusterEventsMonitor(Microsoft.FailoverClusters.Framework.Cluster frameworkCluster)
+	public ClusterEventsMonitor(FailoverClusters.Framework.Cluster frameworkCluster)
 		: this()
 	{
 		this.frameworkCluster = frameworkCluster;
@@ -622,3 +622,4 @@ internal class ClusterEventsMonitor : ViewModelBase, IClusterEventsMonitor
 		}
 	}
 }
+

@@ -1,8 +1,8 @@
-using System;
+﻿using System;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.UI.Common;
+using FailoverClusters.UI.Common;
 
-namespace Microsoft.FailoverClusters.SnapIn;
+namespace FailoverClusters.SnapIn;
 
 internal class EnumColumnSorter<TObject> : ColumnSorterBase<TObject> where TObject : class
 {
@@ -28,3 +28,4 @@ internal class EnumColumnSorter<TObject> : ColumnSorterBase<TObject> where TObje
 		return string.Compare(func(x), func(y), StringComparison.CurrentCulture);
 	}
 }
+

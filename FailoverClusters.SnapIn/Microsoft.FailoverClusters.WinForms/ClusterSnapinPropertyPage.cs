@@ -1,12 +1,12 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.ManagementConsole;
+using FailoverClusters.Framework;
+using ManagementConsole;
 using MS.Internal.ServerClusters;
 using MS.Internal.ServerClusters.Management;
 
-namespace Microsoft.FailoverClusters.WinForms;
+namespace FailoverClusters.WinForms;
 
 internal class ClusterSnapinPropertyPage : PropertyPage
 {
@@ -135,3 +135,4 @@ internal class ClusterSnapinPropertyPage : PropertyPage
 		ClusterDialogException.ShowTaskDialog(e);
 	}
 }
+

@@ -1,14 +1,14 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Globalization;
 using System.Text;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.Framework;
+using FailoverClusters.Framework;
 using MS.Internal.ServerClusters;
 using MS.Internal.ServerClusters.Management;
 
-namespace Microsoft.FailoverClusters.WinForms;
+namespace FailoverClusters.WinForms;
 
 internal class FilterGrid2 : DataGridView
 {
@@ -764,3 +764,4 @@ internal class FilterGrid2 : DataGridView
 		}
 	}
 }
+

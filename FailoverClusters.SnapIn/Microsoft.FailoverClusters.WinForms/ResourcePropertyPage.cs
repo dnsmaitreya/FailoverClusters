@@ -1,4 +1,4 @@
-namespace Microsoft.FailoverClusters.WinForms;
+﻿namespace FailoverClusters.WinForms;
 
 internal class ResourcePropertyPage : SnapinPropertyPageControlBase
 {
@@ -15,3 +15,4 @@ internal class ResourcePropertyPage : SnapinPropertyPageControlBase
 	{
 	}
 }
+

@@ -1,7 +1,7 @@
-using Microsoft.FailoverClusters.ClusterSnapIn;
-using Microsoft.FailoverClusters.UIFramework;
+﻿using FailoverClusters.ClusterSnapIn;
+using FailoverClusters.UIFramework;
 
-namespace Microsoft.FailoverClusters.SnapIn;
+namespace FailoverClusters.SnapIn;
 
 internal class ClusterRootViewAdapter : WpfViewAdapterBase<ClusterRootViewModel>
 {
@@ -12,3 +12,4 @@ internal class ClusterRootViewAdapter : WpfViewAdapterBase<ClusterRootViewModel>
 		return new ClusterRootViewModel(viewModelData.ViewCommandsProvider, (IScopeNodeNavigationCommandsProvider)(object)new ScopeNodeNavigationCommandsProvider(this));
 	}
 }
+

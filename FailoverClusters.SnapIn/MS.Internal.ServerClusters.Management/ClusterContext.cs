@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
@@ -7,14 +7,14 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Input;
-using Microsoft.FailoverClusters.ClusterSnapIn;
-using Microsoft.FailoverClusters.Configuration;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.SnapIn;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.FailoverClusters.UI.Common.Services;
-using Microsoft.FailoverClusters.UIFramework;
-using Microsoft.ManagementConsole;
+using FailoverClusters.ClusterSnapIn;
+using FailoverClusters.Configuration;
+using FailoverClusters.Framework;
+using FailoverClusters.SnapIn;
+using FailoverClusters.UI.Common;
+using FailoverClusters.UI.Common.Services;
+using FailoverClusters.UIFramework;
+using ManagementConsole;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -80,7 +80,7 @@ internal class ClusterContext : ScopeNodeContextBase, IHasPropertyPages, IClosea
 
 	internal ActionBase ClusterAwareUpdatingAction { get; private set; }
 
-	public Microsoft.FailoverClusters.Framework.Cluster FrameworkCluster { get; private set; }
+	public FailoverClusters.Framework.Cluster FrameworkCluster { get; private set; }
 
 	public ResourceTypeManager ResourceTypeManager => resTypeManager;
 
@@ -105,7 +105,7 @@ internal class ClusterContext : ScopeNodeContextBase, IHasPropertyPages, IClosea
 				ViewCommandsProvider = (IViewCommandsProvider)(object)new ClusterOverviewCommandsProvider(this)
 			};
 			signalViewModel = viewModelData.ProcessMessage;
-			Microsoft.FailoverClusters.Framework.Cluster frameworkCluster = FrameworkCluster;
+			FailoverClusters.Framework.Cluster frameworkCluster = FrameworkCluster;
 			if (frameworkCluster != null)
 			{
 				viewDescriptionCollection.Add(new FormViewDescription
@@ -202,7 +202,7 @@ internal class ClusterContext : ScopeNodeContextBase, IHasPropertyPages, IClosea
 			cluster.NodesChanged += nodeNotifications.OnCollectionChanged;
 			nodeNotifications.NotificationRaised += OnClusterQuorumStateChanged;
 			IntPtr intPtr = cluster.ClusterHandle.DangerousGetHandle();
-			FrameworkCluster = new Microsoft.FailoverClusters.Framework.Cluster
+			FrameworkCluster = new FailoverClusters.Framework.Cluster
 			{
 				Adapter = ClusterAdapterType.ClusterApi
 			};
@@ -411,10 +411,10 @@ internal class ClusterContext : ScopeNodeContextBase, IHasPropertyPages, IClosea
 	private void FrameworkClusterDisconnected(object sender, ClusterDisconnectedEventArgs e)
 	{
 		ClusterLog.LogVerbose((LogSubcategory)10, "Framework invoked a cluster disconnected");
-		DisconectAndLoadDownClusterPage((Microsoft.FailoverClusters.Framework.Cluster)sender);
+		DisconectAndLoadDownClusterPage((FailoverClusters.Framework.Cluster)sender);
 	}
 
-	private void DisconectAndLoadDownClusterPage(Microsoft.FailoverClusters.Framework.Cluster frameworkCluster)
+	private void DisconectAndLoadDownClusterPage(FailoverClusters.Framework.Cluster frameworkCluster)
 	{
 		Close();
 		if (frameworkCluster != null)
@@ -583,7 +583,7 @@ internal class ClusterContext : ScopeNodeContextBase, IHasPropertyPages, IClosea
 		List<ActionsPaneItem> list = new List<ActionsPaneItem>();
 		try
 		{
-			Microsoft.FailoverClusters.Framework.Cluster frameworkCluster = FrameworkCluster;
+			FailoverClusters.Framework.Cluster frameworkCluster = FrameworkCluster;
 			if (frameworkCluster != null)
 			{
 				AverageGroup obj = frameworkCluster.CoreGroup as AverageGroup;
@@ -1015,7 +1015,7 @@ internal class ClusterContext : ScopeNodeContextBase, IHasPropertyPages, IClosea
 		moveActionsAreDirty = true;
 		actionsAreDirty = true;
 		UpdateStateBasedActions();
-		Microsoft.FailoverClusters.Framework.Cluster frameworkCluster = FrameworkCluster;
+		FailoverClusters.Framework.Cluster frameworkCluster = FrameworkCluster;
 		if (frameworkCluster != null)
 		{
 			frameworkCluster.Refresh(targeted: false);
@@ -1090,3 +1090,4 @@ internal class ClusterContext : ScopeNodeContextBase, IHasPropertyPages, IClosea
 	{
 	}
 }
+

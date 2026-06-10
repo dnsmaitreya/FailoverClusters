@@ -1,8 +1,8 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using MS.Internal.ServerClusters.Management;
 
-namespace Microsoft.FailoverClusters.WinForms;
+namespace FailoverClusters.WinForms;
 
 internal class FilterGrouping
 {
@@ -288,3 +288,4 @@ internal class FilterGrouping
 		return false;
 	}
 }
+

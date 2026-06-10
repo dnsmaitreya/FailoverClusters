@@ -1,17 +1,17 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Threading;
 using System.Windows.Input;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.FailoverClusters.UIFramework;
-using Microsoft.FailoverClusters.WinForms;
-using Microsoft.ManagementConsole;
+using FailoverClusters.Framework;
+using FailoverClusters.UI.Common;
+using FailoverClusters.UIFramework;
+using FailoverClusters.WinForms;
+using ManagementConsole;
 using MS.Internal.ServerClusters.Management;
 
-namespace Microsoft.FailoverClusters.SnapIn;
+namespace FailoverClusters.SnapIn;
 
 internal class UiActionProducer : IUiActionProducer
 {
@@ -92,9 +92,9 @@ internal class UiActionProducer : IUiActionProducer
 
 	private void UpdateSelectionDataOnSingleItemSelection(SelectionData selectionData, IDataItem firstSelectedItem)
 	{
-		UpdateSelection(selectionData, firstSelectedItem as Resource, Microsoft.FailoverClusters.WinForms.ResourceContext.GetNodeTypes, Microsoft.FailoverClusters.WinForms.ResourceContext.GetSharedData);
-		UpdateSelection(selectionData, firstSelectedItem as Group, Microsoft.FailoverClusters.WinForms.GroupContext.GetNodeTypes, Microsoft.FailoverClusters.WinForms.GroupContext.GetSharedData);
-		UpdateSelection(selectionData, firstSelectedItem as Network, Microsoft.FailoverClusters.WinForms.NetworkContext.GetNodeTypes, Microsoft.FailoverClusters.WinForms.NetworkContext.GetSharedData);
+		UpdateSelection(selectionData, firstSelectedItem as Resource, FailoverClusters.WinForms.ResourceContext.GetNodeTypes, FailoverClusters.WinForms.ResourceContext.GetSharedData);
+		UpdateSelection(selectionData, firstSelectedItem as Group, FailoverClusters.WinForms.GroupContext.GetNodeTypes, FailoverClusters.WinForms.GroupContext.GetSharedData);
+		UpdateSelection(selectionData, firstSelectedItem as Network, FailoverClusters.WinForms.NetworkContext.GetNodeTypes, FailoverClusters.WinForms.NetworkContext.GetSharedData);
 		selectionData.Update(null, multiSelection: false, null, null);
 	}
 
@@ -135,3 +135,4 @@ internal class UiActionProducer : IUiActionProducer
 		});
 	}
 }
+

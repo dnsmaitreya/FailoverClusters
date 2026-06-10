@@ -1,8 +1,8 @@
-using Microsoft.FailoverClusters.UIFramework;
-using Microsoft.ManagementConsole;
+﻿using FailoverClusters.UIFramework;
+using ManagementConsole;
 using MS.Internal.ServerClusters.Management;
 
-namespace Microsoft.FailoverClusters.ClusterSnapIn;
+namespace FailoverClusters.ClusterSnapIn;
 
 internal class ClusterOverviewCommandsProvider : ViewCommandsProviderBase
 {
@@ -57,3 +57,4 @@ internal class ClusterOverviewCommandsProvider : ViewCommandsProviderBase
 		return true;
 	}
 }
+

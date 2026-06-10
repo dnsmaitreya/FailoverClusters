@@ -1,5 +1,5 @@
-using System.Windows.Forms;
-using Microsoft.FailoverClusters.SnapIn;
+﻿using System.Windows.Forms;
+using FailoverClusters.SnapIn;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -19,3 +19,4 @@ internal class DiskListView : BaseListView
 		}
 	}
 }
+

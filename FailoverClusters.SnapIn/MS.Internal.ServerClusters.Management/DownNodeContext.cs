@@ -1,8 +1,8 @@
-using System;
+﻿using System;
 using System.ServiceProcess;
 using System.Threading;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.ManagementConsole;
+using FailoverClusters.UI.Common;
+using ManagementConsole;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -231,3 +231,4 @@ internal class DownNodeContext : ContextBase, IRefreshable
 		}
 	}
 }
+

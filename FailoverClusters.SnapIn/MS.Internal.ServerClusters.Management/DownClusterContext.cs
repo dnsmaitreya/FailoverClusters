@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,12 +10,12 @@ using System.Threading.Tasks;
 using System.Timers;
 using System.Windows.Forms;
 using System.Windows.Input;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.SnapIn;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.FailoverClusters.UIFramework;
-using Microsoft.ManagementConsole;
-using Microsoft.ManagementConsole.Advanced;
+using FailoverClusters.Framework;
+using FailoverClusters.SnapIn;
+using FailoverClusters.UI.Common;
+using FailoverClusters.UIFramework;
+using ManagementConsole;
+using ManagementConsole.Advanced;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -585,3 +585,4 @@ internal class DownClusterContext : ScopeNodeContextBase, ICloseable
 		}
 	}
 }
+

@@ -1,9 +1,9 @@
-using System;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.FailoverClusters.UIFramework;
+﻿using System;
+using FailoverClusters.Framework;
+using FailoverClusters.UI.Common;
+using FailoverClusters.UIFramework;
 
-namespace Microsoft.FailoverClusters.ClusterSnapIn;
+namespace FailoverClusters.ClusterSnapIn;
 
 public class ViewModelData
 {
@@ -57,3 +57,4 @@ public class ViewModelData
 		}
 	}
 }
+

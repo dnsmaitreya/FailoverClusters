@@ -1,8 +1,8 @@
-using System.Windows.Forms;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.ManagementConsole;
-using Microsoft.ManagementConsole.Advanced;
-using Microsoft.WindowsAPICodePack.Dialogs;
+﻿using System.Windows.Forms;
+using FailoverClusters.UI.Common;
+using ManagementConsole;
+using ManagementConsole.Advanced;
+using WindowsAPICodePack.Dialogs;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -46,3 +46,4 @@ internal sealed class PropertyPageNotifyUser : NotifyUser
 		return confirmationDialog.ShowDialog();
 	}
 }
+

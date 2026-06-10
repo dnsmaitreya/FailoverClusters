@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -7,14 +7,14 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.FailoverClusters.UI.Controls;
+using FailoverClusters.Framework;
+using FailoverClusters.UI.Common;
+using FailoverClusters.UI.Controls;
 using MS.Internal.ServerClusters;
 using MS.Internal.ServerClusters.Controls;
 using MS.Internal.ServerClusters.Management;
 
-namespace Microsoft.FailoverClusters.WinForms;
+namespace FailoverClusters.WinForms;
 
 [DesignTimeVisible(true)]
 internal class GroupGeneralPropertyPage : SnapinPropertyPageControlBase
@@ -33,11 +33,11 @@ internal class GroupGeneralPropertyPage : SnapinPropertyPageControlBase
 
 	private string owner;
 
-	private Microsoft.FailoverClusters.Framework.GroupType groupType;
+	private FailoverClusters.Framework.GroupType groupType;
 
 	private readonly Guid groupId;
 
-	private readonly Microsoft.FailoverClusters.Framework.Cluster cluster;
+	private readonly FailoverClusters.Framework.Cluster cluster;
 
 	private Group group;
 
@@ -80,7 +80,7 @@ internal class GroupGeneralPropertyPage : SnapinPropertyPageControlBase
 		InitializeComponent();
 	}
 
-	internal GroupGeneralPropertyPage(Microsoft.FailoverClusters.Framework.Cluster cluster, Guid groupId)
+	internal GroupGeneralPropertyPage(FailoverClusters.Framework.Cluster cluster, Guid groupId)
 		: base(Resources.General_Text)
 	{
 		Exceptions.ThrowIfNull((object)cluster, "cluster");
@@ -181,7 +181,7 @@ internal class GroupGeneralPropertyPage : SnapinPropertyPageControlBase
 		stateValueLabel.Text = state;
 		nodeValueLabel.Text = owner;
 		orderedListViewPreferredOwners.Items.AddRange(preferredOwners.ToArray());
-		WinFormsHelp.SetEncodedLinkLabelText(ownersInstructionsLabel, (groupType == Microsoft.FailoverClusters.Framework.GroupType.CoreCluster) ? Resources.CoreClusterGroupOwnersInstructions_Text : Resources.ServiceOrApplicationOwnersInstructions_Text);
+		WinFormsHelp.SetEncodedLinkLabelText(ownersInstructionsLabel, (groupType == FailoverClusters.Framework.GroupType.CoreCluster) ? Resources.CoreClusterGroupOwnersInstructions_Text : Resources.ServiceOrApplicationOwnersInstructions_Text);
 		if (IsPriorityValueInEnumRange(priorityValue))
 		{
 			priorityComboBox.SelectedIndex = priorityComboBox.FindString(priorityValue.Translate());
@@ -210,7 +210,7 @@ internal class GroupGeneralPropertyPage : SnapinPropertyPageControlBase
 			int selectedIndex = priorityComboBox.Items.Add(new PriorityWrapper(text));
 			priorityComboBox.SelectedIndex = selectedIndex;
 		}
-		if (group.GroupType == Microsoft.FailoverClusters.Framework.GroupType.CoreCluster)
+		if (group.GroupType == FailoverClusters.Framework.GroupType.CoreCluster)
 		{
 			priorityComboBox.Enabled = false;
 		}
@@ -571,3 +571,4 @@ internal class GroupGeneralPropertyPage : SnapinPropertyPageControlBase
 		((Control)(object)this).PerformLayout();
 	}
 }
+

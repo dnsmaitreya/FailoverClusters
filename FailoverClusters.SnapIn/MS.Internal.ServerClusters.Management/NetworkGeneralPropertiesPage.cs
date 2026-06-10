@@ -1,9 +1,9 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.UI.Controls;
+using FailoverClusters.UI.Controls;
 using MS.Internal.ServerClusters.Controls;
 
 namespace MS.Internal.ServerClusters.Management;
@@ -436,3 +436,4 @@ internal class NetworkGeneralPropertiesPage : PropertyPageControlBase
 		((Control)(object)this).PerformLayout();
 	}
 }
+

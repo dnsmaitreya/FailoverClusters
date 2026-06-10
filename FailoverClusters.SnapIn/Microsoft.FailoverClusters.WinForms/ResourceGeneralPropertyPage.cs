@@ -1,17 +1,17 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.SnapIn;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.FailoverClusters.UI.Controls;
-using Microsoft.FailoverClusters.UIFramework;
+using FailoverClusters.Framework;
+using FailoverClusters.SnapIn;
+using FailoverClusters.UI.Common;
+using FailoverClusters.UI.Controls;
+using FailoverClusters.UIFramework;
 using MS.Internal.ServerClusters;
 using MS.Internal.ServerClusters.Controls;
 using MS.Internal.ServerClusters.Management;
 
-namespace Microsoft.FailoverClusters.WinForms;
+namespace FailoverClusters.WinForms;
 
 [DesignTimeVisible(true)]
 internal class ResourceGeneralPropertyPage : ResourcePropertyPage
@@ -30,7 +30,7 @@ internal class ResourceGeneralPropertyPage : ResourcePropertyPage
 
 	private string resourceType;
 
-	private readonly Microsoft.FailoverClusters.Framework.Cluster cluster;
+	private readonly FailoverClusters.Framework.Cluster cluster;
 
 	private readonly Guid resourceId;
 
@@ -89,12 +89,12 @@ internal class ResourceGeneralPropertyPage : ResourcePropertyPage
 		resource = null;
 	}
 
-	public ResourceGeneralPropertyPage(Microsoft.FailoverClusters.Framework.Cluster cluster, Guid resourceId)
+	public ResourceGeneralPropertyPage(FailoverClusters.Framework.Cluster cluster, Guid resourceId)
 		: this(cluster, resourceId, renamable: true)
 	{
 	}
 
-	public ResourceGeneralPropertyPage(Microsoft.FailoverClusters.Framework.Cluster cluster, Guid resourceId, bool renamable)
+	public ResourceGeneralPropertyPage(FailoverClusters.Framework.Cluster cluster, Guid resourceId, bool renamable)
 		: base(Resources.General_Text)
 	{
 		Exceptions.ThrowIfNull((object)cluster, "cluster");
@@ -135,7 +135,7 @@ internal class ResourceGeneralPropertyPage : ResourcePropertyPage
 					int num = IconHelpers.GetResourceTypeIconIndex(resource);
 					if (num == Icons.ResourceIndex)
 					{
-						num = IconHelpers.GetResourceIconIndex(resource, Microsoft.FailoverClusters.Framework.ResourceState.Online);
+						num = IconHelpers.GetResourceIconIndex(resource, FailoverClusters.Framework.ResourceState.Online);
 					}
 					icon = Icons.GetIcon(num);
 					name = resource.Name;
@@ -156,7 +156,7 @@ internal class ResourceGeneralPropertyPage : ResourcePropertyPage
 
 	protected override void InitializePage()
 	{
-		int resourceIconIndex = IconHelpers.GetResourceIconIndex(null, Microsoft.FailoverClusters.Framework.ResourceState.Unknown);
+		int resourceIconIndex = IconHelpers.GetResourceIconIndex(null, FailoverClusters.Framework.ResourceState.Unknown);
 		icon = Icons.GetIcon(resourceIconIndex);
 		name = CommonResources.LoadingText;
 		state = CommonResources.LoadingText;
@@ -318,3 +318,4 @@ internal class ResourceGeneralPropertyPage : ResourcePropertyPage
 		((Control)(object)this).PerformLayout();
 	}
 }
+

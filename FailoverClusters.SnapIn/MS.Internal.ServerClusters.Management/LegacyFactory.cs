@@ -1,11 +1,11 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.SnapIn;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.ManagementConsole;
+using FailoverClusters.Framework;
+using FailoverClusters.SnapIn;
+using FailoverClusters.UI.Common;
+using ManagementConsole;
 using MS.Internal.ServerClusters.Wizards;
 
 namespace MS.Internal.ServerClusters.Management;
@@ -760,3 +760,4 @@ public static class LegacyFactory
 		SharedActions.PerformClusterAwareUpdating((Cluster)GetLegacyCluster(clusterId, null), ClusterAdministrator.NotifyUser, Resources.UpdateCluster_Description);
 	}
 }
+

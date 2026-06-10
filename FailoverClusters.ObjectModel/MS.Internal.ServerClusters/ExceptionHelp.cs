@@ -1,4 +1,4 @@
-#define DEBUG
+﻿#define DEBUG
 using System;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -7,8 +7,8 @@ using System.Management;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
-using Microsoft.FailoverClusters.UI.Common;
-using Microsoft.Management.Infrastructure;
+using FailoverClusters.UI.Common;
+using Management.Infrastructure;
 
 namespace MS.Internal.ServerClusters;
 
@@ -436,3 +436,4 @@ public sealed class ExceptionHelp
 		}
 	}
 }
+

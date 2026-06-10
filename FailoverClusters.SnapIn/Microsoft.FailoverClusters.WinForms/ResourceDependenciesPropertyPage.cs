@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -6,12 +6,12 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.Framework;
-using Microsoft.FailoverClusters.UI.Common;
+using FailoverClusters.Framework;
+using FailoverClusters.UI.Common;
 using MS.Internal.ServerClusters;
 using MS.Internal.ServerClusters.Management;
 
-namespace Microsoft.FailoverClusters.WinForms;
+namespace FailoverClusters.WinForms;
 
 internal class ResourceDependenciesPropertyPage : SnapinPropertyPageControlBase
 {
@@ -36,7 +36,7 @@ internal class ResourceDependenciesPropertyPage : SnapinPropertyPageControlBase
 
 	private readonly Dictionary<Resource, ResourceInfo> clusterResources = new Dictionary<Resource, ResourceInfo>();
 
-	private Microsoft.FailoverClusters.Framework.RequiredDependencies requiredDependencies;
+	private FailoverClusters.Framework.RequiredDependencies requiredDependencies;
 
 	private DependencyRelationship dependencyRelationship;
 
@@ -48,7 +48,7 @@ internal class ResourceDependenciesPropertyPage : SnapinPropertyPageControlBase
 
 	private readonly Guid resourceId;
 
-	private readonly Microsoft.FailoverClusters.Framework.Cluster cluster;
+	private readonly FailoverClusters.Framework.Cluster cluster;
 
 	private Resource resource;
 
@@ -86,7 +86,7 @@ internal class ResourceDependenciesPropertyPage : SnapinPropertyPageControlBase
 		resource = null;
 	}
 
-	internal ResourceDependenciesPropertyPage(Microsoft.FailoverClusters.Framework.Cluster cluster, Guid resourceId)
+	internal ResourceDependenciesPropertyPage(FailoverClusters.Framework.Cluster cluster, Guid resourceId)
 		: base(Resources.Dependencies_Text)
 	{
 		Exceptions.ThrowIfNull((object)cluster, "cluster");
@@ -440,3 +440,4 @@ internal class ResourceDependenciesPropertyPage : SnapinPropertyPageControlBase
 		((Control)(object)this).PerformLayout();
 	}
 }
+

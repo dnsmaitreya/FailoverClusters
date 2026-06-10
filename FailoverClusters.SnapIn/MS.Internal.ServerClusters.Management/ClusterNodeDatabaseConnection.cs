@@ -1,8 +1,8 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using Microsoft.Win32;
+using Win32;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -56,3 +56,4 @@ internal class ClusterNodeDatabaseConnection
 		return new Guid((byte[])clusterSeriviceParametersKey.GetValue("InstanceGuid"));
 	}
 }
+

@@ -1,9 +1,9 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Net;
 using System.Windows.Forms;
-using Microsoft.FailoverClusters.UI.Controls;
+using FailoverClusters.UI.Controls;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -252,3 +252,4 @@ internal class NetworkNameControl : SnapinUserControl
 		((Control)this).ResumeLayout(performLayout: false);
 	}
 }
+

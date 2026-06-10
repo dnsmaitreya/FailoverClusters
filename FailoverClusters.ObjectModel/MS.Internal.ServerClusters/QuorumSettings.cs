@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Runtime.CompilerServices;
@@ -72,7 +72,7 @@ public abstract class QuorumSettings
 		OnOperationProgress(e);
 	}
 
-	[SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+	[SuppressMessage("Performance", "CA1811:AvoidUncalledPrivateCode")]
 	private void OnOperationProgress(OperationProgressEventArgs e)
 	{
 		_003Cbacking_store_003EOperationProgress?.Invoke(this, e);
@@ -147,3 +147,4 @@ public abstract class QuorumSettings
 		_003Cbacking_store_003EOperationProgress?.Invoke(value0, value1);
 	}
 }
+

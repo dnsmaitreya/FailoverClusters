@@ -1,5 +1,5 @@
-using System;
-using Microsoft.ManagementConsole;
+﻿using System;
+using ManagementConsole;
 
 namespace MS.Internal.ServerClusters.Management;
 
@@ -14,3 +14,4 @@ internal class SelectScopeNodeEventArgs : EventArgs
 		this.scopeNode = scopeNode;
 	}
 }
+

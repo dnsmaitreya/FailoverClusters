@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
@@ -6,8 +6,8 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Security.AccessControl;
 using System.Threading;
-using Microsoft.FailoverClusters.NativeHelp;
-using Microsoft.Win32;
+using FailoverClusters.NativeHelp;
+using Win32;
 
 namespace MS.Internal.ServerClusters;
 
@@ -2338,3 +2338,4 @@ public class ClusterGroup : ClusterItem
 		}
 	}
 }
+
