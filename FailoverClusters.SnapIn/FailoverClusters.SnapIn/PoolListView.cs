@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 using FailoverClusters.Framework;
-using MS.Internal.ServerClusters.Management;
+using KDDSL.ServerClusters.Management;
 
 namespace FailoverClusters.SnapIn;
 

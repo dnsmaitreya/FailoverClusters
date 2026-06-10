@@ -13,7 +13,7 @@ internal class ClusterCimSession
 
 	private const string NodeClass = "MSFTCluster_Node";
 
-	private const string ClusterNamespace = "root/microsoft/windows/cluster";
+	private const string ClusterNamespace = "root/windows/cluster";
 
 	private readonly List<string> nodeNames;
 
@@ -31,12 +31,12 @@ internal class ClusterCimSession
 	public static ClusterCimSession Create(string serverName)
 	{
 		ICimUtilities cimUtilities = ServiceContainer.Container.Resolve<ICimUtilities>(Array.Empty<object>());
-		CimSession cimSession = GetCimSession(serverName, "root/microsoft/windows/cluster", "MSFTCluster_Cluster");
+		CimSession cimSession = GetCimSession(serverName, "root/windows/cluster", "MSFTCluster_Cluster");
 		if (cimSession == null)
 		{
 			throw new ClusterCimException();
 		}
-		IEnumerable<string> enumerable = from n in cimUtilities.EnumerateInstances(cimSession, "root/microsoft/windows/cluster", "MSFTCluster_Node")
+		IEnumerable<string> enumerable = from n in cimUtilities.EnumerateInstances(cimSession, "root/windows/cluster", "MSFTCluster_Node")
 			select cimUtilities.GetCimPropertyValue(n.CimInstanceProperties, "Fqdn").ToString();
 		if (!enumerable.Any())
 		{

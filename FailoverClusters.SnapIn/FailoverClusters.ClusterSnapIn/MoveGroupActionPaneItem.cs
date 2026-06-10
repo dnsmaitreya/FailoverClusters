@@ -4,8 +4,8 @@ using System.Windows.Input;
 using FailoverClusters.Framework;
 using FailoverClusters.UIFramework;
 using ManagementConsole;
-using MS.Internal.ServerClusters;
-using MS.Internal.ServerClusters.Management;
+using KDDSL.ServerClusters;
+using KDDSL.ServerClusters.Management;
 
 namespace FailoverClusters.ClusterSnapIn;
 

@@ -8,7 +8,7 @@ using System.Linq;
 using System.Reflection;
 using System.Threading;
 using FailoverClusters.UI.Common;
-using MS.Internal.FailoverClusters.Framework;
+using KDDSL.FailoverClusters.Framework;
 
 namespace FailoverClusters.Framework;
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data.Linq.Mapping;
-using MS.Internal.FailoverClusters.Framework;
+using KDDSL.FailoverClusters.Framework;
 
 namespace FailoverClusters.Framework;
 

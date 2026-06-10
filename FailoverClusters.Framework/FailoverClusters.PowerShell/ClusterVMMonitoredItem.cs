@@ -6,7 +6,7 @@ using System.Threading;
 using FailoverClusters.Framework;
 using FailoverClusters.UI.Common;
 using Win32;
-using MS.Internal.FailoverClusters.Framework;
+using KDDSL.FailoverClusters.Framework;
 
 namespace FailoverClusters.PowerShell;
 
@@ -65,7 +65,7 @@ public abstract class ClusterVMMonitoredItem
 		cancellationToken.ThrowIfCancellationRequested();
 		try
 		{
-			taskService.GetFolder("\\Microsoft\\Windows").CreateFolder("Failover Clustering", null);
+			taskService.GetFolder("\\windows").CreateFolder("Failover Clustering", null);
 		}
 		catch (COMException ex)
 		{
@@ -76,7 +76,7 @@ public abstract class ClusterVMMonitoredItem
 		}
 		try
 		{
-			taskService.GetFolder("\\Microsoft\\Windows\\Failover Clustering").CreateFolder("VM Monitoring", null);
+			taskService.GetFolder("\\windows\\Failover Clustering").CreateFolder("VM Monitoring", null);
 		}
 		catch (COMException ex2)
 		{
@@ -85,17 +85,17 @@ public abstract class ClusterVMMonitoredItem
 				throw;
 			}
 		}
-		taskFolder = taskService.GetFolder("\\Microsoft\\Windows\\Failover Clustering\\VM Monitoring");
+		taskFolder = taskService.GetFolder("\\windows\\Failover Clustering\\VM Monitoring");
 	}
 
 	private static RegistryKey CreateRootKey(string computerName)
 	{
-		return ((RegistryKey.OpenRemoteBaseKey(RegistryHive.LocalMachine, computerName, RegistryView.Registry64).OpenSubKey("Software\\Microsoft", writable: true) ?? throw new ClusterDialogException(ExceptionResources.FailedToCreateRegistryKey.FormatCurrentCulture(computerName))).CreateSubKey("Failover Clustering") ?? throw new ClusterDialogException(ExceptionResources.FailedToCreateRegistryKey.FormatCurrentCulture(computerName))).CreateSubKey("VM Monitoring") ?? throw new ClusterDialogException(ExceptionResources.FailedToCreateRegistryKey.FormatCurrentCulture(computerName));
+		return ((RegistryKey.OpenRemoteBaseKey(RegistryHive.LocalMachine, computerName, RegistryView.Registry64).OpenSubKey("Software", writable: true) ?? throw new ClusterDialogException(ExceptionResources.FailedToCreateRegistryKey.FormatCurrentCulture(computerName))).CreateSubKey("Failover Clustering") ?? throw new ClusterDialogException(ExceptionResources.FailedToCreateRegistryKey.FormatCurrentCulture(computerName))).CreateSubKey("VM Monitoring") ?? throw new ClusterDialogException(ExceptionResources.FailedToCreateRegistryKey.FormatCurrentCulture(computerName));
 	}
 
 	private static RegistryKey OpenRootKey(string computerName, bool writable)
 	{
-		return ((RegistryKey.OpenRemoteBaseKey(RegistryHive.LocalMachine, computerName, RegistryView.Registry64).OpenSubKey("Software\\Microsoft", writable) ?? throw new ClusterDialogException(ExceptionResources.FailedToOpenRegistryKey.FormatCurrentCulture(computerName))).OpenSubKey("Failover Clustering", writable) ?? throw new ClusterDialogException(ExceptionResources.FailedToOpenRegistryKey.FormatCurrentCulture(computerName))).OpenSubKey("VM Monitoring", writable) ?? throw new ClusterDialogException(ExceptionResources.FailedToOpenRegistryKey.FormatCurrentCulture(computerName));
+		return ((RegistryKey.OpenRemoteBaseKey(RegistryHive.LocalMachine, computerName, RegistryView.Registry64).OpenSubKey("Software", writable) ?? throw new ClusterDialogException(ExceptionResources.FailedToOpenRegistryKey.FormatCurrentCulture(computerName))).OpenSubKey("Failover Clustering", writable) ?? throw new ClusterDialogException(ExceptionResources.FailedToOpenRegistryKey.FormatCurrentCulture(computerName))).OpenSubKey("VM Monitoring", writable) ?? throw new ClusterDialogException(ExceptionResources.FailedToOpenRegistryKey.FormatCurrentCulture(computerName));
 	}
 
 	internal static IEnumerable<ClusterVMMonitoredItem> GetMonitoredItems(string computerName, CancellationToken cancellationToken)
@@ -163,7 +163,7 @@ public abstract class ClusterVMMonitoredItem
 	internal void CreateItemKey(string computerName)
 	{
 		RootKey = CreateRootKey(computerName);
-		KvpKey = RegistryKey.OpenRemoteBaseKey(RegistryHive.LocalMachine, computerName, RegistryView.Registry64).OpenSubKey("Software\\Microsoft\\Virtual Machine\\Guest", writable: true);
+		KvpKey = RegistryKey.OpenRemoteBaseKey(RegistryHive.LocalMachine, computerName, RegistryView.Registry64).OpenSubKey("Software\\Virtual Machine\\Guest", writable: true);
 		if (RootKey.GetSubKeyNames().Length == 0 && KvpKey != null)
 		{
 			KvpKey.SetValue("VMMonitoringConfigured", 1);
@@ -188,7 +188,7 @@ public abstract class ClusterVMMonitoredItem
 				KvpKey.SetValue("VMMonitoringConfigured", 0);
 			}
 			RootKey.Close();
-			RegistryKey registryKey = RegistryKey.OpenRemoteBaseKey(RegistryHive.LocalMachine, computerName, RegistryView.Registry64).OpenSubKey("Software\\Microsoft", writable: true);
+			RegistryKey registryKey = RegistryKey.OpenRemoteBaseKey(RegistryHive.LocalMachine, computerName, RegistryView.Registry64).OpenSubKey("Software", writable: true);
 			if (registryKey == null)
 			{
 				throw new ApplicationException(ExceptionResources.FailedToOpenRegistryKey.FormatCurrentCulture(computerName));
@@ -213,7 +213,7 @@ public abstract class ClusterVMMonitoredItem
 	private void OpenRegistryKey(string computerName)
 	{
 		RootKey = OpenRootKey(computerName, writable: true);
-		KvpKey = RegistryKey.OpenRemoteBaseKey(RegistryHive.LocalMachine, computerName, RegistryView.Registry64).OpenSubKey("Software\\Microsoft\\Virtual Machine\\Guest", writable: true);
+		KvpKey = RegistryKey.OpenRemoteBaseKey(RegistryHive.LocalMachine, computerName, RegistryView.Registry64).OpenSubKey("Software\\Virtual Machine\\Guest", writable: true);
 	}
 
 	internal void CreateTask(NativeMethods.ITaskService taskService, NativeMethods.ITaskFolder taskFolder, string eventQuery, string taskDescription, string taskName, string serviceName, string serviceGuid, string criticalStateValue)

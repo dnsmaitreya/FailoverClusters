@@ -8,8 +8,8 @@ using System.Threading;
 using FailoverClusters.Framework;
 using FailoverClusters.UI.Common;
 using ManagementConsole;
-using MS.Internal.ServerClusters;
-using MS.Internal.ServerClusters.Management;
+using KDDSL.ServerClusters;
+using KDDSL.ServerClusters.Management;
 
 namespace FailoverClusters.WinForms;
 
@@ -221,7 +221,7 @@ public static class ResourceContext
 		writableSharedDataItem3.SetData(Encoding.Unicode.GetBytes(resourceType.Name + "\0"));
 		writableSharedData.Add(writableSharedDataItem3);
 		WritableSharedDataItem writableSharedDataItem4 = new WritableSharedDataItem("CLUSTER_LCID", requiresCallback: false);
-		writableSharedDataItem4.SetData(MS.Internal.ServerClusters.Management.ClusterHelp.Int32ToByteArray(CultureInfo.CurrentCulture.LCID));
+		writableSharedDataItem4.SetData(KDDSL.ServerClusters.Management.ClusterHelp.Int32ToByteArray(CultureInfo.CurrentCulture.LCID));
 		writableSharedData.Add(writableSharedDataItem4);
 		return writableSharedData;
 	}

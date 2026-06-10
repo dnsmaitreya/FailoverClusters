@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
-using MS.Internal.FailoverClusters.Framework;
+using KDDSL.FailoverClusters.Framework;
 
 namespace FailoverClusters.Framework;
 

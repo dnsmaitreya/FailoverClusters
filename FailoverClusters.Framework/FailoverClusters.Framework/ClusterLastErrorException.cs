@@ -4,7 +4,7 @@ using System.Globalization;
 using System.Runtime.Serialization;
 using FailoverClusters.UI.Common;
 using WindowsAPICodePack.Dialogs;
-using MS.Internal.FailoverClusters.Framework;
+using KDDSL.FailoverClusters.Framework;
 
 namespace FailoverClusters.Framework;
 

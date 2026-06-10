@@ -10,7 +10,7 @@ using System.Windows.Interop;
 using System.Windows.Media;
 using FailoverClusters.UI.Common;
 using Virtualization.Client.Common;
-using MS.Internal.FailoverClusters.Framework;
+using KDDSL.FailoverClusters.Framework;
 
 namespace FailoverClusters.Framework;
 

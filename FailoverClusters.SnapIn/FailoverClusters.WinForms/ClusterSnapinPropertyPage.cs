@@ -3,8 +3,8 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using FailoverClusters.Framework;
 using ManagementConsole;
-using MS.Internal.ServerClusters;
-using MS.Internal.ServerClusters.Management;
+using KDDSL.ServerClusters;
+using KDDSL.ServerClusters.Management;
 
 namespace FailoverClusters.WinForms;
 

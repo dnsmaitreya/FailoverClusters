@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading;
 using FailoverClusters.UI.Common;
 using WindowsAPICodePack.Dialogs;
-using MS.Internal.FailoverClusters.Framework;
+using KDDSL.FailoverClusters.Framework;
 
 namespace FailoverClusters.Framework;
 

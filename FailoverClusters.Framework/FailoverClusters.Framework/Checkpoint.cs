@@ -8,8 +8,8 @@ using System.Management;
 using System.Windows.Input;
 using FailoverClusters.UI.Common;
 using WindowsAPICodePack.Dialogs;
-using MS.Internal.FailoverClusters.Framework;
-using MS.Internal.ServerClusters;
+using KDDSL.FailoverClusters.Framework;
+using KDDSL.ServerClusters;
 
 namespace FailoverClusters.Framework;
 

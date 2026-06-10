@@ -4,8 +4,8 @@ using System.Drawing;
 using System.Windows.Forms;
 using FailoverClusters.Framework;
 using FailoverClusters.UI.Common;
-using MS.Internal.ServerClusters;
-using MS.Internal.ServerClusters.Management;
+using KDDSL.ServerClusters;
+using KDDSL.ServerClusters.Management;
 
 namespace FailoverClusters.WinForms;
 

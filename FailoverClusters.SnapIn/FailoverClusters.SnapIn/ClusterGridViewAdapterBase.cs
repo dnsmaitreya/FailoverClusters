@@ -4,7 +4,7 @@ using FailoverClusters.Framework;
 using FailoverClusters.UI.Common;
 using FailoverClusters.UIFramework;
 using FailoverClusters.WinForms;
-using MS.Internal.ServerClusters.Management;
+using KDDSL.ServerClusters.Management;
 
 namespace FailoverClusters.SnapIn;
 
@@ -24,7 +24,7 @@ internal abstract class ClusterGridViewAdapterBase<TViewModel> : WpfViewAdapterB
 
 	protected override TViewModel InitializeAndCreateViewModel(ViewModelData viewModelData)
 	{
-		MS.Internal.ServerClusters.Management.ClusterContext clusterContextFromCache = ClusterConnectionFactory.GetClusterContextFromCache(base.ViewModelData.Id);
+		KDDSL.ServerClusters.Management.ClusterContext clusterContextFromCache = ClusterConnectionFactory.GetClusterContextFromCache(base.ViewModelData.Id);
 		if (clusterContextFromCache != null)
 		{
 			Cluster frameworkCluster = clusterContextFromCache.FrameworkCluster;

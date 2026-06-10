@@ -1,5 +1,5 @@
 ﻿using FailoverClusters.UI.Common.Services;
-using MS.Internal.FailoverClusters.Framework;
+using KDDSL.FailoverClusters.Framework;
 
 namespace FailoverClusters.Framework;
 

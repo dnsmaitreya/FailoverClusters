@@ -1,6 +1,6 @@
 ﻿using FailoverClusters.UIFramework;
 using ManagementConsole;
-using MS.Internal.ServerClusters.Management;
+using KDDSL.ServerClusters.Management;
 
 namespace FailoverClusters.ClusterSnapIn;
 

@@ -5,8 +5,8 @@ using System.Threading;
 using System.Windows.Forms;
 using FailoverClusters.Framework;
 using FailoverClusters.UI.Common;
-using MS.Internal.ServerClusters;
-using MS.Internal.ServerClusters.Management;
+using KDDSL.ServerClusters;
+using KDDSL.ServerClusters.Management;
 
 namespace FailoverClusters.SnapIn;
 
@@ -36,9 +36,9 @@ internal class AddPoolsOperation
 
 	private FailoverClusters.Framework.Cluster FrameworkCluster { get; set; }
 
-	private MS.Internal.ServerClusters.Cluster LegacyCluster { get; set; }
+	private KDDSL.ServerClusters.Cluster LegacyCluster { get; set; }
 
-	internal AddPoolsOperation(FailoverClusters.Framework.Cluster frameworkCluster, MS.Internal.ServerClusters.Cluster legacyCluster)
+	internal AddPoolsOperation(FailoverClusters.Framework.Cluster frameworkCluster, KDDSL.ServerClusters.Cluster legacyCluster)
 	{
 		FrameworkCluster = frameworkCluster;
 		LegacyCluster = legacyCluster;

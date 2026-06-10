@@ -9,7 +9,7 @@ using System.Security.Permissions;
 using System.Threading;
 using _003CCppImplementationDetails_003E;
 using _003CCrtImplementationDetails_003E;
-using MS.Internal.ServerClusters;
+using KDDSL.ServerClusters;
 
 internal class _003CModule_003E
 {

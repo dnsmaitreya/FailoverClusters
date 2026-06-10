@@ -3,7 +3,7 @@ using FailoverClusters.ClusterSnapIn;
 using FailoverClusters.Framework;
 using FailoverClusters.UI.Common;
 using ManagementConsole;
-using MS.Internal.ServerClusters.Management;
+using KDDSL.ServerClusters.Management;
 
 namespace FailoverClusters.SnapIn;
 

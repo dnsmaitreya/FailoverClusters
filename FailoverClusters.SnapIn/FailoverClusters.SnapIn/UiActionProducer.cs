@@ -9,7 +9,7 @@ using FailoverClusters.UI.Common;
 using FailoverClusters.UIFramework;
 using FailoverClusters.WinForms;
 using ManagementConsole;
-using MS.Internal.ServerClusters.Management;
+using KDDSL.ServerClusters.Management;
 
 namespace FailoverClusters.SnapIn;
 

@@ -4,7 +4,7 @@ using FailoverClusters.Framework;
 using FailoverClusters.UI.Common;
 using FailoverClusters.UIFramework;
 using ManagementConsole;
-using MS.Internal.ServerClusters;
+using KDDSL.ServerClusters;
 
 namespace FailoverClusters.ClusterSnapIn;
 

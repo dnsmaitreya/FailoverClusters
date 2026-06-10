@@ -5,7 +5,7 @@ using FailoverClusters.UI.Common;
 using Management.Infrastructure;
 using Management.Infrastructure.Generic;
 using Management.Infrastructure.Options;
-using MS.Internal.FailoverClusters.Framework;
+using KDDSL.FailoverClusters.Framework;
 
 namespace FailoverClusters.Framework;
 

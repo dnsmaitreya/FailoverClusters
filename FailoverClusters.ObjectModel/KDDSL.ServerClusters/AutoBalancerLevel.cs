@@ -1,0 +1,8 @@
+namespace KDDSL.ServerClusters;
+
+public enum AutoBalancerLevel
+{
+	Low = 1,
+	Medium,
+	High
+}

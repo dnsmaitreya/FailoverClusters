@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using FailoverClusters.UI.Common;
-using MS.Internal.FailoverClusters.Framework;
+using KDDSL.FailoverClusters.Framework;
 
 namespace FailoverClusters.Framework;
 

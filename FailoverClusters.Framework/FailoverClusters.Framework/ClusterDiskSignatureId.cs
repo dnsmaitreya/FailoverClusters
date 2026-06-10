@@ -1,5 +1,5 @@
 ﻿using System.Globalization;
-using MS.Internal.FailoverClusters.Framework;
+using KDDSL.FailoverClusters.Framework;
 
 namespace FailoverClusters.Framework;
 

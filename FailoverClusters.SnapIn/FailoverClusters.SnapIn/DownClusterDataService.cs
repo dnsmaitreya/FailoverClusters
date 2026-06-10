@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using FailoverClusters.UIFramework;
-using MS.Internal.ServerClusters.Management;
+using KDDSL.ServerClusters.Management;
 
 namespace FailoverClusters.SnapIn;
 

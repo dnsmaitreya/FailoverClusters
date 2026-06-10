@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using MS.Internal.ServerClusters.Management;
+using KDDSL.ServerClusters.Management;
 
 namespace FailoverClusters.WinForms;
 

@@ -5,8 +5,8 @@ using FailoverClusters.UI.Common;
 using FileServer.Management.ServerManagerProxy;
 using Windows.Server;
 using WindowsAPICodePack.Dialogs;
-using MS.Internal.FailoverClusters.Framework;
-using MS.Internal.ServerClusters;
+using KDDSL.FailoverClusters.Framework;
+using KDDSL.ServerClusters;
 
 namespace FailoverClusters.Framework;
 
